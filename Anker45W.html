@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anker 45W (Smart Display) - Charger.az</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #333; }
+        
+        /* Header */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 12px 20px; background: white; border-bottom: 1px solid #f0f0f0; position: sticky; top: 0; z-index: 1000; }
+        .menu-icon { font-size: 24px; cursor: pointer; }
+        .logo img { height: 35px; }
+        .search-icon img { height: 22px; cursor: pointer; }
+
+        /* Slider */
+        .slider-wrapper { position: relative; width: 100%; margin-top: 10px; }
+        .slider-container { 
+            display: flex; 
+            overflow-x: auto; 
+            scroll-snap-type: x mandatory; 
+            scroll-behavior: smooth; 
+            -webkit-overflow-scrolling: touch; 
+        }
+        .slider-container::-webkit-scrollbar { display: none; }
+        .slider-container img { width: 100%; flex-shrink: 0; scroll-snap-align: start; height: 380px; object-fit: contain; }
+
+        /* Dots */
+        .dots { display: flex; justify-content: center; gap: 8px; margin: 15px 0; }
+        .dot { width: 8px; height: 8px; background-color: #e0e0e0; border-radius: 50%; transition: 0.3s; }
+        .dot.active { background-color: #333; transform: scale(1.2); }
+
+        /* Product Info */
+        .product-info { text-align: center; padding: 0 25px; margin-bottom: 25px; }
+        .product-title { font-size: 15px; line-height: 1.4; color: #333; margin-bottom: 15px; font-weight: 400; }
+        .product-price { font-size: 18px; font-weight: bold; color: #000; }
+
+        /* Card Section */
+        .main-card { border: 1px solid #eee; border-radius: 20px; margin: 0 15px 40px 15px; padding: 25px 20px; background-color: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
+        
+        .warranty-badge { display: flex; align-items: center; justify-content: center; background-color: #fff5f6; border: 1px solid #ffebeb; color: #ff4d4f; border-radius: 12px; padding: 8px 20px; font-size: 11px; font-weight: bold; width: fit-content; margin: 0 auto 20px auto; letter-spacing: 0.5px; }
+        .warranty-badge span { margin-right: 5px; }
+
+        .wp-button { display: flex; align-items: center; justify-content: center; background-color: #2ecc71; color: white; text-decoration: none; border-radius: 15px; padding: 14px; font-size: 17px; font-weight: bold; margin-bottom: 30px; box-shadow: 0 4px 12px rgba(46, 204, 113, 0.2); }
+        .wp-button img { margin-right: 10px; filter: brightness(0) invert(1); }
+
+        /* Specs Table */
+        .specs-title { font-size: 17px; font-weight: bold; margin-bottom: 20px; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px; color: #000; }
+        .specs-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 30px; }
+        .specs-table td { padding: 12px 0; border-bottom: 1px solid #fafafa; }
+        .label { color: #888; }
+        .value { text-align: right; font-weight: 600; color: #000; }
+
+        /* About Section */
+        .about-title { font-size: 17px; font-weight: bold; margin-bottom: 10px; color: #000; }
+        .about-text { font-size: 13px; color: #666; line-height: 1.6; text-align: left; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="menu-icon">☰</div>
+        <div class="logo">
+            <a href="index.html">
+                <img src="Images_site/Charger.az Logo.png" alt="Logo">
+            </a>
+        </div>
+        <div class="search-icon">
+            <img src="Images_site/lupa.png" alt="Search">
+        </div>
+    </header>
+
+    <div class="slider-wrapper">
+        <div class="slider-container" id="slider">
+            <!-- Şəkillər qovluqdakı adlara uyğun[cite: 1] -->
+            <img src="Images_site/Anker 45 1.jpg">
+            <img src="Images_site/Anker 45 2.jpg">
+            <img src="Images_site/Anker 45 3.jpg">
+            <img src="Images_site/Anker 45 4.jpg">
+            <img src="Images_site/Anker 45 5.jpg">
+            <img src="Images_site/Anker 45 6.jpg">
+            <img src="Images_site/Anker 45 7.jpg">
+            <img src="Images_site/Anker 45 8.jpg">
+        </div>
+        <div class="dots" id="dotsContainer">
+            <!-- Nöqtələr JavaScript ilə avtomatik yaranacaq -->
+        </div>
+    </div>
+
+    <div class="product-info">
+        <div class="product-title">Anker 45W (Smart Display) Güc adapteri. Qoşulduğu cihazı tanıyır və ekranda adı yazılır</div>
+        <div class="product-price">99.99AZN</div>
+    </div>
+
+    <div class="main-card">
+        <div class="warranty-badge">
+            <span>🛡️</span> RƏSMİ ZƏMANƏT: 1 İL
+        </div>
+
+        <a href="https://wa.me/994998058060?text=Salam%2C%20Anker%2045W%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m." class="wp-button">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="20">
+            İndi Sifariş Et
+        </a>
+
+        <div class="specs-title">Texniki Xüsusiyyətlər</div>
+        <table class="specs-table">
+            <tr><td class="label">Maksimum Güc:</td><td class="value">45 Watt (PPS)</td></tr>
+            <tr><td class="label">Ekran:</td><td class="value">Smart LED Display</td></tr>
+            <tr><td class="label">Texnologiya:</td><td class="value">GaN, PowerIQ 3.0</td></tr>
+            <tr><td class="label">Opt. Cihazlar:</td><td class="value">Samsung, iPhone, iPad, Macbook</td></tr>
+            <tr><td class="label">Giriş Portu:</td><td class="value">USB-C</td></tr>
+            <tr><td class="label">Qoruma:</td><td class="value">ActiveShield 2.0</td></tr>
+            <tr><td class="label">Rəng:</td><td class="value">Qara / Fantom</td></tr>
+        </table>
+
+        <div class="about-title">Məhsul Haqqında</div>
+        <div class="about-text">
+            Anker-in 2026 Smart Display adapteri real vaxtda şarj gücünü göstərən ekranla təchiz olunub. GaN və PowerIQ 3.0 texnologiyası sayəsində cihazınızı ən təhlükəsiz və sürətli şəkildə şarj edir.
+        </div>
+    </div>
+
+    <script>
+        const slider = document.getElementById('slider');
+        const dotsContainer = document.getElementById('dotsContainer');
+        const images = slider.getElementsByTagName('img');
+        
+        // Şəkil sayı qədər nöqtə yarat
+        for (let i = 0; i < images.length; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (i === 0) dot.classList.add('active');
+            dotsContainer.appendChild(dot);
+        }
+
+        const dots = document.querySelectorAll('.dot');
+
+        // Sürüşdürməni izlə və nöqtəni dəyiş
+        slider.addEventListener('scroll', () => {
+            const scrollIndex = Math.round(slider.scrollLeft / slider.offsetWidth);
+            
+            dots.forEach((dot, index) => {
+                if (index === scrollIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
