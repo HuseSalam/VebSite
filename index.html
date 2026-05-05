@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charger.az - Ana Səhifə</title>
+    <style>
+        body { font-family: -apple-system, sans-serif; margin: 0; text-align: center; background-color: #fff; }
+        
+        /* Header */
+        header { 
+            display: flex; 
+            justify-content: space-between; 
+            padding: 10px 15px; 
+            border-bottom: 1px solid #eee; 
+            align-items: center; 
+            position: sticky; 
+            top: 0; 
+            background: white; 
+            z-index: 100; 
+        }
+        
+        .header-left { display: flex; align-items: center; gap: 15px; }
+        .logo img { height: 40px; display: block; }
+        
+        .search-container { padding: 15px; }
+        #searchInput {
+            width: 90%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-size: 16px;
+            outline: none;
+            background: #f9f9f9;
+        }
+
+        .section-title {
+            text-align: center;
+            padding: 15px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 5px;
+            letter-spacing: 0.8px;
+        }
+
+        /* Məhsul siyahısı - Yan-yana düzülüş */
+        .product-list { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 15px; 
+            padding: 15px; 
+        }
+        
+        .product-item { 
+            border: 1px solid #eee; 
+            border-radius: 12px; 
+            padding: 15px 10px; 
+            transition: 0.3s; 
+            text-decoration: none; 
+            display: block;
+            background: #fff;
+        }
+        
+        .product-item img { width: 100%; height: 130px; object-fit: contain; border-radius: 8px; }
+        .product-item p { font-weight: bold; font-size: 12px; margin: 10px 0 5px; color: #333; text-transform: uppercase; }
+        .product-item span { color: #888; font-size: 11px; font-weight: 500; }
+
+        #noResults { display: none; padding: 20px; color: #888; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <div style="font-size: 24px; cursor: pointer;">☰</div>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Images_site/Charger.az Logo.png" alt="Logo">
+                </a>
+            </div>
+        </div>
+        <div style="font-size: 20px; cursor: pointer;">🔍</div>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Məhsul axtar..." onkeyup="searchProduct()">
+    </div>
+
+    <div class="section-title">MƏHSULLARIMIZ</div>
+
+    <div id="noResults">Uyğun məhsul tapılmadı.</div>
+
+    <div class="product-list" id="productList">
+        
+        <!-- APPLE 40W -->
+        <a href="apple40w.html" class="product-item" data-name="apple 40w uk adapter dual usb-c">
+            <img src="Images_site/apple 40 3.png">
+            <p>APPLE 40W (UK)</p>
+            <span>99.99 AZN</span>
+        </a>
+
+        <!-- APPLE 20W -->
+        <a href="apple20W.html" class="product-item" data-name="apple 20w usb-c adapter eu">
+            <img src="Images_site/apple 20 5.png">
+            <p>APPLE 20W (EU)</p>
+            <span>59.99 AZN</span>
+        </a>
+        <!-- ANKER 30W -->
+<a href="anker30W.html" class="product-item" data-name="anker 30w 511 nano 3 usb-c adapter">
+    <img src="Images_site/anker30 1.png">
+    <p>ANKER 30W Nano 3</p>
+    <span>69.99 AZN</span>
+</a>
+
+<!-- SAMSUNG 25W -->
+<a href="samsung25W.html" class="product-item" data-name="samsung 25w usb-c adapter super fast charging sfc">
+    <img src="Images_site/samsung25 1.png">
+    <p>SAMSUNG 25W (USB-C)</p>
+    <span>39.99 AZN</span>
+</a>
+
+    </div>
+
+    <script>
+        function searchProduct() {
+            let input = document.getElementById('searchInput').value.toLowerCase().trim();
+            let items = document.getElementsByClassName('product-item');
+            let list = document.getElementById('productList');
+            let noResults = document.getElementById('noResults');
+            let title = document.querySelector('.section-title');
+            let found = false;
+
+            for (let i = 0; i < items.length; i++) {
+                let name = items[i].getAttribute('data-name');
+                if (name.includes(input)) {
+                    items[i].style.display = "block";
+                    found = true;
+                } else {
+                    items[i].style.display = "none";
+                }
+            }
+
+            if (found) {
+                noResults.style.display = "none";
+                list.style.display = "grid";
+                title.style.display = "block";
+            } else {
+                noResults.style.display = "block";
+                list.style.display = "none";
+                title.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
