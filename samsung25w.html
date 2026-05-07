@@ -11,11 +11,27 @@
         .logo img { height: 45px; display: block; }
         .search-icon-img { width: 24px; height: 24px; cursor: pointer; }
 
-        /* Slider */
-        .slider-wrapper { position: relative; width: 100%; overflow: hidden; margin-top: 10px; }
-        .slider-container { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; }
+             /* Slider - Yenilənmiş Hissə */
+        .slider-wrapper { position: relative; width: 100%; margin-top: 10px; }
+        
+        .slider-container { 
+            display: flex; 
+            overflow-x: auto; 
+            scroll-snap-type: x mandatory; 
+            scroll-behavior: smooth; 
+            -webkit-overflow-scrolling: touch; 
+        }
+        
         .slider-container::-webkit-scrollbar { display: none; }
-        .slider-container img { width: 100%; flex-shrink: 0; scroll-snap-align: start; height: 350px; object-fit: contain; }
+        
+        .slider-container img { 
+            width: 100%; 
+            flex-shrink: 0; 
+            scroll-snap-align: start; 
+            scroll-snap-stop: always; /* Şəkillərin tək-tək dayanmasını təmin edir */
+            height: 380px; 
+            object-fit: contain; 
+        }
 
         .dots { display: flex; justify-content: center; gap: 8px; margin: 10px 0 20px 0; }
         .dot { width: 8px; height: 8px; background-color: #ddd; border-radius: 50%; transition: 0.3s; }
