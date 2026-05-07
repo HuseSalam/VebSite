@@ -8,7 +8,18 @@
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #333; }
         
         /* Header */
-        header { display: flex; align-items: center; justify-content: flex-start; padding: 12px 20px; background: white; border-bottom: 1px solid #f0f0f0; gap: 15px; position: sticky; top: 0; z-index: 1000; }
+        header { 
+            display: flex; 
+            align-items: center; 
+            justify-content: flex-start; 
+            padding: 12px 20px; 
+            background: white; 
+            border-bottom: 1px solid #f0f0f0; 
+            gap: 15px; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+        }
         .menu-icon { font-size: 24px; cursor: pointer; display: flex; align-items: center; }
         .logo img { height: 35px; }
         .search-icon { margin-left: auto; display: flex; align-items: center; }
@@ -16,9 +27,22 @@
 
         /* Slider */
         .slider-wrapper { position: relative; width: 100%; margin-top: 10px; }
-        .slider-container { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
+        .slider-container { 
+            display: flex; 
+            overflow-x: auto; 
+            scroll-snap-type: x mandatory; 
+            scroll-behavior: smooth; 
+            -webkit-overflow-scrolling: touch; 
+        }
         .slider-container::-webkit-scrollbar { display: none; }
-        .slider-container img { width: 100%; flex-shrink: 0; scroll-snap-align: start; scroll-snap-stop: always; height: 380px; object-fit: contain; }
+        .slider-container img { 
+            width: 100%; 
+            flex-shrink: 0; 
+            scroll-snap-align: start; 
+            scroll-snap-stop: always; 
+            height: 380px; 
+            object-fit: contain; 
+        }
 
         /* Dots */
         .dots { display: flex; justify-content: center; gap: 8px; margin: 15px 0; }
@@ -31,10 +55,42 @@
         .product-price { font-size: 18px; font-weight: bold; color: #000; }
 
         /* Card Section */
-        .main-card { border: 1px solid #eee; border-radius: 20px; margin: 0 15px 40px 15px; padding: 25px 20px; background-color: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
-        .warranty-badge { display: flex; align-items: center; justify-content: center; background-color: #fff5f6; border: 1px solid #ffebeb; color: #ff4d4f; border-radius: 12px; padding: 8px 20px; font-size: 11px; font-weight: bold; width: fit-content; margin: 0 auto 20px auto; }
+        .main-card { 
+            border: 1px solid #eee; 
+            border-radius: 20px; 
+            margin: 0 15px 40px 15px; 
+            padding: 25px 20px; 
+            background-color: #fff; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02); 
+        }
+        .warranty-badge { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            background-color: #fff5f6; 
+            border: 1px solid #ffebeb; 
+            color: #ff4d4f; 
+            border-radius: 12px; 
+            padding: 8px 20px; 
+            font-size: 11px; 
+            font-weight: bold; 
+            width: fit-content; 
+            margin: 0 auto 20px auto; 
+        }
         
-        .wp-button { display: flex; align-items: center; justify-content: center; background-color: #2ecc71; color: white; text-decoration: none; border-radius: 15px; padding: 14px; font-size: 17px; font-weight: bold; margin-bottom: 30px; }
+        .wp-button { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            background-color: #2ecc71; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 15px; 
+            padding: 14px; 
+            font-size: 17px; 
+            font-weight: bold; 
+            margin-bottom: 30px; 
+        }
         .wp-button img { margin-right: 10px; filter: brightness(0) invert(1); }
 
         /* Specs Table */
@@ -52,15 +108,22 @@
 <body>
     <header>
         <div class="menu-icon">☰</div>
-        <div class="logo"><a href="index.html"><img src="Images_site/Charger.az Logo.png" alt="Logo"></a></div>
-        <div class="search-icon"><img src="Images_site/lupa.png" alt="Search"></div>
+        <div class="logo">
+            <a href="index.html">
+                <img src="Images_site/Charger.az Logo.png" alt="Logo">
+            </a>
+        </div>
+        <div class="search-icon">
+            <img src="Images_site/lupa.png" alt="Search">
+        </div>
     </header>
 
     <div class="slider-wrapper">
         <div class="slider-container" id="slider">
-            <img src="Images_site/samsung45 1.jpg">
-            <img src="Images_site/samsung45 2.jpg">
-            <img src="Images_site/samsung45 3.jpg">
+            <img src="Images_site/samsung45 1.png">
+            <img src="Images_site/samsung45 2.png">
+            <img src="Images_site/samsung45 3.png">
+            <img src="Images_site/samsung45 4.jpeg">
         </div>
         <div class="dots" id="dotsContainer"></div>
     </div>
@@ -75,6 +138,7 @@
         <a href="https://wa.me/994998058060?text=Salam%2C%20Samsung%2045W%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m." class="wp-button">
             <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="20"> İndi Sifariş Et
         </a>
+        
         <div class="specs-title">Texniki Xüsusiyyətlər</div>
         <table class="specs-table">
             <tr><td class="label">Maksimum Güc:</td><td class="value">45 Watt</td></tr>
@@ -85,9 +149,10 @@
             <tr><td class="label">Təhlükəsizlik:</td><td class="value">Cərəyan və Gərginlik Qoruması</td></tr>
             <tr><td class="label">Giriş Voltajı:</td><td class="value">100-240V</td></tr>
         </table>
+
         <div class="about-title">Məhsul Haqqında</div>
         <div class="about-text">
-            Samsung 45W USB-C adapteri <b>Super Fast Charging 2.0</b> standartı ilə Galaxy cihazlarınızı ən yüksək sürətlə doldurmaq üçün hazırlanıb. S20 Ultra modelindən başlayaraq ən son flaqmanlara tam uyğundur.
+            Samsung 45W USB-C adapteri <b>Super Fast Charging 2.0</b> standartı ilə Galaxy cihazlarınızı ən yüksək sürətlə doldurmaq üçün hazırlanıb. S20 Ultra modelindən başlayaraq ən son flaqmanlara və yeni A36/A56 seriyasına tam uyğundur. PD 3.0 PPS dəstəyi ilə ağıllı enerji ötürülməsini təmin edərək batareyanın həddindən artıq isinməsinin qarşısını alır.
         </div>
     </div>
 
@@ -95,16 +160,21 @@
         const slider = document.getElementById('slider');
         const dotsContainer = document.getElementById('dotsContainer');
         const images = slider.getElementsByTagName('img');
+        
+        // Dinamik nöqtələr yaratmaq
         for (let i = 0; i < images.length; i++) {
             const dot = document.createElement('div');
             dot.classList.add('dot');
             if (i === 0) dot.classList.add('active');
             dotsContainer.appendChild(dot);
         }
+
         const dots = document.querySelectorAll('.dot');
         slider.addEventListener('scroll', () => {
             const scrollIndex = Math.round(slider.scrollLeft / slider.offsetWidth);
-            dots.forEach((dot, index) => dot.classList.toggle('active', index === scrollIndex));
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === scrollIndex);
+            });
         });
     </script>
 </body>
