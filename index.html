@@ -9,16 +9,17 @@
         header { display: flex; justify-content: space-between; padding: 15px 20px; border-bottom: 1px solid #eee; align-items: center; position: sticky; top: 0; background: white; z-index: 100; }
         .header-left { display: flex; align-items: center; gap: 15px; }
         .logo img { height: 35px; display: block; }
-        .search-icon img { height: 22px; cursor: pointer; }
+        .search-icon img { height: 22px; cursor: pointer; transition: 0.2s; }
+        .search-icon img:active { transform: scale(0.9); }
         
         .search-container { padding: 15px; }
-        #searchInput { width: 92%; padding: 14px 20px; border: 1px solid #e0e0e0; border-radius: 30px; font-size: 16px; outline: none; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.03); }
+        #searchInput { width: 92%; padding: 14px 20px; border: 1px solid #e0e0e0; border-radius: 30px; font-size: 16px; outline: none; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.03); transition: border-color 0.3s; }
+        #searchInput:focus { border-color: #004a99; }
         
         .section-title { text-align: center; padding: 25px 20px; font-size: 20px; font-weight: 800; color: #1a1a1a; letter-spacing: 1px; }
         
         .product-list { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 15px; }
         
-        /* İstədiyin Frame Dizaynı */
         .product-item { 
             border: 1px solid #eee; 
             border-radius: 20px; 
@@ -46,7 +47,7 @@
             font-weight: 700; 
             font-size: 12px; 
             margin: 10px 0 5px; 
-            color: #004a99; /* Göndərdiyin şəkildəki göy rəng tonu */
+            color: #004a99;
             text-transform: uppercase; 
             line-height: 1.3;
             max-width: 90%;
@@ -58,7 +59,7 @@
             font-weight: 500; 
         }
         
-        #noResults { display: none; padding: 20px; color: #888; }
+        #noResults { display: none; padding: 20px; color: #888; font-weight: 500; }
     </style>
 </head>
 <body>
@@ -72,7 +73,7 @@
                 </a>
             </div>
         </div>
-        <div class="search-icon">
+        <div class="search-icon" onclick="focusSearch()">
             <img src="Images_site/lupa.png" alt="Axtar">
         </div>
     </header>
@@ -87,7 +88,7 @@
 
     <div class="product-list" id="productList">
         
-<a href="anker45w.html" class="product-item" data-name="anker 45w smart display adapter başlıq basliq ucluq sarj şarj aləti pps gan poweriq original зарядка блок адаптер">
+        <a href="anker45w.html" class="product-item" data-name="anker 45w smart display adapter başlıq basliq ucluq sarj şarj aləti pps gan poweriq original зарядка блок адаптер">
             <img src="Images_site/Anker 45 1.jpg">
             <p>ANKER 45W (Smart Display)</p>
             <span>99.99 AZN</span>
@@ -198,6 +199,17 @@
     </div>
 
     <script>
+        // Lupa ikonuna basanda axtarış xanasını aktiv edir
+        function focusSearch() {
+            const searchInput = document.getElementById('searchInput');
+            searchInput.focus();
+            // Mobil cihazlarda səhifənin axtarış xanasına sürüşməsi üçün:
+            window.scrollTo({
+                top: searchInput.offsetTop - 100,
+                behavior: 'smooth'
+            });
+        }
+
         function searchProduct() {
             let input = document.getElementById('searchInput').value.toLowerCase().trim();
             let items = document.getElementsByClassName('product-item');
