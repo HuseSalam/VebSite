@@ -9,16 +9,17 @@
         header { display: flex; justify-content: space-between; padding: 15px 20px; border-bottom: 1px solid #eee; align-items: center; position: sticky; top: 0; background: white; z-index: 100; }
         .header-left { display: flex; align-items: center; gap: 15px; }
         .logo img { height: 35px; display: block; }
-        .search-icon img { height: 22px; cursor: pointer; }
+        .search-icon img { height: 22px; cursor: pointer; transition: 0.2s; }
+        .search-icon img:active { transform: scale(0.9); }
         
         .search-container { padding: 15px; }
-        #searchInput { width: 92%; padding: 14px 20px; border: 1px solid #e0e0e0; border-radius: 30px; font-size: 16px; outline: none; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.03); }
+        #searchInput { width: 92%; padding: 14px 20px; border: 1px solid #e0e0e0; border-radius: 30px; font-size: 16px; outline: none; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.03); transition: border-color 0.3s; }
+        #searchInput:focus { border-color: #004a99; }
         
         .section-title { text-align: center; padding: 25px 20px; font-size: 20px; font-weight: 800; color: #1a1a1a; letter-spacing: 1px; }
         
         .product-list { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 15px; }
         
-        /* İstədiyin Frame Dizaynı */
         .product-item { 
             border: 1px solid #eee; 
             border-radius: 20px; 
@@ -46,7 +47,7 @@
             font-weight: 700; 
             font-size: 12px; 
             margin: 10px 0 5px; 
-            color: #004a99; /* Göndərdiyin şəkildəki göy rəng tonu */
+            color: #004a99;
             text-transform: uppercase; 
             line-height: 1.3;
             max-width: 90%;
@@ -58,7 +59,7 @@
             font-weight: 500; 
         }
         
-        #noResults { display: none; padding: 20px; color: #888; }
+        #noResults { display: none; padding: 20px; color: #888; font-weight: 500; }
     </style>
 </head>
 <body>
@@ -72,7 +73,7 @@
                 </a>
             </div>
         </div>
-        <div class="search-icon">
+        <div class="search-icon" onclick="focusSearch()">
             <img src="Images_site/lupa.png" alt="Axtar">
         </div>
     </header>
@@ -87,126 +88,128 @@
 
     <div class="product-list" id="productList">
         
-        <!-- ANKER 45W - YENİ FRAME DİZAYNI İLƏ -->
-        <a href="anker45w.html" class="product-item" data-name="anker 45w smart display adapter pps gan poweriq">
+        <a href="anker45w.html" class="product-item" data-name="anker 45w smart display adapter başlıq basliq ucluq sarj şarj aləti pps gan poweriq original зарядка блок адаптер">
             <img src="Images_site/Anker 45 1.jpg">
             <p>ANKER 45W (Smart Display)</p>
             <span>99.99 AZN</span>
         </a>
 
-        <!-- APPLE 40W -->
-        <a href="apple40w.html" class="product-item" data-name="apple 40w uk adapter dual usb-c">
+        <a href="apple40w.html" class="product-item" data-name="apple 40w uk adapter dual usb-c ikili başlıq basliq ucluq şarj sarj aləti iphone ipad original зарядка блок эпл">
             <img src="Images_site/apple 40 4.png">
             <p>APPLE 40W (UK)</p>
             <span>99.99 AZN</span>
         </a>
 
-        <!-- Digər məhsullar eyni dizaynla davam edir... -->
-        <a href="apple20w.html" class="product-item" data-name="apple 20w usb-c adapter eu">
+        <a href="apple20w.html" class="product-item" data-name="apple 20w usb-c adapter eu avropa başlıq basliq ucluq şarj sarj aləti iphone original зарядка блок эпл">
             <img src="Images_site/apple 20 2.png">
             <p>APPLE 20W (EU)</p>
             <span>59.99 AZN</span>
         </a>
 
-        <a href="anker30w.html" class="product-item" data-name="anker 30w 511 nano 3 usb-c adapter">
+        <a href="anker30w.html" class="product-item" data-name="anker 30w 511 nano 3 usb-c adapter başlıq basliq ucluq şarj sarj aləti kiçik sürətli зарядка анкер">
             <img src="Images_site/anker30 5.jpg">
             <p>ANKER 30W NANO 3</p>
             <span>69.99 AZN</span>
         </a>
 
-        <a href="samsung25w.html" class="product-item" data-name="samsung 25w usb-c adapter super fast charging sfc">
+        <a href="samsung25w.html" class="product-item" data-name="samsung 25w usb-c adapter başlıq basliq ucluq şarj sarj aləti super fast charging sfc original самсунг зарядка">
             <img src="Images_site/samsung25 1.png">
             <p>SAMSUNG 25W (USB-C)</p>
             <span>39.99 AZN</span>
         </a>
 
-        <a href="samsung45w.html" class="product-item" data-name="samsung 45w usb-c super fast charging adapter sfc 2.0 gan">
+        <a href="samsung45w.html" class="product-item" data-name="samsung 45w usb-c super fast charging adapter başlıq basliq ucluq şarj sarj aləti sfc 2.0 gan original самсунг зарядка">
             <img src="Images_site/samsung45 1.png">
             <p>SAMSUNG 45W (SFC 2.0)</p>
             <span>59.99 AZN</span>
+        </a>
 
-
-                    <!-- energe alupac mini 5k -->
-        <a href="energeaAlupacMini_5K.html" class="product-item" data-name="energea alupac mini 5k 5000mah powerbank 20w pd">
+        <a href="energeaAlupacMini_5K.html" class="product-item" data-name="energea alupac mini 5k 5000mah powerbank poverbank enerji yigdigi yığan bateriya portativ 20w pd повербанк">
             <img src="Images_site/energea alupac mini 1.png">
             <p>ENERGEA ALUPAC MINI 5K</p>
             <span>74.99 AZN</span>
-
         </a>
-                <!-- energe mag pac pro + 10K -->
-            <a href="EG-Mag-pac-pro-plus-10K.html" class="product-item" data-name="anker 622 magnetic battery maggo 5000mah powerbank usb-c">
+
+        <a href="EG-Mag-pac-pro-plus-10K.html" class="product-item" data-name="energea mag pac pro plus 10k 10000mah powerbank poverbank magsafe maqnidli simsiz wireless charging повербанк">
             <img src="Images_site/EG-MagPac-Pro-1.jpg">
             <p>ENERGEA Mag Pac Pro Plus 10K</p>
             <span>99.99 AZN</span>
         </a>
 
-         <!-- Poverbank Joyroom 10K -->
-        <a href="JoyRoom-PBF12-10K.html" class="product-item" data-name="poverbank joyroom 10k 10000mah 22.5w 3 girişli led display">
+        <a href="JoyRoom-PBF12-10K.html" class="product-item" data-name="poverbank joyroom 10k 10000mah powerbank enerji yığan bateriya 22.5w 3 girişli led display повербанк джойрум">
             <img src="Images_site/Joyroom-10K-1.png">
             <p>JOYROOM 10K (22.5W)</p>
             <span>49.99 AZN</span>
         </a>
 
-         <!-- Poverbank Joyroom Magsafe 10K-->
-        <a href="JoyRoom-Magsafe-10K.html" class="product-item" data-name="poverbank joyroom 10k 10000mah magsafe wireless fast charging jr-w020">
+        <a href="JoyRoom-Magsafe-10K.html" class="product-item" data-name="poverbank joyroom 10k 10000mah powerbank magsafe simsiz wireless fast charging jr-w020 maqnidli повербанк">
             <img src="Images_site/JR-magsafe-10K-1.png">
             <p>JOYROOM MAGSAFE 10K</p>
             <span>79.99 AZN</span>
         </a>
 
-         <!-- Poverbank Joyroom 20K-->
-        <a href="JoyRoom 20K.html" class="product-item" data-name="poverbank joyroom 20k 20000mah 22.5w 3 girişli led indicator jr-qp192">
+        <a href="JoyRoom 20K.html" class="product-item" data-name="poverbank joyroom 20k 20000mah powerbank enerji yığan böyük tutumlu 22.5w 3 girişli led indicator jr-qp192 повербанк">
             <img src="Images_site/JoyRoom-20K-1.jpg">
             <p>JOYROOM 20K (22.5W)</p>
             <span>69.99 AZN</span>
         </a>
 
-
-         <!-- Airpods 2 premium -->
-        <a href="AirPods_2_premium.html" class="product-item" data-name="qulaqliq airpods 2 premium wireless charging pop-up gps sensor bluetooth">
+        <a href="AirPods_2_premium.html" class="product-item" data-name="qulaqliq airpods 2 premium wireless charging nauşnik nausnik bluetooth simsiz sensor наушники эпл">
             <img src="Images_site/airpods2_1.png">
             <p>AirPods 2 Premium</p>
             <span>29.99 AZN</span>
         </a>
 
-
-         <!-- Airpods 4 premium -->
-        <a href="AirPods_4_premium.html" class="product-item" data-name="qulaqliq airpods 4 premium type-c wireless charging spatial audio gps">
+        <a href="AirPods_4_premium.html" class="product-item" data-name="qulaqliq airpods 4 premium type-c wireless charging spatial audio gps nauşnik nausnik bluetooth наушники">
             <img src="Images_site/airpods4_1.png">
             <p>AirPods 4 Premium</p>
             <span>44.99 AZN</span>
         </a>
 
-         <!-- Airpods 4 ANC premium -->
-        <a href="AirPods_4_ANC_premium.html" class="product-item" data-name="qulaqliq airpods 4 anc aktiv kuy legvi transparency mode type-c wireless charging gps">
+        <a href="AirPods_4_ANC_premium.html" class="product-item" data-name="qulaqliq airpods 4 anc aktiv kuy legvi səs kəsən transparency mode simsiz nauşnik nausnik bluetooth наушники">
             <img src="Images_site/airpods4_ANC_1.jpg">
             <p>AirPods 4 ANC</p>
             <span>54.99 AZN</span>
         </a>
 
-        <!-- Airpods Pro 3 premium -->
-        <a href="AirPods_Pro_3.html" class="product-item" data-name="qulaqliq airpods pro 3 premium type-c magsafe wireless charging gps animation">
+        <a href="AirPods_Pro_3.html" class="product-item" data-name="qulaqliq airpods pro 3 premium type-c magsafe wireless charging gps animation nauşnik nausnik наушники">
             <img src="Images_site/AirPosds_Pro_3_1.png">
             <p>AirPods Pro 3</p>
             <span>49.99 AZN</span>
         </a>
 
-
-        <!-- Airpods Pro 3 ANC premium -->
-        <a href="AirPods_Pro_3_ANC.html" class="product-item" data-name="qulaqliq airpods pro 3 anc aktiv kuy legvi transparency mode type-c magsafe wireless charging gps">
+        <a href="AirPods_Pro_3_ANC.html" class="product-item" data-name="qulaqliq airpods pro 3 anc aktiv kuy legvi səs kəsən transparency mode magsafe simsiz nauşnik nausnik наушники">
             <img src="Images_site/AirPosds_Pro_3_ANC_1.jpg">
             <p>AirPods Pro 3 ANC</p>
             <span>64.99 AZN</span>
         </a>
 
+        <a href="anker_car_char_67vatt.html" class="product-item" data-name="anker 535 car charger 67w 3 port avtomobil adapteri masin maşın üçün başlıq usb-c usb-a зарядка в машину">
+            <img src="Images_site/Anker_Car_Char_1.jpg">
+            <p>ANKER CAR CHARGER 67W</p>
+            <span>69.99 AZN</span>  
+        </a>
 
-
-
-
+        <a href="samsung65w.html" class="product-item" data-name="samsung 65w trio adapter başlıq basliq ucluq şarj sarj aləti usb-c usb-a super fast charging 2.0 original зарядка">
+            <img src="Images_site/samsung_65_1.jpg">
+            <p>SAMSUNG 65W TRIO</p>
+            <span>99.99 AZN</span>
+        </a>
 
     </div>
 
     <script>
+        // Lupa ikonuna basanda axtarış xanasını aktiv edir
+        function focusSearch() {
+            const searchInput = document.getElementById('searchInput');
+            searchInput.focus();
+            // Mobil cihazlarda səhifənin axtarış xanasına sürüşməsi üçün:
+            window.scrollTo({
+                top: searchInput.offsetTop - 100,
+                behavior: 'smooth'
+            });
+        }
+
         function searchProduct() {
             let input = document.getElementById('searchInput').value.toLowerCase().trim();
             let items = document.getElementsByClassName('product-item');
