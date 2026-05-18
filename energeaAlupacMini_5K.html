@@ -5,11 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Energea Alupac Mini 5K - Charger.az</title>
     <style>
+        /* Hamburger Menyu Stili */
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 15px;
+            border-bottom: 1px solid #eee;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 1000;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .side-menu {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 2000;
+            top: 0;
+            left: -250px;
+            background-color: rgb(56, 56, 56);
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 20px;
+        }
+
+        .menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px 20px;
+            border-bottom: 1px solid #eee;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .close-btn {
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .side-menu a {
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #ffffff;
+            display: block;
+            transition: 0.2s;
+            border-bottom: 1px solid #f9f9f9;
+        }
+
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1500;
+        }
+
+        /* Tap Highlight silinməsi və Orijinal Stillər */
+        * {
+            -webkit-tap-highlight-color: transparent !important;
+            -webkit-touch-callout: none !important;
+            outline: none !important;
+        }
+
         body { font-family: -apple-system, sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #000; }
-        header { display: flex; justify-content: space-between; align-items: center; padding: 10px 15px; background: white; border-bottom: 1px solid #f0f0f0; position: sticky; top: 0; z-index: 1000; }
-        .header-left { display: flex; align-items: center; gap: 15px; }
+        
         .logo img { height: 45px; display: block; }
-        .search-icon-img { width: 24px; height: 24px; cursor: pointer; }
 
         .slider-wrapper { position: relative; width: 100%; margin-top: 10px; }
         .slider-container { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
@@ -25,7 +99,8 @@
         .product-price { font-size: 14px; color: #555; letter-spacing: 0.5px; }
 
         .main-card { border: 1px solid #e8e8e8; border-radius: 15px; margin: 0 20px 40px 20px; padding: 20px; background-color: #fff; }
-.warranty-badge {
+        
+        .warranty-badge {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -34,16 +109,12 @@
             color: #ff4d4d;
             border-radius: 20px;
             padding: 6px 15px;
-            /* Daha yığcam ölçü */
             font-size: 11px;
-            /* Daha zərif yazı */
             font-weight: bold;
             width: fit-content;
             margin: 0 auto 15px auto;
-            /* Ortada qalması və aşağı ilə məsafə */
         }
 
-        /* WhatsApp Düyməsi - BirMarket ilə eyni hündürlükdə */
         .wp-button {
             display: flex;
             align-items: center;
@@ -59,7 +130,6 @@
             transition: transform 0.2s;
         }
 
-        /* BirMarket Düyməsi - Yenilənmiş */
         .installment-button {
             display: flex;
             align-items: center;
@@ -91,7 +161,7 @@
 
     <header>
         <div class="header-left">
-            <div style="font-size: 24px;">☰</div>
+            <div style="font-size: 24px; cursor: pointer;" onclick="toggleMenu()">☰</div>
             <div class="logo">
                 <a href="index.html">
                     <img src="Images_site/Charger.az Logo.png" alt="Charger.az Logo">
@@ -99,6 +169,17 @@
             </div>
         </div>
     </header>
+
+    <div id="sideMenu" class="side-menu">
+        <div class="menu-header">
+            <span>Charger.az</span>
+            <div class="close-btn" onclick="toggleMenu()">&times;</div>
+        </div>
+        <a href="index.html">Ana Səhifə</a>
+        <a href="https://wa.me/994998058060">WhatsApp Dəstək</a>
+    </div>
+
+    <div id="menuOverlay" class="menu-overlay" onclick="toggleMenu()"></div>
 
    <div class="slider-wrapper">
         <div class="slider-container" id="slider">
@@ -110,15 +191,13 @@
         </div>
     </div>
 
-    <div class="dots">
+    <div class="dots" id="dotsContainer">
         <div class="dot active"></div>
         <div class="dot"></div>
         <div class="dot"></div>
         <div class="dot"></div>
         <div class="dot"></div>
     </div>
-
- 
 
     <div class="product-header">
         <div class="product-title">ENERGEA ALUPAC MINI 5K</div>
@@ -151,11 +230,24 @@
 
         <div class="about-title">Məhsum Haqqında</div>
         <div class="about-text">
-            Energea Alupac Mini 5K poverbankı, gündəlik istifadə üçün nəzərdə tutulmuş ultra-kompakt və yüngül bir powerbankdır. 5000mAh tutumu ilə smartfonunuzun enerji ehtiyacını qarşılayır və 20W PD (Power Delivery) texnologiyası sayəsində sürətli şarj dəstəyi təqdim edir. Metal korpusu həm şık görünür, həm də istilik paylanmasını optimallaşdırır. Kiçik ölçüləri sayəsində cibinizdə və ya çantanızda heç bir yer tutmur.
+            Energea Alupac Mini 5K "powerbank"ı, gündəlik istifadə üçün nəzərdə tutulmuş ultra-kompakt və yüngül bir powerbankdır. 5000mAh tutumu ilə smartfonunuzun enerji ehtiyacını qarşılayır və 20W PD (Power Delivery) texnologiyası sayəsində sürətli şarj dəstəyi təqdim edir. Metal korpusu həm şık görünür, həm də istilik paylanmasını optimallaşdırır. Kiçik ölçüləri sayəsində cibinizdə və ya çantanızda heç bir yer tutmur.
         </div>
     </div>
 
     <script>
+        function toggleMenu() {
+            const menu = document.getElementById("sideMenu");
+            const overlay = document.getElementById("menuOverlay");
+
+            if (menu.style.left === "0px") {
+                menu.style.left = "-250px";
+                overlay.style.display = "none";
+            } else {
+                menu.style.left = "0px";
+                overlay.style.display = "block";
+            }
+        }
+
         const slider = document.getElementById('slider');
         const dots = document.querySelectorAll('.dot');
         slider.addEventListener('scroll', () => {

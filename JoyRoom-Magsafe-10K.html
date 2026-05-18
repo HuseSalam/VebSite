@@ -1,33 +1,181 @@
 <!DOCTYPE html>
 <html lang="az">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joyroom JR-W020 - Charger.az</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #333; }
-        header { display: flex; align-items: center; justify-content: flex-start; padding: 12px 20px; background: white; border-bottom: 1px solid #f0f0f0; gap: 15px; position: sticky; top: 0; z-index: 1000; }
-        .menu-icon { font-size: 24px; cursor: pointer; display: flex; align-items: center; }
-        .logo { display: flex; align-items: center; }
-        .logo img { height: 35px; }
-        .search-icon { margin-left: auto; display: flex; align-items: center; }
-        .search-icon img { height: 22px; cursor: pointer; }
+        /* Yan menyu və overlay stilləri */
+        .side-menu {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 2000;
+            top: 0;
+            left: -250px;
+            background-color: rgb(56, 56, 56);
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 20px;
+        }
 
-        .slider-wrapper { position: relative; width: 100%; margin-top: 10px; }
-        .slider-container { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
-        .slider-container::-webkit-scrollbar { display: none; }
-        .slider-container img { width: 100%; flex-shrink: 0; scroll-snap-align: start; scroll-snap-stop: always; height: 380px; object-fit: contain; }
+        .menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px 20px;
+            border-bottom: 1px solid #eee;
+            font-weight: bold;
+            color: #ffffff;
+        }
 
-        .dots { display: flex; justify-content: center; gap: 8px; margin: 10px 0 20px 0; }
-        .dot { width: 8px; height: 8px; background-color: #ddd; border-radius: 50%; transition: 0.3s; }
-        .dot.active { background-color: #444; }
+        .close-btn {
+            font-size: 30px;
+            cursor: pointer;
+        }
 
-        .product-header { text-align: center; margin-bottom: 25px; }
-        .product-title { font-size: 15px; font-weight: 500; margin-bottom: 15px; color: #333; text-transform: uppercase; }
-        .product-price { font-size: 14px; color: #555; letter-spacing: 0.5px; font-weight: normal; }
+        .side-menu a {
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #ffffff;
+            display: block;
+            transition: 0.2s;
+            border-bottom: 1px solid #f9f9f9;
+        }
 
-        .main-card { border: 1px solid #e8e8e8; border-radius: 15px; margin: 0 20px 40px 20px; padding: 20px; background-color: #fff; }
-.warranty-badge {
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1500;
+        }
+
+        /* Tap highlight silinməsi və animasiya */
+        * {
+            -webkit-tap-highlight-color: transparent !important;
+            -webkit-touch-callout: none !important;
+            outline: none !important;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 12px 20px;
+            background: white;
+            border-bottom: 1px solid #f0f0f0;
+            gap: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .menu-icon {
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 35px;
+        }
+
+        .slider-wrapper {
+            position: relative;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .slider-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .slider-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .slider-container img {
+            width: 100%;
+            flex-shrink: 0;
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+            height: 380px;
+            object-fit: contain;
+        }
+
+        .dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 10px 0 20px 0;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: #ddd;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+
+        .dot.active {
+            background-color: #444;
+        }
+
+        .product-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .product-title {
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 15px;
+            color: #333;
+            text-transform: uppercase;
+        }
+
+        .product-price {
+            font-size: 14px;
+            color: #555;
+            letter-spacing: 0.5px;
+            font-weight: normal;
+        }
+
+        .main-card {
+            border: 1px solid #e8e8e8;
+            border-radius: 15px;
+            margin: 0 20px 40px 20px;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .warranty-badge {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -36,16 +184,12 @@
             color: #ff4d4d;
             border-radius: 20px;
             padding: 6px 15px;
-            /* Daha yığcam ölçü */
             font-size: 11px;
-            /* Daha zərif yazı */
             font-weight: bold;
             width: fit-content;
             margin: 0 auto 15px auto;
-            /* Ortada qalması və aşağı ilə məsafə */
         }
 
-        /* WhatsApp Düyməsi - BirMarket ilə eyni hündürlükdə */
         .wp-button {
             display: flex;
             align-items: center;
@@ -61,7 +205,6 @@
             transition: transform 0.2s;
         }
 
-        /* BirMarket Düyməsi - Yenilənmiş */
         .installment-button {
             display: flex;
             align-items: center;
@@ -76,28 +219,86 @@
             margin-bottom: 25px;
             transition: transform 0.2s;
         }
-        .wp-button img { width: 22px; height: 22px; margin-right: 10px; filter: brightness(0) invert(1); border: none; display: block; }
 
-        .specs-title { font-size: 16px; font-weight: bold; margin-bottom: 15px; }
-        .specs-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-        .specs-table tr { border-bottom: 1px solid #f5f5f5; }
-        .specs-table td { padding: 12px 0; }
-        .label { color: #999; }
-        .value { text-align: right; font-weight: bold; color: #000; }
+        /* Düymə animasiyası */
+        .wp-button:active,
+        .installment-button:active {
+            transform: scale(0.96);
+        }
 
-        .about-title { font-size: 16px; font-weight: bold; margin: 25px 0 10px 0; }
-        .about-text { font-size: 13px; color: #666; line-height: 1.6; text-align: justify; }
+        .wp-button img {
+            width: 22px;
+            height: 22px;
+            margin-right: 10px;
+            filter: brightness(0) invert(1);
+            border: none;
+            display: block;
+        }
+
+        .specs-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        .specs-table tr {
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .specs-table td {
+            padding: 12px 0;
+        }
+
+        .label {
+            color: #999;
+        }
+
+        .value {
+            text-align: right;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .about-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 25px 0 10px 0;
+        }
+
+        .about-text {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.6;
+            text-align: justify;
+        }
     </style>
 </head>
+
 <body>
 
     <header>
-        <div class="menu-icon">☰</div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
         <div class="logo">
             <a href="index.html"><img src="Images_site/Charger.az Logo.png" alt="Logo"></a>
         </div>
-    
     </header>
+
+    <div id="sideMenu" class="side-menu">
+        <div class="menu-header">
+            <span>Charger.az</span>
+            <div class="close-btn" onclick="toggleMenu()">&times;</div>
+        </div>
+        <a href="index.html">Ana Səhifə</a>
+        <a href="https://wa.me/994998058060">WhatsApp Dəstək</a>
+    </div>
+
+    <div id="menuOverlay" class="menu-overlay" onclick="toggleMenu()"></div>
 
     <div class="slider-wrapper">
         <div class="slider-container" id="slider">
@@ -106,7 +307,6 @@
             <img src="Images_site/JR-magsafe-10K-4.png">
             <img src="Images_site/JR-magsafe-10K-5.png">
             <img src="Images_site/JR-magsafe-10K-2.png">
-            
         </div>
     </div>
 
@@ -120,7 +320,8 @@
     <div class="main-card">
         <div class="warranty-badge">🛡️ RƏSMİ ZƏMANƏT: 3 AY</div>
 
-        <a href="https://wa.me/994998058060?text=Salam%2C%20Joyroom%20JR-W020%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m." class="wp-button">
+        <a href="https://wa.me/994998058060?text=Salam%2C%20Joyroom%20JR-W020%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m."
+            class="wp-button">
             <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
             İndi Sifariş Et
         </a>
@@ -132,25 +333,60 @@
 
         <div class="specs-title">Texniki Xüsusiyyətlər</div>
         <table class="specs-table">
-          <tr><td class="label">Batareya tutumu:</td><td class="value">10000mAh</td></tr>
-            <tr><td class="label">Type-C girişi:</td><td class="value">5V-3A, 9V-2A</td></tr>
-            <tr><td class="label">Type-C çıxışı:</td><td class="value">5V-2.4A, 9V-2.22A, 12V-1.67A</td></tr>
-            <tr><td class="label">USB çıxışı:</td><td class="value">5V-3A, 9V-2A, 12V-1.5A</td></tr>
-            <tr><td class="label">Simsiz çıxış:</td><td class="value">5W, 7.5W, 10W, 15W (Maks)</td></tr>
-            <tr><td class="label">Məhsulun materialı:</td><td class="value">ABS + yanğına davamlı PC</td></tr>
+            <tr>
+                <td class="label">Batareya tutumu:</td>
+                <td class="value">10000mAh</td>
+            </tr>
+            <tr>
+                <td class="label">Type-C girişi:</td>
+                <td class="value">5V-3A, 9V-2A</td>
+            </tr>
+            <tr>
+                <td class="label">Type-C çıxışı:</td>
+                <td class="value">5V-2.4A, 9V-2.22A, 12V-1.67A</td>
+            </tr>
+            <tr>
+                <td class="label">USB çıxışı:</td>
+                <td class="value">5V-3A, 9V-2A, 12V-1.5A</td>
+            </tr>
+            <tr>
+                <td class="label">Simsiz çıxış:</td>
+                <td class="value">5W, 7.5W, 10W, 15W (Maks)</td>
+            </tr>
+            <tr>
+                <td class="label">Məhsulun materialı:</td>
+                <td class="value">ABS + yanğına davamlı PC</td>
+            </tr>
         </table>
 
         <div class="about-title">Məhsul Haqqında</div>
         <div class="about-text">
-            Joyroom, 10000 mAh tutumlu və MagSafe dəstəkli mini poverbankdır. Şəkillərdə göründüyü kimi həm sürətli naqilli (20W PD), həm də naqilsiz (15W) şarj imkanı təqdim edir. ABS və yanğına davamlı PC materialından hazırlanmışdır ki, bu da yüksək təhlükəsizlik təmin edir. iPhone 12 və daha yeni modellər üçün maqnitli yapışma özəlliyi ilə istifadəsi çox rahatdır.
+            Joyroom, 10000 mAh tutumlu və MagSafe dəstəkli mini "powerbank"dır. Şəkillərdə göründüyü kimi həm sürətli
+            naqilli (20W PD), həm də naqilsiz (15W) şarj imkanı təqdim edir. ABS və yanğına davamlı PC materialından
+            hazırlanmışdır ki, bu da yüksək təhlükəsizlik təmin edir. iPhone 12 və daha yeni modellər üçün maqnitli
+            yapışma özəlliyi ilə istifadəsi çox rahatdır.
         </div>
     </div>
 
     <script>
+        // Menyu funksiyası
+        function toggleMenu() {
+            const menu = document.getElementById("sideMenu");
+            const overlay = document.getElementById("menuOverlay");
+
+            if (menu.style.left === "0px") {
+                menu.style.left = "-250px";
+                overlay.style.display = "none";
+            } else {
+                menu.style.left = "0px";
+                overlay.style.display = "block";
+            }
+        }
+
         const slider = document.getElementById('slider');
         const dotsContainer = document.getElementById('dotsContainer');
         const images = slider.getElementsByTagName('img');
-        
+
         for (let i = 0; i < images.length; i++) {
             const dot = document.createElement('div');
             dot.classList.add('dot');
@@ -165,4 +401,5 @@
         });
     </script>
 </body>
+
 </html>

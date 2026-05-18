@@ -1,94 +1,298 @@
 <!DOCTYPE html>
 <html lang="az">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charger.az - Ana Səhifə</title>
     <meta property="og:title" content="Charger.az - Keyfiyyətli Şarj Cihazları">
-<meta property="og:description" content="Ən son model adapterlər, powerbanklar və aksesuarlar.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://grand-kashata-1064f5.netlify.app/">
-
-<meta property="og:image" content="https://grand-kashata-1064f5.netlify.app/Images_site/OG_link_image.png">
-
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Charger.az Mağaza Şəkli">
+    <meta property="og:description" content="Ən son model adapterlər, powerbanklar və aksesuarlar.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://grand-kashata-1064f5.netlify.app/">
+    <meta property="og:image" content="https://grand-kashata-1064f5.netlify.app/Images_site/OG_link_image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Charger.az Mağaza Şəkli">
+    
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; background-color: #f8f9fa; }
-        
-        header { 
-            display: flex; justify-content: space-between; padding: 10px 15px; 
-            border-bottom: 1px solid #eee; align-items: center; position: sticky; 
-            top: 0; background: white; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        
-        .header-left { display: flex; align-items: center; gap: 12px; }
-        .logo img { height: 30px; display: block; }
-        .search-icon img { height: 20px; cursor: pointer; }
-        
-        .search-container { padding: 10px 15px; background: white; }
-        #searchInput { 
-            width: 100%; padding: 10px 15px; border: 1px solid #efefef; 
-            border-radius: 12px; font-size: 14px; outline: none; 
-            background: #f1f3f4; box-sizing: border-box;
-        }
-        
-        .section-title { 
-    padding: 15px 15px 5px; 
-    font-size: 16px; 
-    font-weight: 800; 
-    color: #333; 
-    text-align: center; /* Sol tərəfdən mərkəzə dəyişdirildi */
-    letter-spacing: 0.5px; 
-    text-transform: uppercase;
+
+        /* Yan menyunun stili */
+.side-menu {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: -250px; /* Başlanğıcda gizli */
+    background-color: white;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 20px;
 }
-        
-        .product-list { 
-            display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 10px; 
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 20px;
+    border-bottom: 1px solid #eee;
+    font-weight: bold;
+    color: #004a99;
+}
+
+.close-btn {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.side-menu a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    display: block;
+    transition: 0.2s;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+.side-menu a:active {
+    background-color: #f1f3f4;
+    color: #004a99;
+}
+
+/* Arxa fon qaraltması */
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+
+        /* 1. Mavi kölgəni və fokus xətlərini bütün saytda ləğv edirik */
+        * {
+            -webkit-tap-highlight-color: transparent !important;
+            outline: none !important;
         }
-        
-        .product-item { 
-            border-radius: 15px; padding: 12px 8px; transition: 0.2s; 
-            text-decoration: none; display: flex; flex-direction: column;
-            align-items: center; background: #fff; border: 1px solid #f0f0f0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            background-color: #f8f9fa;
         }
-        
-        .product-item:active { transform: scale(0.95); background: #fdfdfd; }
-        
-        .product-item img { 
-            width: 100%; height: 110px; object-fit: contain; margin-bottom: 8px; 
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 15px;
+            border-bottom: 1px solid #eee;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
-        
-        .product-item p { 
-            font-weight: 600; font-size: 11px; margin: 5px 0 2px; 
-            color: #222; text-transform: uppercase; line-height: 1.2;
-            text-align: center; height: 26px; overflow: hidden;
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
-        
-        .product-item span { 
-            color: #004a99; font-size: 13px; font-weight: 700; margin-top: 5px;
+
+        .logo img {
+            height: 30px;
+            display: block;
         }
-        
-        #noResults { display: none; padding: 40px 20px; color: #999; font-size: 14px; }
+
+        .search-icon img {
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .search-container {
+            padding: 10px 15px;
+            background: white;
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #efefef;
+            border-radius: 12px;
+            font-size: 14px;
+            outline: none;
+            background: #f1f3f4;
+            box-sizing: border-box;
+        }
+
+        .section-title {
+            padding: 15px 15px 5px;
+            font-size: 16px;
+            font-weight: 800;
+            color: #333;
+            text-align: center;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .product-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        /* Məhsul qutusu stili */
+        .product-item {
+            position: relative;
+            border-radius: 15px;
+            padding: 12px 8px;
+            transition: 0.2s;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #fff;
+            border: 1px solid #f0f0f0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+        }
+
+        /* 2. Ana kartın parıltı və sıxılma effekti */
+        .product-item:active {
+            transform: scale(0.94);
+            background: #fff;
+            box-shadow: 0 0 20px rgba(0, 74, 153, 0.5), 0 0 40px rgba(0, 74, 153, 0.2);
+            border: 1px solid #004a99;
+            transition: 0.05s ease-out;
+        }
+
+        /* 3. Hədiyyə basılanda kartın effektini söndürürük */
+        .product-item:has(.gift-badge:active) {
+            transform: none !important;
+            box-shadow: none !important;
+            border: 1px solid #f0f0f0 !important;
+            background: white !important;
+        }
+
+        .product-item img {
+            width: 100%;
+            height: 110px;
+            object-fit: contain;
+            margin-bottom: 8px;
+        }
+
+        .product-item p {
+            font-weight: 600;
+            font-size: 11px;
+            margin: 5px 0 2px;
+            color: #222;
+            text-transform: uppercase;
+            line-height: 1.2;
+            text-align: center;
+            height: 26px;
+            overflow: hidden;
+        }
+
+        .product-item span {
+            color: #004a99;
+            font-size: 13px;
+            font-weight: 700;
+            margin-top: 5px;
+        }
+
+        /* Hədiyyə emojisinin stili */
+        .gift-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 32px;
+            height: 32px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+            cursor: pointer;
+            border: 1px solid #f0f0f0;
+            transition: 0.1s;
+        }
+
+        /* 4. Hədiyyə basılanda qırmızı neon parıltı */
+        .gift-badge:active {
+            transform: scale(0.8) !important;
+            background: #fff !important;
+            box-shadow: 0 0 15px rgba(255, 71, 87, 0.7), 0 0 30px rgba(255, 71, 87, 0.4) !important;
+            border: 1px solid #ff4757 !important;
+            transition: 0.05s ease-out !important;
+        }
+
+        /* Hədiyyə şəkli üçün pəncərə */
+        .gift-preview {
+            display: none;
+            position: absolute;
+            top: 45px;
+            left: 15px;
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            border: 2px solid #004a99;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            overflow: hidden;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transform: scale(0.5);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s linear;
+        }
+
+        .gift-preview.active {
+            display: flex;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .gift-preview img {
+            width: 85%;
+            height: 85%;
+            object-fit: contain;
+            transform: translateY(3px);
+        }
+
+        #noResults {
+            display: none;
+            padding: 40px 20px;
+            color: #999;
+            font-size: 14px;
+        }
     </style>
 </head>
+
 <body>
 
     <header>
-        <div class="header-left">
-            <div style="font-size: 24px; cursor: pointer;">☰</div>
-            <div class="logo">
-                <a href="index.html">
-                    <img src="Images_site/Charger.az Logo.png" alt="Logo">
-                </a>
-            </div>
+    <div class="header-left">
+        <div style="font-size: 24px; cursor: pointer; -webkit-tap-highlight-color: transparent;" onclick="toggleMenu()">☰</div>
+        <div class="logo">
+            <a href="index.html">
+                <img src="Images_site/Charger.az Logo.png" alt="Logo">
+            </a>
         </div>
-        <div class="search-icon" onclick="focusSearch()">
-            <img src="Images_site/lupa.png" alt="Axtar">
-        </div>
-    </header>
+    </div>
+    <div class="search-icon" onclick="focusSearch()">
+        <img src="Images_site/lupa.png" alt="Axtar">
+    </div>
+</header>
 
     <div class="search-container">
         <input type="text" id="searchInput" placeholder="Məhsul axtar..." onkeyup="searchProduct()">
@@ -99,55 +303,60 @@
     <div id="noResults">Uyğun məhsul tapılmadı.</div>
 
     <div class="product-list" id="productList">
-        
+
         <a href="anker45w.html" class="product-item" data-name="anker 45w smart display adapter başlıq basliq ucluq sarj şarj aləti pps gan poweriq original зарядка блок адаптер">
             <img src="Images_site/Anker 45 1.jpg">
+            <div class="gift-badge" onclick="showGift(event, this)">🎁</div>
+            <div class="gift-preview">
+                <img src="Images_site/merkan_kecirici.png">
+            </div>
             <p>ANKER 45W (Smart Display)</p>
             <span>89.99 AZN</span>
         </a>
 
         <a href="EG-Mag-pac-pro-plus-10K.html" class="product-item" data-name="energea mag pac pro plus 10k 10000mah powerbank poverbank magsafe maqnidli simsiz wireless charging повербанк">
             <img src="Images_site/EG-MagPac-Pro-1.jpg">
-            <p>ENERGEA Mag Pac Pro Plus 10K</p>
+            <p>ENERGEA 10K (MagPac Pro+)</p>
             <span>99.99 AZN</span>
         </a>
-        
+
         <a href="AirPods_4_premium.html" class="product-item" data-name="qulaqliq airpods 4 premium type-c wireless charging spatial audio gps nauşnik nausnik bluetooth наушники">
             <img src="Images_site/airpods4_1.png">
             <p>AIRPODS 4 (Premium)</p>
             <span>44.99 AZN</span>
         </a>
 
-
         <a href="apple20w.html" class="product-item" data-name="apple 20w usb-c adapter eu avropa başlıq basliq ucluq şarj sarj aləti iphone original зарядка блок эпл">
             <img src="Images_site/apple 20 2.png">
-            <p>APPLE 20W (EU)</p>
+            <p>APPLE 20W</p>
             <span>59.99 AZN</span>
         </a>
 
-
-
         <a href="apple40w.html" class="product-item" data-name="apple 40w uk adapter dual usb-c ikili başlıq basliq ucluq şarj sarj aləti iphone ipad original зарядка блок эпл">
             <img src="Images_site/apple 40 4.png">
-            <p>APPLE 40W (UK)</p>
+            <div class="gift-badge" onclick="showGift(event, this)">🎁</div>
+            <div class="gift-preview">
+                <img src="Images_site/merkan_kecirici.png">
+            </div>
+            <p>APPLE 40W</p>
             <span>89.99 AZN</span>
         </a>
 
-        
-
         <a href="anker30w.html" class="product-item" data-name="anker 30w 511 nano 3 usb-c adapter başlıq basliq ucluq şarj sarj aləti kiçik sürətli зарядка анкер">
             <img src="Images_site/anker30 5.jpg">
+            <div class="gift-badge" onclick="showGift(event, this)">🎁</div>
+            <div class="gift-preview">
+                <img src="Images_site/merkan_kecirici.png">
+            </div>
             <p>ANKER 30W NANO 3</p>
             <span>69.99 AZN</span>
         </a>
-
 
         <a href="AirPods_2_premium.html" class="product-item" data-name="qulaqliq airpods 2 premium wireless charging nauşnik nausnik bluetooth simsiz sensor наушники эпл">
             <img src="Images_site/airpods2_1.png">
             <p>AIRPODS 2 (Premium)</p>
             <span>29.99 AZN</span>
         </a>
-
 
         <a href="samsung25w.html" class="product-item" data-name="samsung 25w usb-c adapter başlıq basliq ucluq şarj sarj aləti super fast charging sfc original самсунг зарядка">
             <img src="Images_site/samsung25 1.png">
@@ -167,8 +376,6 @@
             <span>74.99 AZN</span>
         </a>
 
-        
-
         <a href="JoyRoom-PBF12-10K.html" class="product-item" data-name="poverbank joyroom 10k 10000mah powerbank enerji yığan bateriya 22.5w 3 girişli led display повербанк джойрум">
             <img src="Images_site/Joyroom-10K-1.png">
             <p>JOYROOM 10K (22.5W)</p>
@@ -186,10 +393,6 @@
             <p>JOYROOM 20K (22.5W)</p>
             <span>69.99 AZN</span>
         </a>
-
-        
-
-        
 
         <a href="AirPods_4_ANC_premium.html" class="product-item" data-name="qulaqliq airpods 4 anc aktiv kuy legvi səs kəsən transparency mode simsiz nauşnik nausnik bluetooth наушники">
             <img src="Images_site/airpods4_ANC_1.jpg">
@@ -212,7 +415,7 @@
         <a href="anker_car_char_67vatt.html" class="product-item" data-name="anker 535 car charger 67w 3 port avtomobil adapteri masin maşın üçün başlıq usb-c usb-a зарядка в машину">
             <img src="Images_site/Anker_Car_Char_1.jpg">
             <p>ANKER CAR CHARGER 67W</p>
-            <span>69.99 AZN</span>  
+            <span>69.99 AZN</span>
         </a>
 
         <a href="samsung65w.html" class="product-item" data-name="samsung 65w trio adapter başlıq basliq ucluq şarj sarj aləti usb-c usb-a super fast charging 2.0 original зарядка">
@@ -224,11 +427,40 @@
     </div>
 
     <script>
-        // Lupa ikonuna basanda axtarış xanasını aktiv edir
+        function showGift(event, element) {
+            // Hadisənin arxadakı karta keçməsini dayandırırıq
+            event.stopPropagation();
+            event.preventDefault();
+
+            let preview = element.nextElementSibling;
+
+            if (preview.classList.contains('active')) {
+                preview.classList.remove('active');
+                setTimeout(() => { preview.style.display = 'none'; }, 200);
+            } else {
+                document.querySelectorAll('.gift-preview').forEach(el => {
+                    el.classList.remove('active');
+                    el.style.display = 'none';
+                });
+
+                preview.style.display = 'flex';
+                setTimeout(() => { preview.classList.add('active'); }, 10);
+            }
+        }
+
+        // Kənar klikləri bağlamaq üçün
+        document.addEventListener('click', function (event) {
+            if (!event.target.classList.contains('gift-badge')) {
+                document.querySelectorAll('.gift-preview').forEach(el => {
+                    el.classList.remove('active');
+                    setTimeout(() => { el.style.display = 'none'; }, 200);
+                });
+            }
+        });
+
         function focusSearch() {
             const searchInput = document.getElementById('searchInput');
             searchInput.focus();
-            // Mobil cihazlarda səhifənin axtarış xanasına sürüşməsi üçün:
             window.scrollTo({
                 top: searchInput.offsetTop - 100,
                 behavior: 'smooth'
@@ -263,7 +495,33 @@
                 title.style.display = "none";
             }
         }
+
+        function toggleMenu() {
+    const menu = document.getElementById("sideMenu");
+    const overlay = document.getElementById("menuOverlay");
+
+    if (menu.style.left === "0px") {
+        menu.style.left = "-250px";
+        overlay.style.display = "none";
+    } else {
+        menu.style.left = "0px";
+        overlay.style.display = "block";
+    }
+}
+
+
     </script>
 
 </body>
+<div id="sideMenu" class="side-menu">
+    <div class="menu-header">
+        <span>Charger.az</span>
+        <div class="close-btn" onclick="toggleMenu()">&times;</div>
+    </div>
+    <a href="index.html">Ana Səhifə</a>
+    <a href="https://wa.me/994998058060">WhatsApp Dəstək</a>
+</div>
+
+<div id="menuOverlay" class="menu-overlay" onclick="toggleMenu()"></div>
+
 </html>

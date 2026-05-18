@@ -5,6 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joyroom 10K (22.5W) - Charger.az</title>
     <style>
+        /* Yan menyu və overlay stilləri */
+        .side-menu {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 2000;
+            top: 0;
+            left: -250px;
+            background-color: rgb(56, 56, 56);
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 20px;
+        }
+
+        .menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px 20px;
+            border-bottom: 1px solid #eee;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .close-btn {
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .side-menu a {
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #ffffff;
+            display: block;
+            transition: 0.2s;
+            border-bottom: 1px solid #f9f9f9;
+        }
+
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1500;
+        }
+
+        /* Tap highlight silinməsi və animasiya təsiri */
+        * {
+            -webkit-tap-highlight-color: transparent !important;
+            -webkit-touch-callout: none !important;
+            outline: none !important;
+        }
+
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #333; }
         header { display: flex; align-items: center; justify-content: flex-start; padding: 12px 20px; background: white; border-bottom: 1px solid #f0f0f0; gap: 15px; position: sticky; top: 0; z-index: 1000; }
         .menu-icon { font-size: 24px; cursor: pointer; display: flex; align-items: center; }
@@ -27,7 +85,7 @@
         .product-price { font-size: 14px; color: #555; letter-spacing: 0.5px; font-weight: normal; }
 
         .main-card { border: 1px solid #e8e8e8; border-radius: 15px; margin: 0 20px 40px 20px; padding: 20px; background-color: #fff; }
-.warranty-badge {
+        .warranty-badge {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -36,16 +94,13 @@
             color: #ff4d4d;
             border-radius: 20px;
             padding: 6px 15px;
-            /* Daha yığcam ölçü */
             font-size: 11px;
-            /* Daha zərif yazı */
             font-weight: bold;
             width: fit-content;
             margin: 0 auto 15px auto;
-            /* Ortada qalması və aşağı ilə məsafə */
         }
 
-        /* WhatsApp Düyməsi - BirMarket ilə eyni hündürlükdə */
+        /* WhatsApp Düyməsi */
         .wp-button {
             display: flex;
             align-items: center;
@@ -61,7 +116,7 @@
             transition: transform 0.2s;
         }
 
-        /* BirMarket Düyməsi - Yenilənmiş */
+        /* BirMarket Düyməsi */
         .installment-button {
             display: flex;
             align-items: center;
@@ -76,6 +131,12 @@
             margin-bottom: 25px;
             transition: transform 0.2s;
         }
+
+        /* Aktiv basılma animasiyası (Anker-dəki kimi) */
+        .wp-button:active, .installment-button:active {
+            transform: scale(0.96);
+        }
+
         .wp-button img { width: 22px; height: 22px; margin-right: 10px; filter: brightness(0) invert(1); border: none; display: block; }
 
         .specs-title { font-size: 16px; font-weight: bold; margin-bottom: 15px; }
@@ -92,12 +153,22 @@
 <body>
 
     <header>
-        <div class="menu-icon">☰</div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
         <div class="logo">
             <a href="index.html"><img src="Images_site/Charger.az Logo.png" alt="Logo"></a>
         </div>
-   
     </header>
+
+    <div id="sideMenu" class="side-menu">
+        <div class="menu-header">
+            <span>Charger.az</span>
+            <div class="close-btn" onclick="toggleMenu()">&times;</div>
+        </div>
+        <a href="index.html">Ana Səhifə</a>
+        <a href="https://wa.me/994998058060">WhatsApp Dəstək</a>
+    </div>
+
+    <div id="menuOverlay" class="menu-overlay" onclick="toggleMenu()"></div>
 
     <div class="slider-wrapper">
         <div class="slider-container" id="slider">
@@ -112,7 +183,6 @@
             <img src="Images_site/Joyroom-10K-9.png">
             <img src="Images_site/Joyroom-10K-10.png">
             <img src="Images_site/Joyroom-10K-11.png">
-            
         </div>
     </div>
 
@@ -149,11 +219,25 @@
 
         <div class="about-title">Məhsul Haqqında</div>
         <div class="about-text">
-            Joyroom JR-QP191, eyni vaxtda 3 cihaza qədər enerji verə bilən universal və güclü bir poverbankdır. 22.5W sürətli şarj dəstəyi ilə smartfonlarınızı qısa müddətdə enerji ilə təmin edir. Üzərindəki LED displey batareyanın qalıq faizini dəqiq göstərir. Kompakt ölçüsü sayəsində səyahətlər və gündəlik istifadə üçün çox rahatdır. Çoxpilləli qoruma sistemi sayəsində cihazlarınızı qısaqapanma və yüksək gərginlikdən qoruyur.
+            Joyroom JR-QP191, eyni vaxtda 3 cihaza qədər enerji verə bilən universal və güclü bir "powerbank"dır. 22.5W sürətli şarj dəstəyi ilə smartfonlarınızı qısa müddətdə enerji ilə təmin edir. Üzərindəki LED displey batareyanın qalıq faizini dəqiq göstərir. Kompakt ölçüsü sayəsində səyahətlər və gündəlik istifadə üçün çox rahatdır. Çoxpilləli qoruma sistemi sayəsində cihazlarınızı qısaqapanma və yüksək gərginlikdən qoruyur.
         </div>
     </div>
 
     <script>
+        // Menyu funksionallığı
+        function toggleMenu() {
+            const menu = document.getElementById("sideMenu");
+            const overlay = document.getElementById("menuOverlay");
+
+            if (menu.style.left === "0px") {
+                menu.style.left = "-250px";
+                overlay.style.display = "none";
+            } else {
+                menu.style.left = "0px";
+                overlay.style.display = "block";
+            }
+        }
+
         const slider = document.getElementById('slider');
         const dotsContainer = document.getElementById('dotsContainer');
         const images = slider.getElementsByTagName('img');

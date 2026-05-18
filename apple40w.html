@@ -6,6 +6,12 @@
     <title>Apple 40W (UK) - Charger.az</title>
     <style>
         /* Ümumi Stil */
+        * {
+            -webkit-tap-highlight-color: transparent !important;
+            -webkit-touch-callout: none !important;
+            outline: none !important;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
             margin: 0;
@@ -14,7 +20,7 @@
             color: #000;
         }
 
-        /* Header - Logo Sola Çəkildi */
+        /* Header */
         header {
             display: flex;
             justify-content: space-between;
@@ -38,53 +44,55 @@
         .logo a { display: block; text-decoration: none; }
         .logo img { height: 45px; display: block; }
 
-        .search-icon-img {
-            width: 24px;
-            height: 24px;
-            cursor: pointer;
-            display: block;
+        /* Yan menyu stili */
+        .side-menu {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 2000;
+            top: 0;
+            left: -250px;
+            background-color: rgb(56, 56, 56);
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 20px;
         }
 
-        /* Axtarış Paneli (Overlay) */
-        #searchOverlay {
+        .menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px 20px;
+            border-bottom: 1px solid #eee;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .close-btn { font-size: 30px; cursor: pointer; }
+
+        .side-menu a {
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #ffffff;
+            display: block;
+            transition: 0.2s;
+            border-bottom: 1px solid #444;
+        }
+
+        .menu-overlay {
             display: none;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: white;
-            z-index: 2000;
-            padding-top: 20px;
-            flex-direction: column;
-            align-items: center;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1500;
         }
 
-        .search-header {
-            width: 90%;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        #searchOverlay input {
-            flex: 1;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 25px;
-            font-size: 16px;
-            outline: none;
-            background: #f9f9f9;
-        }
-
-        .close-search {
-            font-size: 24px;
-            cursor: pointer;
-            color: #666;
-            padding: 5px;
-        }
-
-        /* Slider - Yenilənmiş Hissə */
+        /* Slider */
         .slider-wrapper { position: relative; width: 100%; margin-top: 10px; }
         
         .slider-container { 
@@ -101,28 +109,60 @@
             width: 100%; 
             flex-shrink: 0; 
             scroll-snap-align: start; 
-            scroll-snap-stop: always; /* Şəkillərin tək-tək dayanmasını təmin edir */
+            scroll-snap-stop: always;
             height: 380px; 
             object-fit: contain; 
         }
 
-        /* Nöqtələr */
-        .dots {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            margin: 10px 0 20px 0;
-        }
-        .dot {
-            width: 8px;
-            height: 8px;
-            background-color: #ddd;
+        /* Hədiyyə ikonu sistemi */
+        .gift-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 55px;
+            height: 55px;
+            background: white;
             border-radius: 50%;
-            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            cursor: pointer;
+            border: 2px solid #f0f0f0;
+            transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-        .dot.active {
-            background-color: #444;
+
+        .gift-badge:active { transform: scale(0.85); }
+
+        .gift-preview {
+            display: none;
+            position: absolute;
+            top: 85px;
+            left: 30px;
+            width: 150px;
+            height: 150px;
+            background: white;
+            border-radius: 50%;
+            border: 3px solid #004a99;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+            z-index: 110;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            opacity: 0;
+            transform: scale(0.3);
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
+
+        .gift-preview.active { display: flex; opacity: 1; transform: scale(1); }
+        .gift-preview img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* Nöqtələr */
+        .dots { display: flex; justify-content: center; gap: 8px; margin: 10px 0 20px 0; }
+        .dot { width: 8px; height: 8px; background-color: #ddd; border-radius: 50%; transition: 0.3s; }
+        .dot.active { background-color: #444; }
 
         /* Qiymət və Başlıq */
         .product-header { text-align: center; margin-bottom: 25px; }
@@ -147,16 +187,12 @@
             color: #ff4d4d;
             border-radius: 20px;
             padding: 6px 15px;
-            /* Daha yığcam ölçü */
             font-size: 11px;
-            /* Daha zərif yazı */
             font-weight: bold;
             width: fit-content;
             margin: 0 auto 15px auto;
-            /* Ortada qalması və aşağı ilə məsafə */
         }
 
-        /* WhatsApp Düyməsi - BirMarket ilə eyni hündürlükdə */
         .wp-button {
             display: flex;
             align-items: center;
@@ -172,7 +208,6 @@
             transition: transform 0.2s;
         }
 
-        /* BirMarket Düyməsi - Yenilənmiş */
         .installment-button {
             display: flex;
             align-items: center;
@@ -188,7 +223,7 @@
             transition: transform 0.2s;
         }
 
-        .wp-button:active { transform: scale(0.98); background-color: #27ae60; }
+        .wp-button:active, .installment-button:active { transform: scale(0.96); }
         .wp-button img { margin-right: 10px; }
 
         .specs-title { font-size: 16px; font-weight: bold; margin-bottom: 15px; }
@@ -205,53 +240,53 @@
 </head>
 <body>
 
-    <!-- Header -->
     <header>
         <div class="header-left">
-            <div class="menu-icon">☰</div>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
             <div class="logo">
                 <a href="index.html">
                     <img src="Images_site/Charger.az Logo.png" alt="Charger.az Logo">
                 </a>
             </div>
         </div>
-   
     </header>
 
-    <!-- Axtarış Overlay Paneli -->
-    <div id="searchOverlay">
-        <div class="search-header">
-            <input type="text" id="searchInput" placeholder="Məhsul axtar..." onkeyup="liveSearch()">
-            <div class="close-search" onclick="closeSearch()">✕</div>
+    <div id="sideMenu" class="side-menu">
+        <div class="menu-header">
+            <span>Charger.az</span>
+            <div class="close-btn" onclick="toggleMenu()">&times;</div>
         </div>
-        <div class="search-results" id="searchResults"></div>
+        <a href="index.html">Ana Səhifə</a>
+        <a href="https://wa.me/994998058060">WhatsApp Dəstək</a>
     </div>
+    <div id="menuOverlay" class="menu-overlay" onclick="toggleMenu()"></div>
 
-    <!-- Slider -->
     <div class="slider-wrapper">
+        <div class="gift-badge" onclick="toggleGift(event)">🎁</div>
+        <div class="gift-preview" id="giftPreview">
+            <img src="Images_site/merkan_kecirici.png" alt="Hədiyyə">
+        </div>
+
         <div class="slider-container" id="slider">
-            <img src="Images_site/apple 40 1.png">
             <img src="Images_site/apple 40 2.png">
             <img src="Images_site/apple 40 3.png">
             <img src="Images_site/apple 40 4.png">
+            <img src="Images_site/apple 40 1.png">
         </div>
     </div>
 
-    <!-- Nöqtələr -->
-    <div class="dots">
+    <div class="dots" id="dotsContainer">
         <div class="dot active"></div>
         <div class="dot"></div>
         <div class="dot"></div>
         <div class="dot"></div>
     </div>
 
-    <!-- Qiymət Hissəsi -->
     <div class="product-header">
         <div class="product-title">APPLE 40W (UK)</div>
         <div class="product-price">89.99AZN</div>
     </div>
 
-    <!-- Məlumat Kartı -->
     <div class="main-card">
         <div class="warranty-badge">🛡️ RƏSMİ ZƏMANƏT: 1 İL</div>
 
@@ -264,7 +299,6 @@
             class="installment-button" target="_blank">
             Hissə-hissə ödə
         </a>
-
 
         <div class="specs-title">Texniki Xüsusiyyətlər</div>
         <table class="specs-table">
@@ -285,22 +319,47 @@
     </div>
 
     <script>
-        // Slider
+        // Menyu Funksiyası
+        function toggleMenu() {
+            const menu = document.getElementById("sideMenu");
+            const overlay = document.getElementById("menuOverlay");
+            if (menu.style.left === "0px") {
+                menu.style.left = "-250px";
+                overlay.style.display = "none";
+            } else {
+                menu.style.left = "0px";
+                overlay.style.display = "block";
+            }
+        }
+
+        // Hədiyyə Funksiyası
+        function toggleGift(event) {
+            event.stopPropagation();
+            const preview = document.getElementById('giftPreview');
+            if (preview.classList.contains('active')) {
+                preview.classList.remove('active');
+                setTimeout(() => { preview.style.display = 'none'; }, 200);
+            } else {
+                preview.style.display = 'flex';
+                setTimeout(() => { preview.classList.add('active'); }, 10);
+            }
+        }
+
+        document.addEventListener('click', function (event) {
+            const preview = document.getElementById('giftPreview');
+            if (!event.target.classList.contains('gift-badge')) {
+                preview.classList.remove('active');
+                setTimeout(() => { preview.style.display = 'none'; }, 200);
+            }
+        });
+
+        // Slider & Dots
         const slider = document.getElementById('slider');
         const dots = document.querySelectorAll('.dot');
         slider.addEventListener('scroll', () => {
             const index = Math.round(slider.scrollLeft / slider.offsetWidth);
             dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
         });
-
-        function openSearch() {
-            document.getElementById('searchOverlay').style.display = 'flex';
-            document.getElementById('searchInput').focus();
-        }
-
-        function closeSearch() {
-            document.getElementById('searchOverlay').style.display = 'none';
-        }
     </script>
 </body>
 </html>

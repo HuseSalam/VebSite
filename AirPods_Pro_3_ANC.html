@@ -5,6 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AirPods Pro 3 ANC - Charger.az</title>
     <style>
+        /* Yan menyu və overlay stilləri (Anker 45W modelindən) */
+        .side-menu {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 2000;
+            top: 0;
+            left: -250px;
+            background-color: rgb(56, 56, 56);
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 20px;
+        }
+
+        .menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px 20px;
+            border-bottom: 1px solid #eee;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .close-btn {
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .side-menu a {
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #ffffff;
+            display: block;
+            transition: 0.2s;
+            border-bottom: 1px solid #f9f9f9;
+        }
+
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1500;
+        }
+
+        /* Tap highlight silinməsi və animasiya təsiri */
+        * {
+            -webkit-tap-highlight-color: transparent !important;
+            -webkit-touch-callout: none !important;
+            outline: none !important;
+        }
+
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #333; }
         header { display: flex; align-items: center; justify-content: flex-start; padding: 12px 20px; background: white; border-bottom: 1px solid #f0f0f0; gap: 15px; position: sticky; top: 0; z-index: 1000; }
         .menu-icon { font-size: 24px; cursor: pointer; display: flex; align-items: center; }
@@ -23,11 +81,11 @@
         .dot.active { background-color: #444; }
 
         .product-header { text-align: center; margin-bottom: 25px; }
-        .product-title { font-size: 15px; font-weight: 500; margin-bottom: 15px; color: #333; text-transform: uppercase; }
-        .product-price { font-size: 14px; color: #555; letter-spacing: 0.5px; font-weight: normal; }
+        .product-title { font-size: 15px; font-weight: 500; margin-bottom: 15px; color: #333; }
+        .product-price { font-size: 14px; color: #555; letter-spacing: 0.5px; }
 
         .main-card { border: 1px solid #e8e8e8; border-radius: 15px; margin: 0 20px 40px 20px; padding: 20px; background-color: #fff; }
-.warranty-badge {
+        .warranty-badge {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -36,16 +94,12 @@
             color: #ff4d4d;
             border-radius: 20px;
             padding: 6px 15px;
-            /* Daha yığcam ölçü */
             font-size: 11px;
-            /* Daha zərif yazı */
             font-weight: bold;
             width: fit-content;
             margin: 0 auto 15px auto;
-            /* Ortada qalması və aşağı ilə məsafə */
         }
 
-        /* WhatsApp Düyməsi - BirMarket ilə eyni hündürlükdə */
         .wp-button {
             display: flex;
             align-items: center;
@@ -61,7 +115,6 @@
             transition: transform 0.2s;
         }
 
-        /* BirMarket Düyməsi - Yenilənmiş */
         .installment-button {
             display: flex;
             align-items: center;
@@ -75,7 +128,14 @@
             font-weight: bold;
             margin-bottom: 25px;
             transition: transform 0.2s;
-        }        .wp-button img { width: 22px; height: 22px; margin-right: 10px; filter: brightness(0) invert(1); border: none; display: block; }
+        }
+
+        /* Basılma animasiyası */
+        .wp-button:active, .installment-button:active {
+            transform: scale(0.96);
+        }
+
+        .wp-button img { width: 22px; height: 22px; margin-right: 10px; filter: brightness(0) invert(1); border: none; display: block; }
 
         .specs-title { font-size: 16px; font-weight: bold; margin-bottom: 15px; }
         .specs-table { width: 100%; border-collapse: collapse; font-size: 13px; }
@@ -91,26 +151,38 @@
 <body>
 
     <header>
-        <div class="menu-icon">☰</div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
         <div class="logo">
             <a href="index.html"><img src="Images_site/Charger.az Logo.png" alt="Logo"></a>
-       
+        </div>
     </header>
+
+    <div id="sideMenu" class="side-menu">
+        <div class="menu-header">
+            <span>Charger.az</span>
+            <div class="close-btn" onclick="toggleMenu()">&times;</div>
+        </div>
+        <a href="index.html">Ana Səhifə</a>
+        <a href="https://wa.me/994998058060">WhatsApp Dəstək</a>
+    </div>
+
+    <div id="menuOverlay" class="menu-overlay" onclick="toggleMenu()"></div>
 
     <div class="slider-wrapper">
         <div class="slider-container" id="slider">
             <img src="Images_site/AirPosds_Pro_3_ANC_1.png">
-            <img src="Images_site/AirPosds_Pro_3_3.png">
-            <img src="Images_site/AirPosds_Pro_3_4.png">
-            <img src="Images_site/AirPosds_Pro_3_5.png">
-            <img src="Images_site/AirPosds_Pro_3_ANC_2.jpeg">
+            <img src="Images_site/AirPosds_Pro_3_ANC_2.png">
+            <img src="Images_site/AirPosds_Pro_3_ANC_3.png">
+            <img src="Images_site/AirPosds_Pro_3_ANC_4.png">
+            <img src="Images_site/AirPosds_Pro_3_ANC_5.png">
+            <img src="Images_site/AirPosds_Pro_3_ANC_6.png">
         </div>
     </div>
 
     <div class="dots" id="dotsContainer"></div>
 
     <div class="product-header">
-        <div class="product-title">AIRPODS Pro 3 ANC</div>
+        <div class="product-title">AIRPODS PRO 3 (ANC Dəstəkli)</div>
         <div class="product-price">64.99 AZN</div>
     </div>
 
@@ -122,7 +194,6 @@
             İndi Sifariş Et
         </a>
 
-
         <a href="https://birmarket.az/merchant/12157-charger-az?from_search=true&event=view_search_tips&query=charger%20az&choice=Charger.az&tips_type=items&position=1"
             class="installment-button" target="_blank">
             Hissə-hissə ödə
@@ -130,10 +201,10 @@
 
         <div class="specs-title">Texniki Xüsusiyyətlər</div>
         <table class="specs-table">
-            <tr><td class="label">Səs Rejimi:</td><td class="value">ANC və Şəffaflıq rejimi</td></tr>
-            <tr><td class="label">Bağlantı:</td><td class="value">Bluetooth (Yüksək sürətli)</td></tr>
-            <tr><td class="label">Şarj Portu:</td><td class="value">USB-C və MagSafe/Wireless</td></tr>
-            <tr><td class="label">Batareya:</td><td class="value">3-4 saat (24 saat qutu ilə)</td></tr>
+            <tr><td class="label">Səs Texnologiyası:</td><td class="value">Active Noise Cancellation (ANC)</td></tr>
+            <tr><td class="label">Qutu Dinamiki:</td><td class="value">Daxili (Find My üçün səsli siqnal)</td></tr>
+            <tr><td class="label">Şarj Portu:</td><td class="value">USB-C və MagSafe Wireless</td></tr>
+            <tr><td class="label">Batareya:</td><td class="value">4-5 saat (30 saat qutu ilə)</td></tr>
             <tr><td class="label">GPS:</td><td class="value">GPS İzləmə və Səsli siqnal</td></tr>
             <tr><td class="label">Funksiyalar:</td><td class="value">Animasiya, Wireless Charging</td></tr>
         </table>
@@ -145,6 +216,19 @@
     </div>
 
     <script>
+        function toggleMenu() {
+            const menu = document.getElementById("sideMenu");
+            const overlay = document.getElementById("menuOverlay");
+
+            if (menu.style.left === "0px") {
+                menu.style.left = "-250px";
+                overlay.style.display = "none";
+            } else {
+                menu.style.left = "0px";
+                overlay.style.display = "block";
+            }
+        }
+
         const slider = document.getElementById('slider');
         const dotsContainer = document.getElementById('dotsContainer');
         const images = slider.getElementsByTagName('img');

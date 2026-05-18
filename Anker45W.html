@@ -6,6 +6,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anker 45W (Smart Display) - Charger.az</title>
     <style>
+        /* Header-i ana səhifədəki kimi nizamlamaq */
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 15px;
+            border-bottom: 1px solid #eee;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 1000;
+            /* Menyu düyməsinin görünməsi üçün */
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* Yan menyunun stili */
+        .side-menu {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 2000;
+            /* Hər şeyin üstündə olmalıdır */
+            top: 0;
+            left: -250px;
+            /* Gizli vəziyyət */
+            background-color: rgb(56, 56, 56);
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 20px;
+        }
+
+        .menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px 20px;
+            border-bottom: 1px solid #eee;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .close-btn {
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .side-menu a {
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #ffffff;
+            display: block;
+            transition: 0.2s;
+            border-bottom: 1px solid #f9f9f9;
+        }
+
+        /* Arxa fon qaraltması */
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1500;
+        }
+
+        * {
+            -webkit-tap-highlight-color: transparent !important;
+            -webkit-touch-callout: none !important;
+            outline: none !important;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
@@ -248,22 +328,110 @@
             line-height: 1.6;
             text-align: left;
         }
+
+
+        /* Hədiyyə ikonu - Daha da böyüdüldü */
+        .gift-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 55px;
+            /* 45px-dən 55px-ə artırıldı */
+            height: 55px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            /* İkon daha iri və aydın */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            cursor: pointer;
+            border: 2px solid #f0f0f0;
+            transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* Basılanda kiçilmə effekti */
+        .gift-badge:active {
+            transform: scale(0.85);
+        }
+
+        /* Hədiyyə şəkli pəncərəsi - Ölçü 120px-ə çatdırıldı */
+        .gift-preview {
+            display: none;
+            position: absolute;
+            top: 85px;
+            /* İkon böyüdüyü üçün məsafə artırıldı */
+            left: 30px;
+            width: 150px;
+            /* 100px-dən 120px-ə artırıldı */
+            height: 150px;
+            background: white;
+            border-radius: 50%;
+            border: 3px solid #004a99;
+            /* Çərçivə bir az qalınlaşdı */
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+            z-index: 110;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            /* Şəkli dairə formasında kəsir */
+            opacity: 0;
+            transform: scale(0.3);
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .gift-preview.active {
+            display: flex;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Pəncərənin içindəki şəkil */
+        .gift-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Şəkli dairəyə tam otuzdurur və kənarları kəsir */
+        }
     </style>
+
+
 </head>
 
 <body>
 
     <header>
-        <div class="menu-icon">☰</div>
-        <div class="logo">
-            <a href="index.html">
-                <img src="Images_site/Charger.az Logo.png" alt="Logo">
-            </a>
+        <div class="header-left">
+            <div style="font-size: 24px; cursor: pointer; -webkit-tap-highlight-color: transparent;"
+                onclick="toggleMenu()">☰</div>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Images_site/Charger.az Logo.png" alt="Logo">
+                </a>
+            </div>
         </div>
-
     </header>
 
+    <div id="sideMenu" class="side-menu">
+        <div class="menu-header">
+            <span>Charger.az</span>
+            <div class="close-btn" onclick="toggleMenu()">&times;</div>
+        </div>
+        <a href="index.html">Ana Səhifə</a>
+        <a href="https://wa.me/994998058060">WhatsApp Dəstək</a>
+    </div>
+
+    <div id="menuOverlay" class="menu-overlay" onclick="toggleMenu()"></div>
+
     <div class="slider-wrapper">
+
+        <div class="gift-badge" onclick="toggleGift(event)">🎁</div>
+        <div class="gift-preview" id="giftPreview">
+            <img src="Images_site/merkan_kecirici.png" alt="Hədiyyə">
+        </div>
+
         <div class="slider-container" id="slider">
             <img src="Images_site/Anker 45 1.jpg">
             <img src="Images_site/Anker 45 2.jpg">
@@ -326,7 +494,7 @@
             </tr>
             <tr>
                 <td class="label">Rəng:</td>
-                <td class="value">Qara / Fantom</td>
+                <td class="value">Qara / Ağ</td>
             </tr>
         </table>
 
@@ -338,6 +506,21 @@
     </div>
 
     <script>
+
+        function toggleMenu() {
+            const menu = document.getElementById("sideMenu");
+            const overlay = document.getElementById("menuOverlay");
+
+            if (menu.style.left === "0px") {
+                menu.style.left = "-250px";
+                overlay.style.display = "none";
+            } else {
+                menu.style.left = "0px";
+                overlay.style.display = "block";
+            }
+        }
+
+
         const slider = document.getElementById('slider');
         const dotsContainer = document.getElementById('dotsContainer');
         const images = slider.getElementsByTagName('img');
@@ -361,6 +544,31 @@
                 }
             });
         });
+
+
+        // hədiyyə ikonu
+        function toggleGift(event) {
+            event.stopPropagation();
+            const preview = document.getElementById('giftPreview');
+
+            if (preview.classList.contains('active')) {
+                preview.classList.remove('active');
+                setTimeout(() => { preview.style.display = 'none'; }, 200);
+            } else {
+                preview.style.display = 'flex';
+                setTimeout(() => { preview.classList.add('active'); }, 10);
+            }
+        }
+
+        // Ekranda başqa yerə basanda hədiyyə pəncərəsi bağlansın
+        document.addEventListener('click', function (event) {
+            const preview = document.getElementById('giftPreview');
+            if (!event.target.classList.contains('gift-badge')) {
+                preview.classList.remove('active');
+                setTimeout(() => { preview.style.display = 'none'; }, 200);
+            }
+        });
+
     </script>
 
 </body>
