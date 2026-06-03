@@ -113,10 +113,10 @@ const products = {
 
     "airpods4anc": {   // airpods 4 anc burada
         title: "AIRPODS 4 ANC Premium",
-        price: "44.99 AZN",
+        price: "54.99 AZN",
         warranty: "6 AY",
         images: [
-            "Images_site/airpods4_1.png",
+            "Images_site/airpods4_ANC_1.jpg",
             "Images_site/airpods4_2.png",
             "Images_site/airpods4_4.jpeg",
             "Images_site/airpods4_4.png"
@@ -197,7 +197,7 @@ const products = {
 
     "airpodspro3anc": { // <--- AIRPODS PRO 3 ANC BURADA
         title: "AirPods Pro 3 ANC",
-        price: "49.99 AZN",
+        price: "64.99 AZN",
         warranty: "6 AY",
         images: [
             "Images_site/AirPosds_Pro_3_ANC_1.png",
@@ -278,8 +278,8 @@ const products = {
 
 
     "applecablecc": { // <--- APPLE C TO C KABEL BURADA
-        title: "Apple 60W USB-C Charge Cable (1m)",
-        price: "39.00 AZN",
+        title: "Apple USB-C to C Kabel (1m, 60W)",
+        price: "39.99 AZN",
         warranty: null,
         images: [
             "Images_site/Apple_C_to_C_1m_1.png",
@@ -303,8 +303,8 @@ const products = {
 
 
     "applecablecl": { // <--- APPLE C TO LIGHTNING KABEL BURADA
-        title: "Apple USB-C to Lightning Cable (1m)",
-        price: "45.00 AZN",
+        title: "Apple USB-C to Lightning Kabel (1m)",
+        price: "29.99 AZN",
         warranty: null,
         images: [
             "Images_site/Apple_C_to_Light_1m_1.png",
@@ -643,7 +643,7 @@ const products = {
 
 
     "samsung25w": { //  samsung  25watt 25vatt burda
-        title: "Samsung 25W USB-C PD Adapter (Original)",
+        title: "Samsung 25W USB-C PD Adapter",
         price: "39.99 AZN",
         warranty: "1 İL",
         images: [

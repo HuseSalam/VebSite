@@ -275,7 +275,7 @@
             text-align: left;
         }
 
-        /* Hədiyyə ikonu */
+        /* Hədiyyə ikonu stili */
         .gift-badge {
             position: absolute;
             top: 20px;
@@ -288,11 +288,53 @@
             align-items: center;
             justify-content: center;
             font-size: 30px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.772);
             z-index: 100;
             cursor: pointer;
             border: 2px solid #f0f0f0;
             transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+            /* Animasiyanı buraya bağlayırıq (3 saniyədən bir sonsuz təkrar olunur) */
+            animation: heartBeat 3s infinite ease-in-out;
+        }
+
+        /* 🌟 YENİ: Hədiyyə açılanda döyüntü (pulse) animasiyasını dayandıran şərt */
+        .gift-badge.open {
+            animation: none !important;
+            transform: scale(1) !important;
+        }
+
+        .gift-badge:active {
+            transform: scale(0.85);
+        }
+
+        /* Ürək döyüntüsü (Tak-Tak) animasiya qaydası */
+        @keyframes heartBeat {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            14% {
+                transform: scale(1.15);
+                /* Birinci tak (böyüyür) */
+            }
+
+            28% {
+                transform: scale(1);
+                /* Sakitləşir */
+            }
+
+            42% {
+                transform: scale(1.15);
+                /* İkinci tak (böyüyür) */
+            }
+
+            70% {
+                transform: scale(1);
+                /* Normal vəziyyətə qayıdır və növbəti 3-cü saniyəyə qədər gözləyir */
+            }
         }
 
         .gift-badge:active {
@@ -486,23 +528,30 @@
         function toggleGift(event) {
             event.stopPropagation();
             const preview = document.getElementById('giftPreview');
+            const badge = document.getElementById('giftBadge'); // 🌟 Bu sətri bura əlavə et
 
             if (preview.classList.contains('active')) {
                 preview.classList.remove('active');
+                badge.classList.remove('open'); // 🌟 Pəncərə bağlandı, animasiyanı qaytarır
                 setTimeout(() => { preview.style.display = 'none'; }, 200);
             } else {
                 preview.style.display = 'flex';
+                badge.classList.add('open'); // 🌟 Pəncərə açıldı, animasiyanı dayandırır
                 setTimeout(() => { preview.classList.add('active'); }, 10);
             }
         }
 
+        
+
         document.addEventListener('click', function (event) {
-            const preview = document.getElementById('giftPreview');
-            if (preview && !event.target.classList.contains('gift-badge')) {
-                preview.classList.remove('active');
-                setTimeout(() => { preview.style.display = 'none'; }, 200);
-            }
-        });
+    const preview = document.getElementById('giftPreview');
+    const badge = document.getElementById('giftBadge'); // 🌟 Bu sətri bura əlavə et
+    if (preview && !event.target.classList.contains('gift-badge')) {
+        preview.classList.remove('active');
+        if(badge) badge.classList.remove('open'); // 🌟 Bu sətri bura əlavə et
+        setTimeout(() => { preview.style.display = 'none'; }, 200);
+    }
+});
     </script>
 </body>
 
