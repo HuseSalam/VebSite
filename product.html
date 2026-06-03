@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anker 45W (Smart Display) - Charger.az</title>
+    <title>Məhsul - Charger.az</title>
     <style>
-        /* Header-i ana səhifədəki kimi nizamlamaq */
         header {
             display: flex;
             justify-content: space-between;
@@ -17,7 +16,6 @@
             top: 0;
             background: white;
             z-index: 1000;
-            /* Menyu düyməsinin görünməsi üçün */
         }
 
         .header-left {
@@ -26,16 +24,13 @@
             gap: 12px;
         }
 
-        /* Yan menyunun stili */
         .side-menu {
             height: 100%;
             width: 250px;
             position: fixed;
             z-index: 2000;
-            /* Hər şeyin üstündə olmalıdır */
             top: 0;
             left: -250px;
-            /* Gizli vəziyyət */
             background-color: rgb(56, 56, 56);
             box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
             overflow-x: hidden;
@@ -68,7 +63,6 @@
             border-bottom: 1px solid #f9f9f9;
         }
 
-        /* Arxa fon qaraltması */
         .menu-overlay {
             display: none;
             position: fixed;
@@ -94,45 +88,11 @@
             color: #333;
         }
 
-        /* Header */
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            padding: 12px 20px;
-            background: white;
-            border-bottom: 1px solid #f0f0f0;
-            gap: 15px;
-        }
-
-        .menu-icon {
-            font-size: 24px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
         .logo img {
             height: 35px;
         }
 
-        .search-icon {
-            margin-left: auto;
-            display: flex;
-            align-items: center;
-        }
-
-        .search-icon img {
-            height: 22px;
-            cursor: pointer;
-        }
-
-        /* Slider - Yenilənmiş Hissə */
+        /* Slider */
         .slider-wrapper {
             position: relative;
             width: 100%;
@@ -156,7 +116,6 @@
             flex-shrink: 0;
             scroll-snap-align: start;
             scroll-snap-stop: always;
-            /* Şəkillərin tək-tək dayanmasını təmin edir */
             height: 380px;
             object-fit: contain;
         }
@@ -211,22 +170,17 @@
             color: #ff4d4d;
             border-radius: 20px;
             padding: 6px 15px;
-            /* Daha yığcam ölçü */
             font-size: 11px;
-            /* Daha zərif yazı */
             font-weight: bold;
             width: fit-content;
             margin: 0 auto 15px auto;
-            /* Ortada qalması və aşağı ilə məsafə */
         }
 
-        /* Kartın daxili boşluğu */
         .main-card {
             border: 1px solid #e8e8e8;
             border-radius: 15px;
             margin: 0 20px 40px 20px;
             padding: 15px;
-            /* 20px-dən 15px-ə endirdik ki, yığcam olsun */
             background-color: #fff;
         }
 
@@ -234,9 +188,6 @@
             margin-right: 5px;
         }
 
-
-
-        /* WhatsApp Düyməsi - Daha yığcam */
         .wp-button {
             display: flex;
             align-items: center;
@@ -246,22 +197,17 @@
             text-decoration: none;
             border-radius: 30px;
             padding: 10px;
-            /* 14px-dən 10px-ə endirdik */
             font-size: 15px;
-            /* Bir az kiçiltdik */
             font-weight: bold;
             margin-bottom: 10px;
-            /* Düymələr arası məsafəni azaltdıq */
             transition: transform 0.2s;
         }
 
-        /* BirMarket Düyməsi - Qırmızı və yığcam */
         .installment-button {
             display: flex;
             align-items: center;
             justify-content: center;
             background-color: #ea207d;
-            /* BirMarket-in qırmızı rəngi */
             color: white;
             text-decoration: none;
             border-radius: 30px;
@@ -329,14 +275,12 @@
             text-align: left;
         }
 
-
-        /* Hədiyyə ikonu - Daha da böyüdüldü */
+        /* Hədiyyə ikonu */
         .gift-badge {
             position: absolute;
             top: 20px;
             left: 20px;
             width: 55px;
-            /* 45px-dən 55px-ə artırıldı */
             height: 55px;
             background: white;
             border-radius: 50%;
@@ -344,7 +288,6 @@
             align-items: center;
             justify-content: center;
             font-size: 30px;
-            /* İkon daha iri və aydın */
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             z-index: 100;
             cursor: pointer;
@@ -352,52 +295,42 @@
             transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        /* Basılanda kiçilmə effekti */
         .gift-badge:active {
             transform: scale(0.85);
         }
 
-        /* Hədiyyə şəkli pəncərəsi - Ölçü 120px-ə çatdırıldı */
+        /* Hədiyyə şəkli pəncərəsi */
         .gift-preview {
             display: none;
             position: absolute;
             top: 85px;
-            /* İkon böyüdüyü üçün məsafə artırıldı */
             left: 30px;
             width: 150px;
-            /* 100px-dən 120px-ə artırıldı */
             height: 150px;
             background: white;
             border-radius: 50%;
             border: 3px solid #004a99;
-            /* Çərçivə bir az qalınlaşdı */
             box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
             z-index: 110;
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            /* Şəkli dairə formasında kəsir */
             opacity: 0;
             transform: scale(0.3);
             transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         .gift-preview.active {
-            display: flex;
             opacity: 1;
             transform: scale(1);
         }
 
-        /* Pəncərənin içindəki şəkil */
         .gift-preview img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            /* Şəkli dairəyə tam otuzdurur və kənarları kəsir */
         }
     </style>
-
-
 </head>
 
 <body>
@@ -426,87 +359,45 @@
     <div id="menuOverlay" class="menu-overlay" onclick="toggleMenu()"></div>
 
     <div class="slider-wrapper">
-
-        <div class="gift-badge" onclick="toggleGift(event)">🎁</div>
+        <div class="gift-badge" id="giftBadge" onclick="toggleGift(event)">🎁</div>
         <div class="gift-preview" id="giftPreview">
-            <img src="Images_site/merkan_kecirici.png" alt="Hədiyyə">
+            <img src="" id="giftImg" alt="Hədiyyə">
         </div>
 
-        <div class="slider-container" id="slider">
-            <img src="Images_site/Anker 45 1.jpg">
-            <img src="Images_site/Anker 45 2.jpg">
-            <img src="Images_site/Anker 45 3.jpg">
-            <img src="Images_site/Anker 45 4.jpg">
-            <img src="Images_site/Anker 45 5.jpg">
-            <img src="Images_site/Anker 45 6.jpg">
-            <img src="Images_site/Anker 45 7.jpg">
-            <img src="Images_site/Anker 45 8.jpg">
-        </div>
+        <div class="slider-container" id="slider"></div>
         <div class="dots" id="dotsContainer"></div>
     </div>
 
     <div class="product-info">
-        <div class="product-title">Anker 45W (Smart Display) Güc adapteri.</div>
-        <div class="product-price">89.99AZN</div>
+        <div class="product-title" id="productTitle">Məhsul adı yüklənir...</div>
+        <div class="product-price" id="productPrice">0.00AZN</div>
     </div>
 
+    <!-- Əsas Kart Bölməsi başladı -->
     <div class="main-card">
-        <div class="warranty-badge">
-            <span>🛡️</span> RƏSMİ ZƏMANƏT: 1 İL
+        <div class="warranty-badge" id="warrantyBadge">
+            <span>🛡️</span> RƏSMİ ZƏMANƏT: &nbsp;<span id="warrantyText"></span>
         </div>
 
-        <a href="https://wa.me/994998058060?text=Salam%2C%20Anker%2045W%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m."
-            class="wp-button">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="20">
+        <a href="#" id="wpOrderBtn" class="wp-button">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="20" alt="WP">
             İndi Sifariş Et
         </a>
 
-        <a href="https://birmarket.az/merchant/12157-charger-az?from_search=true&event=view_search_tips&query=charger%20az&choice=Charger.az&tips_type=items&position=1"
-            class="installment-button" target="_blank">
+        <a href="#" id="installmentBtn" class="installment-button" target="_blank">
             Hissə-hissə ödə
         </a>
 
         <div class="specs-title">Texniki Xüsusiyyətlər</div>
-        <table class="specs-table">
-            <tr>
-                <td class="label">Maksimum Güc:</td>
-                <td class="value">45 Watt (PPS)</td>
-            </tr>
-            <tr>
-                <td class="label">Ekran:</td>
-                <td class="value">Smart LED Display</td>
-            </tr>
-            <tr>
-                <td class="label">Texnologiya:</td>
-                <td class="value">GaN, PowerIQ 3.0</td>
-            </tr>
-            <tr>
-                <td class="label">Opt. Cihazlar:</td>
-                <td class="value">Samsung, iPhone, iPad, Macbook</td>
-            </tr>
-            <tr>
-                <td class="label">Giriş Portu:</td>
-                <td class="value">USB-C</td>
-            </tr>
-            <tr>
-                <td class="label">Qoruma:</td>
-                <td class="value">ActiveShield 2.0</td>
-            </tr>
-            <tr>
-                <td class="label">Rəng:</td>
-                <td class="value">Qara / Ağ</td>
-            </tr>
-        </table>
+        <table class="specs-table" id="specsTable"></table>
 
         <div class="about-title">Məhsul Haqqında</div>
-        <div class="about-text">
-            Anker-in 2026 Smart Display adapteri real vaxtda şarj gücünü göstərən ekranla təchiz olunub. GaN və PowerIQ
-            3.0 texnologiyası sayəsində cihazınızı ən təhlükəsiz və sürətli şəkildə şarj edir.
-        </div>
+        <div class="about-text" id="aboutText"></div>
     </div>
+    <!-- Əsas Kart Bölməsi bitdi -->
 
+    <script src="products.js"></script>
     <script>
-
         function toggleMenu() {
             const menu = document.getElementById("sideMenu");
             const overlay = document.getElementById("menuOverlay");
@@ -520,33 +411,78 @@
             }
         }
 
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
 
-        const slider = document.getElementById('slider');
-        const dotsContainer = document.getElementById('dotsContainer');
-        const images = slider.getElementsByTagName('img');
+        if (productId && products[productId]) {
+            const product = products[productId];
 
-        for (let i = 0; i < images.length; i++) {
-            const dot = document.createElement('div');
-            dot.classList.add('dot');
-            if (i === 0) dot.classList.add('active');
-            dotsContainer.appendChild(dot);
+            document.getElementById('productTitle').innerText = product.title;
+
+            const warrantyBadge = document.getElementById('warrantyBadge');
+            const warrantyText = document.getElementById('warrantyText');
+
+            if (product.warranty) {
+                warrantyText.innerText = product.warranty;
+                warrantyBadge.style.display = 'flex';
+            } else {
+                warrantyBadge.style.display = 'none';
+            }
+
+            document.getElementById('productPrice').innerText = product.price;
+            document.getElementById('aboutText').innerHTML = product.about; // HTML dəstəyi üçün innerHTML edildi
+            document.getElementById('wpOrderBtn').href = product.wpLink;
+            document.getElementById('installmentBtn').href = product.installmentLink;
+
+            document.title = product.title + " - Charger.az";
+
+            if (product.giftImage && product.giftImage !== "") {
+                document.getElementById('giftImg').src = product.giftImage;
+                document.getElementById('giftBadge').style.display = 'flex';
+            } else {
+                document.getElementById('giftBadge').style.display = 'none';
+            }
+
+            const slider = document.getElementById('slider');
+            const dotsContainer = document.getElementById('dotsContainer');
+
+            product.images.forEach((imgUrl, i) => {
+                const img = document.createElement('img');
+                img.src = imgUrl;
+                slider.appendChild(img);
+
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                if (i === 0) dot.classList.add('active');
+                dotsContainer.appendChild(dot);
+            });
+
+            const table = document.getElementById('specsTable');
+            table.innerHTML = "";
+            product.specs.forEach(spec => {
+                const row = `<tr>
+                    <td class="label">${spec.label}</td>
+                    <td class="value">${spec.value}</td>
+                </tr>`;
+                table.innerHTML += row;
+            });
+
+            const dots = document.querySelectorAll('.dot');
+            slider.addEventListener('scroll', () => {
+                const scrollIndex = Math.round(slider.scrollLeft / slider.offsetWidth);
+                dots.forEach((dot, index) => {
+                    if (index === scrollIndex) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            });
+
+        } else {
+            document.body.innerHTML = "<h2 style='text-align:center; margin-top:50px; font-family:sans-serif;'>Məhsul tapılmadı! <br><br><a href='index.html' style='font-size:16px; color:#004a99;'>Ana Səhifəyə qayıt</a></h2>";
         }
 
-        const dots = document.querySelectorAll('.dot');
-
-        slider.addEventListener('scroll', () => {
-            const scrollIndex = Math.round(slider.scrollLeft / slider.offsetWidth);
-            dots.forEach((dot, index) => {
-                if (index === scrollIndex) {
-                    dot.classList.add('active');
-                } else {
-                    dot.classList.remove('active');
-                }
-            });
-        });
-
-
-        // hədiyyə ikonu
         function toggleGift(event) {
             event.stopPropagation();
             const preview = document.getElementById('giftPreview');
@@ -560,17 +496,14 @@
             }
         }
 
-        // Ekranda başqa yerə basanda hədiyyə pəncərəsi bağlansın
         document.addEventListener('click', function (event) {
             const preview = document.getElementById('giftPreview');
-            if (!event.target.classList.contains('gift-badge')) {
+            if (preview && !event.target.classList.contains('gift-badge')) {
                 preview.classList.remove('active');
                 setTimeout(() => { preview.style.display = 'none'; }, 200);
             }
         });
-
     </script>
-
 </body>
 
 </html>
