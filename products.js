@@ -588,7 +588,7 @@ const products = {
 
 
 
-    "samsungkabel3a": {   // samsungkabel3a burdadır
+    "samsungkabel3a": {   // samsung kabel 3a burdadır
         title: "SAMSUNG Type-C to Type-C Kabel (3A, 1.8m)",
         price: "19.99 AZN",
         warranty: null,
@@ -607,7 +607,7 @@ const products = {
             { label: "Maksimum cərəyan gücü:", value: "3 Amper (25W-a qədər tam dəstək)" },
             { label: "Kabelin uzunluğu:", value: "1.8 metr" },
             { label: "İnterfeys:", value: "USB 2.0" },
-            { label: "Rəng:", value: "Qara" },
+            { label: "Rəng:", value: "Ağ, Qara" },
             { label: "Uyğunluq:", value: "Type-C portu olan bütün Samsung smartfonları, planşetləri və digər cihazlar" }
         ],
         about: "Samsung original Type-C to Type-C kabeli (3A) cihazlarınızı təhlükəsiz şəkildə şarj etmək və yüksək sürətlə məlumat ötürmək üçün nəzərdə tutulub. 1.8 metr uzunluğu sayəsində cihazı şarj edərkən daha geniş hərəkət azadlığı təmin edilir. USB-C portu olan adapterlər tərəfindən dəstəklənir. Şarj adapteri ayrıca satılır."
@@ -615,7 +615,7 @@ const products = {
 
 
 
-    "samsungkabel5a": {  //  samsungkabel5a burda
+    "samsungkabel5a": {  //  samsung kabel 5a burda
         title: "SAMSUNG Type-C to Type-C Kabel (5A, 100W, 1.8m)",
         price: "29.99 AZN",
         warranty: null,
@@ -634,7 +634,7 @@ const products = {
             { label: "Maksimum güc dəstəyi:", value: "5 Amper / 100 Watt (Super Fast Charging 2.0 tam dəstək)" },
             { label: "Kabelin uzunluğu:", value: "1.8 metr" },
             { label: "İnterfeys:", value: "USB 2.0" },
-            { label: "Rəng:", value: "Qara" },
+            { label: "Rəng:", value: "Ağ, Qara" },
             { label: "Uyğunluq:", value: "45W Super Fast Charging dəstəkləyən Samsung flaqmanları (S22 Ultra, S23 Ultra, S24 Ultra, S25 Ultra və s.), planşetlər və noutbuklar" }
         ],
         about: "Samsung original 5A yüksək performanslı kabeli cihazlarınızı maksimum sürətlə şarj etmək üçün xüsusi olaraq hazırlanıb. Bu kabel 45W və daha yüksək güclü adapterlərlə birlikdə Samsung-un \"Super Fast Charging 2.0\" texnologiyasını aktivləşdirir. Maksimum səmərəlilik üçün 45W və daha yuxarı gücə malik adapterlərlə istifadə olunması tövsiyə edilir. Şarj adapteri ayrıca satılır."
@@ -658,6 +658,7 @@ const products = {
         installmentLink: "https://birmarket.az/merchant/12157-charger-az",
         specs: [
             { label: "Maksimum Güc:", value: "25W" },
+             { label: "Uyğun cihazlar:", value: "(S20...S26), (A seriyası), (S25 Edge, S20Fe...S24Fe), (Z Fold/Flip seriyaları)" },
             { label: "Texnologiya:", value: "Super Sürətli Şarj (SFC), Power Delivery 3.0 PPS" },
             { label: "Çıxış Portu:", value: "USB Type-C" },
             { label: "Rəng:", value: "Qara" },
@@ -668,7 +669,7 @@ const products = {
 
 
 
-    "samsung45w": {   //  samsung  45watt 25vatt burda
+    "samsung45w": {   //  samsung  45watt 45vatt burda
         title: "Samsung 45W Sürətli Şarj Adapteri",
         price: "59.99 AZN",
         warranty: "1 İL",
@@ -678,11 +679,12 @@ const products = {
             "Images_site/samsung45 3.png",
             "Images_site/samsung45 4.jpg"
         ],
-        giftImage: "Images_site/samsung_45w_hediyye.png",
+        giftImage: null,
         wpLink: "https://wa.me/994998058060?text=Salam%2C%20Samsung%2045W%20adapter%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m.",
         installmentLink: "https://birmarket.az/merchant/12157-charger-az",
         specs: [
             { label: "Maksimum Güc:", value: "45 Watt" },
+            { label: "Uyğun cihazlar:", value: "(S20 Ultra, S22...S25 Ultra), (S22 plus...26 plus), (S25 Fe), (Note 20 Ultra), (A36, A37, A56, A57), " },
             { label: "Texnologiya:", value: "Super Fast Charging 2.0, PD 3.0 PPS" },
             { label: "Çıxış Portu:", value: "USB Type-C" },
             { label: "Giriş Voltajı:", value: "100-240V" },
@@ -693,7 +695,7 @@ const products = {
 
 
 
-    "samsung65w": {   //  samsung  65watt 25vatt burda
+    "samsung65w": {   //  samsung  65 watt 65 vatt burda
         title: "Samsung 65W Trio Sürətli Şarj Adapteri",
         price: "99.99 AZN",
         warranty: "1 İL",
@@ -705,7 +707,7 @@ const products = {
             "Images_site/samsung_65_5.jpg",
 
         ],
-        giftImage: "Images_site/samsung_65w_hediyye.png",
+        giftImage: null,
         wpLink: "https://wa.me/994998058060?text=Salam%2C%20Samsung%2065W%20Trio%20adapter%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m.",
         installmentLink: "https://birmarket.az/merchant/12157-charger-az",
         specs: [

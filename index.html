@@ -275,6 +275,101 @@
             color: #999;
             font-size: 14px;
         }
+
+        /* 🌟 YENİ PREMİUM FOOTER VƏ XƏRİTƏ STİLLƏRİ 🌟 */
+        footer {
+            background-color: #0d1117;
+            /* Dərin tünd fon */
+            color: #f0f6fc;
+            padding: 40px 20px 25px 20px;
+            font-size: 14px;
+            margin-top: 50px;
+            border-top: 3px solid #004a99;
+        }
+
+        .footer-container {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .footer-section h4 {
+            font-size: 16px;
+            color: #58a6ff;
+            margin: 0 0 15px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 5px;
+        }
+
+        .footer-section h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: #004a99;
+        }
+
+        .footer-links-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-section p {
+            margin: 0;
+            color: #c9d1d9;
+            line-height: 1.6;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-section a {
+            color: #f0f6fc;
+            text-decoration: none;
+            transition: color 0.2s ease, transform 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .footer-section a:active {
+            color: #58a6ff;
+            transform: scale(0.98);
+        }
+
+        /* İnteraktiv Xəritə Çərçivəsi */
+        .map-container {
+            width: 100%;
+            height: 220px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #30363d;
+            margin-top: 10px;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #21262d;
+            color: #8b949e;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+        }
     </style>
 </head>
 
@@ -464,7 +559,8 @@
             data-name="samsung 65w trio adapter başlıq basliq ucluq şarj sarj aləti usb-c usb-a super fast charging 2.0 original зарядка">
             <img src="Images_site/samsung_65_1.jpg">
             <p>SAMSUNG 65W TRIO</p>
-            <span>99.99 AZN</span>        </a>
+            <span>99.99 AZN</span>
+        </a>
 
 
         <a href="product.html?id=merkan16a" class="product-item"
@@ -509,7 +605,6 @@
 
     <script>
         function showGift(event, element) {
-            // Hadisənin arxadakı karta keçməsini dayandırırıq
             event.stopPropagation();
             event.preventDefault();
 
@@ -529,7 +624,6 @@
             }
         }
 
-        // Kənar klikləri bağlamaq üçün
         document.addEventListener('click', function (event) {
             if (!event.target.classList.contains('gift-badge')) {
                 document.querySelectorAll('.gift-preview').forEach(el => {
@@ -589,9 +683,35 @@
                 overlay.style.display = "block";
             }
         }
-
-
     </script>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Əlaqə</h4>
+                <div class="footer-links-grid">
+                    <p>📞 <a href="tel:+994998058060"><strong>+994 (99) 805-80-60</strong></a></p>
+                    <p>💬 <a href="https://wa.me/994998058060" target="_blank">WhatsApp Dəstək Xətti</a></p>
+                    <p>🕒 İş saatları: Hər gün 11:00 - 20:00</p>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Mağaza Ünvanı</h4>
+                <p>📍 Bakı şəhəri, 28 May metrostansiyası yaxınlığı</p>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.3261197208803!2d49.84635607640084!3d40.37789805800122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307df6a161ddaf%3A0xfce575e1dd892482!2sCharger.az!5e1!3m2!1sen!2saz!4v1780735114041!5m2!1sen!2saz"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                © 2026 Charger.az. Bütün hüquqlar qorunur.
+            </div>
+        </div>
+    </footer>
 
 </body>
 <div id="sideMenu" class="side-menu">
