@@ -149,7 +149,7 @@ const products = {
             "Images_site/EG-MagPac-Pro-6.png",
             "Images_site/EG-MagPac-Pro-7.png",
             "Images_site/EG-MagPac-Pro-8.png",
-            
+
         ],
         giftImage: null,
         wpLink: "https://wa.me/994998058060?text=Salam%2C%20Energea%20Mag%20Pac%20Pro%20Plus%2010K%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m.",
@@ -171,7 +171,7 @@ const products = {
         price: "49.99 AZN",
         warranty: "6 AY",
         images: [
-            
+
             "Images_site/AirPosds_Pro_3_2.png",
             "Images_site/AirPosds_Pro_3_3.png",
             "Images_site/AirPosds_Pro_3_4.png",
@@ -205,7 +205,7 @@ const products = {
             "Images_site/AirPosds_Pro_3_3.png",
             "Images_site/AirPosds_Pro_3_7.png",
             "Images_site/AirPosds_Pro_3_ANC_2.jpeg",
-            
+
         ],
         giftImage: null,
         wpLink: "https://wa.me/994998058060?text=Salam%2C%20AirPods%20Pro%203%20ANC%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m.",
@@ -233,7 +233,7 @@ const products = {
             "Images_site/Anker_Car_Char_3.jpg",
             "Images_site/Anker_Car_Char_4.jpg",
             "Images_site/Anker_Car_Char_5.jpg",
-            "Images_site/Anker_Car_Char_6.jpg",        ],
+            "Images_site/Anker_Car_Char_6.jpg",],
         giftImage: null,
         wpLink: "https://wa.me/994998058060?text=Salam%2C%20Anker%2067W%20Car%20Charger%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m.",
         installmentLink: "https://birmarket.az/merchant/12157-charger-az?from_search=true&event=view_search_tips&query=charger%20az&choice=Charger.az&tips_type=items&position=1",
@@ -327,15 +327,16 @@ const products = {
 
 
 
-    "apple40w": { // <--- APPLE 40W ADAPTER BURADA
-        title: "Apple 40W (UK)",
-        price: "89.99 AZN",
+    "apple40w": { // <--- APPLE 40W 40 vatt ADAPTER BURADA
+        title: "Apple 40W (USA)",
+        price: "99.99 AZN",
         warranty: "1 İL",
         images: [
-            "Images_site/apple 40 2.png",
-            "Images_site/apple 40 3.png",
-            "Images_site/apple 40 4.png",
-            "Images_site/apple 40 1.png",
+            "Images_site/apple 40_5.png",
+            "Images_site/apple 40_6.png",
+            "Images_site/apple 40_7.png",
+            "Images_site/apple 40_8.png",
+
 
         ],
         giftImage: "Images_site/merkan_kecirici_1.png",
@@ -343,13 +344,12 @@ const products = {
         installmentLink: "https://birmarket.az/merchant/12157-charger-az?from_search=true&event=view_search_tips&query=charger%20az&choice=Charger.az&tips_type=items&position=1",
         specs: [
             { label: "Maksimum Güc:", value: "40 Watt" },
-            { label: "Port Sayı:", value: "Dual USB-C (İki Girişli)" },
-            { label: "Başlıq Tipi:", value: "UK (Üç ayaqlı premium format)" },
-            { label: "Ağıllı Paylaşım:", value: "Hər iki port aktiv olduqda gücü bərabər bölür" },
+            { label: "Port:", value: "USB-C" },
+            { label: "Başlıq Tipi:", value: "USA (2 ayaqlı premium format)" },
             { label: "Uyğunluq:", value: "iPhone 15/16/17, iPad Pro, MacBook Air" },
             { label: "Təhlükəsizlik:", value: "Yüksək gərginlik və qızma əleyhinə daxili mikrosxem" }
         ],
-        about: "Apple 40W Dual USB-C Güc Adapteri evdə, ofisdə və ya yolda eyni anda iki cihazı sürətli və səmərəli şarj etmək üçün idealdır. Bu adapter yığcam dizaynı və etibarlı idarəetmə çipi ilə cihazların batareyasını tam təhlükəsiz qoruyur. İki ədəd Type-C çıxışı sayəsində eyni anda həm iPhone, həm də Apple Watch və ya iPad-inizi şarj edə bilərsiniz."
+        about: "Apple 40W Dual USB-C Güc Adapteri evdə, ofisdə və ya yolda sürətli və səmərəli şarj etmək üçün idealdır. Bu adapter yığcam dizaynı və etibarlı idarəetmə çipi ilə cihazların batareyasını tam təhlükəsiz qoruyur. Type-C çıxışı sayəsində həm iPhone, həm də Apple Watch və ya iPad-inizi şarj edə bilərsiniz."
     },
 
 
@@ -367,7 +367,7 @@ const products = {
             "Images_site/earpods_C_6.webp",
             "Images_site/earpods_C_7.webp",
             "Images_site/earpods_C_8.webp",
-           
+
         ],
         giftImage: null,
         wpLink: "https://wa.me/994998058060?text=Salam%2C%20EarPods%20USB-C%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m.",
@@ -382,6 +382,70 @@ const products = {
         ],
         about: "Ənənəvi dairəvi qulaqlıqlardan fərqli olaraq, EarPods-un dizaynı qulaq seyvanının həndəsəsinə əsaslanır. Bu da onu digər qulaqlıqlara nisbətən daha çox insan üçün daha rahat edir. Daxili dinamiklər səs itkisini minimuma endirmək və səs çıxışını maksimuma çatdırmaq üçün xüsusi olaraq layihələndirilib. EarPods həmçinin inteqrasiya edilmiş pulta malikdir ki, bu pult vasitəsilə siz bir toxunuşla səsi tənzimləyə, musiqi və videoların oxunmasını idarə edə, eləcə də zənglərə cavab verib onları sonlandıra bilərsiniz."
     },
+
+
+    "magtrio2": {      // <--- MagTrio 2 3-in-1 Simsiz Şarj Stansiyası BURADA
+        title: "MagTrio 2 Qi2 25W Foldable 3-in-1 Simsiz Şarj stendi",
+        price: "124.99 AZN",
+        warranty: "1 İL",
+        images: [
+            "Images_site/MagTrio2_1.png",
+            "Images_site/MagTrio2_2.png",
+            "Images_site/MagTrio2_3.png",
+            "Images_site/MagTrio2_4.jpg",
+            "Images_site/MagTrio2_5.jpg"
+        ],
+        giftImage: null,
+        wpLink: "https://wa.me/994998058060?text=Salam%2C%20MagTrio%202%203-in-1%20şarj%20cihazı%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m.",
+        installmentLink: "https://birmarket.az/merchant/12157-charger-az?from_search=true&event=view_search_tips&query=charger%20az&choice=Charger.az&tips_type=items&position=1",
+        specs: [
+            { label: "Maksimum Güc:", value: "32.5W (Ümumi)" },
+            { label: "USB-C Giriş:", value: "DC 9V/3A; 15V/3A" },
+            { label: "Telefon Çıxışı:", value: "5W / 7.5W / 10W / 15W / 25W (Max - Qi2)" },
+            { label: "Apple Watch Çıxışı:", value: "2.5W (Max)" },
+            { label: "Sertifikat:", value: "Qi2" },
+            { label: "Qulaqlıq (TWS) Çıxışı:", value: "5W (Max)" },
+            { label: "Ölçülər:", value: "120 x 65 x 18mm" },
+            { label: "Çəki:", value: "175 qram" },
+            { label: "Uyğunluq:", value: "iPhone 12 və daha yeni modellər, Apple Watch, Simsiz Qulaqlıqlar" }
+        ],
+        about: "MagTrio 2 ultra-portativ, Qi2 sertifikatlı və qatlana bilən 3-ü 1-də simsiz şarj stansiyasıdır. Üçlü simsiz şarj gücünü maqnitli yapışma rahatlığı ilə birləşdirir. Ən son Qi2 25W sürətli şarj texnologiyası sayəsində iPhone 16 modelini 30 dəqiqədən daha qısa müddətdə 0-dan 50%-ə qədər doldurur. Həmçinin Apple Watch üçün sürüşmə mexanizmli xüsusi şarj hissəsinə malikdir. Cəmi 18 mm qalınlığında olan erqonomik və qatlanan dizaynı sayəsində masanızda yerə qənaət edir və səyahətlər üçün mükəmməl portativlik təmin edir."
+    },
+
+
+
+
+
+    "magduoarc": { // <--- MagDuo Arc 2-in-1 Simsiz Şarj Cihazı BURADA Mag Duo Arc
+        title: "MagDuo Arc 2-in-1 Simsiz Maqnitli Şarj Cihazı",
+        price: "89.99 AZN", // Qiyməti bura daxil edin (məs: "79.99 AZN")
+        warranty: "1 İL",     // Zəmanət müddətini bura daxil edin
+        images: [
+            "Images_site/MagDuoArc_1.png",
+            "Images_site/MagDuoArc_2.png",
+            "Images_site/MagDuoArc_3.png",
+            "Images_site/MagDuoArc_4.png",
+            "Images_site/MagDuoArc_5.png"
+        ],
+        giftImage: null,
+        wpLink: "https://wa.me/994998058060?text=Salam%2C%20MagDuo%20Arc%202-in-1%20şarj%20cihazı%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m.",
+        installmentLink: "https://birmarket.az/merchant/12157-charger-az?from_search=true&event=view_search_tips&query=charger%20az&choice=Charger.az&tips_type=items&position=1",
+        specs: [
+            { label: "Maksimum Güc:", value: "17.5W (Ümumi)" },
+            { label: "Daxili Kabel:", value: "85 sm uzana və yığıla bilən (Retractable) USB-C kabel" },
+            { label: "USB-C Giriş:", value: "DC 5V/2.4A; 9V/2A; 12V/1.67A" },
+            { label: "Telefon Çıxışı:", value: "Android üçün 15W (Maks) / iPhone üçün 7.5W (Maks)" },
+            { label: "Apple Watch Çıxışı:", value: "2.5W (Maks)" },
+            { label: "Material:", value: "Premium sink ərintisi (Zinc alloy) gövdə" },
+            { label: "Ölçülər:", value: "61 x 61 x 21.5mm" },
+            { label: "Çəki:", value: "95 qram" },
+            { label: "Uyğunluq:", value: "iPhone 12/13/14/15/16 seriyası, maqnitli simsiz şarj dəstəkləyən Android modelləri və Apple Watch" }
+        ],
+        about: "MagDuo Arc, rahatlıq və portativliyi bir araya gətirərək həm telefonunuzu, həm də Apple Watch-u eyni anda şarj etməyə imkan verən xüsusi 2-si 1-də simsiz şarj cihazıdır. Fırçalanmış metal gövdəyə, ikiqat simsiz şarj panelinə, daxili qatlanan stendə (kickstand) və ən əsası xüsusi mexanizmli 85 sm-lik yığılan daxili USB-C kabelinə malikdir. Kabellərin qarışmasının qarşısını alan kompakt dizaynı və cəmi 95 qram çəkisi ilə davamlı hərəkətdə olan rəqəmsal köçərilər və səyahətlər üçün mükəmməl yoldaşdır. Premium sink ərintisindən hazırlanmış korpusu yüksək davamlılıq təmin edir və istiliyi mükəmməl şəkildə kənarlaşdırır."
+    },
+
+
+
 
 
 
@@ -563,15 +627,15 @@ const products = {
         price: "19.99 AZN",
         warranty: null,
         images: [
-        "Images_site/temizleme_seti_1.png",
-        "Images_site/temizleme_seti_2.png",
-        "Images_site/temizleme_seti_3.png",
-        "Images_site/temizleme_seti_4.png",
-        "Images_site/temizleme_seti_5.png",
-        "Images_site/temizleme_seti_6.png",
-        "Images_site/temizleme_seti_7.webp",
-        "Images_site/temizleme_seti_8.webp",
-        "Images_site/temizleme_seti_9.webp"
+            "Images_site/temizleme_seti_1.png",
+            "Images_site/temizleme_seti_2.png",
+            "Images_site/temizleme_seti_3.png",
+            "Images_site/temizleme_seti_4.png",
+            "Images_site/temizleme_seti_5.png",
+            "Images_site/temizleme_seti_6.png",
+            "Images_site/temizleme_seti_7.webp",
+            "Images_site/temizleme_seti_8.webp",
+            "Images_site/temizleme_seti_9.webp"
         ],
         giftImage: null,
         wpLink: "https://wa.me/994998058060?text=Salam%2C%207-in-1%20Temizleme%20Seti%20sifarish%20vermek%20isteyirem.",
@@ -593,10 +657,10 @@ const products = {
         price: "19.99 AZN",
         warranty: null,
         images: [
-        "Images_site/Samsung_3A_cabel_1.png",
-        "Images_site/Samsung_3A_cabel_2.png",
-        "Images_site/Samsung_3A_cabel_3.png",
-        "Images_site/Samsung_3A_cabel_4.png"
+            "Images_site/Samsung_3A_cabel_1.png",
+            "Images_site/Samsung_3A_cabel_2.png",
+            "Images_site/Samsung_3A_cabel_3.png",
+            "Images_site/Samsung_3A_cabel_4.png"
         ],
         giftImage: null,
         wpLink: "https://wa.me/994998058060?text=Salam%2C%20Samsung%203A%20kabeli%20sifarish%20vermek%20isteyirem.",
@@ -620,10 +684,10 @@ const products = {
         price: "29.99 AZN",
         warranty: null,
         images: [
-        "Images_site/Samsung_5A_cabel_1.webp",
-        "Images_site/Samsung_5A_cabel_2.webp",
-        "Images_site/Samsung_5A_cabel_3.webp",
-        "Images_site/Samsung_5A_cabel_4.webp"
+            "Images_site/Samsung_5A_cabel_1.webp",
+            "Images_site/Samsung_5A_cabel_2.webp",
+            "Images_site/Samsung_5A_cabel_3.webp",
+            "Images_site/Samsung_5A_cabel_4.webp"
         ],
         giftImage: null,
         wpLink: "https://wa.me/994998058060?text=Salam%2C%20Samsung%205A%20kabeli%20sifarish%20vermek%20isteyirem.",
@@ -658,7 +722,7 @@ const products = {
         installmentLink: "https://birmarket.az/merchant/12157-charger-az",
         specs: [
             { label: "Maksimum Güc:", value: "25W" },
-             { label: "Uyğun cihazlar:", value: "(S20...S26), (A seriyası), (S25 Edge, S20Fe...S24Fe), (Z Fold/Flip seriyaları)" },
+            { label: "Uyğun cihazlar:", value: "(S20...S26), (A seriyası), (S25 Edge, S20Fe...S24Fe), (Z Fold/Flip seriyaları)" },
             { label: "Texnologiya:", value: "Super Sürətli Şarj (SFC), Power Delivery 3.0 PPS" },
             { label: "Çıxış Portu:", value: "USB Type-C" },
             { label: "Rəng:", value: "Qara" },
@@ -727,5 +791,5 @@ const products = {
 
 
 
-    
+
 };

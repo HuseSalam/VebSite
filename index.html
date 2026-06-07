@@ -8,11 +8,12 @@
     <meta property="og:title" content="Charger.az - Keyfiyyətli Şarj Cihazları">
     <meta property="og:description" content="Ən son model adapterlər, powerbanklar və aksesuarlar.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://grand-kashata-1064f5.netlify.app/">
-    <meta property="og:image" content="https://grand-kashata-1064f5.netlify.app/Images_site/OG_link_image.png">
+    <meta property="og:url" content="https://https://charger-az.netlify.app//">
+    <meta property="og:image" content="https://https://charger-az.netlify.app//Images_site/OG_link_image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Charger.az Mağaza Şəkli">
+
 
     <style>
         /* Yan menyunun stili */
@@ -116,8 +117,7 @@
         }
 
         .search-container {
-            padding: 10px 15px;
-            background: white;
+            display: none;
         }
 
         #searchInput {
@@ -375,28 +375,33 @@
 
 <body>
 
-    <header>
-        <div class="header-left">
+    <header style="display: flex; justify-content: space-between; align-items: center; gap: 15px;">
+        <div class="header-left" style="flex-shrink: 0;">
             <div style="font-size: 24px; cursor: pointer; -webkit-tap-highlight-color: transparent;"
                 onclick="toggleMenu()">☰</div>
             <div class="logo">
                 <a href="index.html">
-                    <img src="Images_site/Charger.az Logo.png" alt="Logo">
+                    <img src="Images_site/chargeraz.png" alt="Logo">
                 </a>
             </div>
         </div>
-        <div class="search-icon" onclick="focusSearch()">
-            <img src="Images_site/lupa.png" alt="Axtar">
+
+        <div style="position: relative; display: flex; align-items: center; width: 100%; max-width: 160px;">
+            <input type="text" id="searchInput" placeholder="Məhsul axtar..." onkeyup="searchProduct()"
+                style="width: 100%; padding: 7px 32px 7px 12px; border: 1px solid #e0e0e0; border-radius: 20px; font-size: 13px; outline: none; background: #f1f3f4; box-sizing: border-box; transition: border-color 0.2s;">
+            <div class="search-icon" onclick="document.getElementById('searchInput').focus()"
+                style="position: absolute; right: 10px; display: flex; align-items: center; pointer-events: none;">
+                <img src="Images_site/lupa.png" alt="Axtar" style="height: 15px; width: 15px; opacity: 0.6;">
+            </div>
         </div>
     </header>
 
-    <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Məhsul axtar..." onkeyup="searchProduct()">
-    </div>
+
 
     <div class="section-title">MƏHSULLARIMIZ</div>
 
     <div id="noResults">Uyğun məhsul tapılmadı.</div>
+
 
     <div class="product-list" id="productList">
 
@@ -411,12 +416,16 @@
             <span>89.99 AZN</span>
         </a>
 
+
+
         <a href="product.html?id=energea10k" class="product-item"
             data-name="energea mag pac pro plus 10k 10000mah powerbank poverbank magsafe maqnidli simsiz wireless charging повербанк">
             <img src="Images_site/EG-MagPac-Pro-1.jpg">
             <p>ENERGEA 10K (MagPac Pro+)</p>
             <span>99.99 AZN</span>
         </a>
+
+
 
         <a href="product.html?id=airpods4" class="product-item"
             data-name="qulaqliq airpods 4 premium type-c wireless charging spatial audio gps nauşnik nausnik bluetooth наушники">
@@ -425,6 +434,9 @@
             <span>44.99 AZN</span>
         </a>
 
+
+
+
         <a href="product.html?id=apple20w" class="product-item"
             data-name="apple 20w usb-c adapter eu avropa başlıq basliq ucluq şarj sarj aləti iphone original зарядка блок эпл">
             <img src="Images_site/apple 20 2.png">
@@ -432,15 +444,17 @@
             <span>59.99 AZN</span>
         </a>
 
+
+
         <a href="product.html?id=apple40w" class="product-item"
             data-name="apple 40w uk adapter dual usb-c ikili başlıq basliq ucluq şarj sarj aləti iphone ipad original зарядка блок эпл">
-            <img src="Images_site/apple 40 4.png">
+            <img src="Images_site/apple 40_5.png">
             <div class="gift-badge" onclick="showGift(event, this)">🎁</div>
             <div class="gift-preview">
                 <img src="Images_site/merkan_kecirici_1.png">
             </div>
             <p>APPLE 40W</p>
-            <span>89.99 AZN</span>
+            <span>99.99 AZN</span>
         </a>
 
 
@@ -455,6 +469,13 @@
             </div>
             <p>ANKER 30W NANO 3</p>
             <span>69.99 AZN</span>
+        </a>
+
+        <a href="product.html?id=magtrio2" class="product-item"
+            data-name="magtrio2 magtrio 2 qi2 25w foldable 3-in-1 wireless charging station simsiz şarj sarj cihazı stansiyası qatlanan ucluq başlıq apple watch iphone airpods">
+            <img src="Images_site/MagTrio2_1.png">
+            <p>Energea Stend (MAGTRIO 2)</p>
+            <span>124.99 AZN</span>
         </a>
 
         <a href="product.html?id=airpods2" class="product-item"
@@ -477,6 +498,15 @@
             <p>SAMSUNG 25W (USB-C)</p>
             <span>39.99 AZN</span>
         </a>
+
+
+        <a href="product.html?id=magduoarc" class="product-item"
+            data-name="magduoarc magduo arc 2-in-1 wireless charger powerbank simsiz şarj sarj cihazı maqnitli magnetic apple watch iphone 12 13 14 15 16 android ucluq basliq stansiya stend">
+            <img src="Images_site/MagDuoArc_1.png">
+            <p>Energea Simsiz şarj aləti (MAGDUO ARC)</p>
+            <span>89.99 AZN</span>
+        </a>
+
 
         <a href="product.html?id=samsung45w" class="product-item"
             data-name="samsung 45w usb-c super fast charging adapter başlıq basliq ucluq şarj sarj aləti sfc 2.0 gan original самсунг зарядка">
@@ -634,12 +664,7 @@
         });
 
         function focusSearch() {
-            const searchInput = document.getElementById('searchInput');
-            searchInput.focus();
-            window.scrollTo({
-                top: searchInput.offsetTop - 100,
-                behavior: 'smooth'
-            });
+            document.getElementById('searchInput').focus();
         }
 
         function searchProduct() {
@@ -714,6 +739,8 @@
     </footer>
 
 </body>
+
+
 <div id="sideMenu" class="side-menu">
     <div class="menu-header">
         <span>Charger.az</span>
