@@ -384,13 +384,106 @@ const products = {
     },
 
 
+    "egcompacultra67": {          // <--- 20000mAh 67W Ultra-Portativ Powerbank BURADA
+        title: "Powerbank 20,000mAh 67W Ultra-Portativ Powerbank (100W Kabelli)",
+        price: "139.99 AZN",
+        warranty: "1 İL",
+        images: [
+            "Images_site/EgCompacUltra67_1.png",
+            "Images_site/EgCompacUltra67_2.png",
+            "Images_site/EgCompacUltra67_3.png",
+            "Images_site/EgCompacUltra67_4.png",
+            "Images_site/EgCompacUltra67_5.webp",
+            "Images_site/EgCompacUltra67_6.png",
+            "Images_site/EgCompacUltra67_7.webp"
+        ],
+        giftImage: null,
+        wpLink: "https://wa.me/994998058060?text=Salam%2C%20Universal%20Smart%20Charge%2020000mAh%2067W%20powerbank%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m.",
+        installmentLink: "https://birmarket.az/merchant/12157-charger-az?from_search=true&event=view_search_tips&query=charger%20az&choice=Charger.az&tips_type=items&position=1",
+        specs: [
+            { label: "Tutumu:", value: "20,000mAh / 3.85V / 77Wh Premium Li-Polymer" },
+            { label: "Maksimum Güc:", value: "PD 67W (Noutbuk və planşetləri tam sürətlə şarj edir)" },
+            { label: "Daxili Kabel:", value: "Çıxarıla bilən 100W USB-C sürətli şarj və data kabeli (480Mbps)" },
+            { label: "USB-C1 / C2 Giriş:", value: "DC 5V-3A; 9V-3A; 12V-3A; 15V-3A; 20V-2.25A (Maks 45W Sürətli daxili doldurma)" },
+            { label: "USB-C1 / C2 Çıxış:", value: "DC 5V-3A; 9V-3A; 12V-3A; 15V-3A; 20V-3.35A (Maks 67W)" },
+            { label: "USB-A Çıxış:", value: "5V-3A; 9V-2A; 12V-1.5A (QC3.0 Maks 18W)" },
+            { label: "Çoxlu Port İstifadəsi:", value: "2 və ya 3 port eyni anda aktiv olduqda: 5V-3A (Maks 15W)" },
+            { label: "Ekran və Təhlükəsizlik:", value: "Real vaxt rejimində rəqəmsal faiz göstəricisi, Təyyarə üçün icazəli (Flight Approved)" },
+            { label: "Ölçü və Çəki:", value: "115 x 68 x 33 mm, 343 qram (Digər 20k powerbanklardan 33% daha kiçik)" }
+        ],
+        about: "Bu 20,000mAh gücündə premium powerbank, digər standart eyni tutumlu modellərlə müqayisədə 33% daha kiçik və ultra-portativ gövdəyə malikdir. Müasir smartfonları cəmi 30 dəqiqə ərzində 60%-ə qədər doldurmağı bacaran Universal Smart Charge texnologiyası ilə təchiz olunub. Yüksək PD67W gücü sayəsində MacBook və digər noutbukları avtonom şəkildə şarj edə bilir. Üzərindəki çıxarıla bilən daxili 100W gücündə USB-C kabeli həm telefonunuzu doldurmaq, həm də digər cihazlara qoşmaq üçün əlavə rahatlıq yaradır. Eyni anda 3 cihazı doldura bilən quruluşu, ağıllı saatlar və qulaqlıqlar üçün xüsusi 'Az Güclü Şarj Modu' (Low Power Charging) və real vaxt rejimli LED rəqəmsal ekranı ilə ideal bir səyahət yoldaşıdır."
+    },
+
+
+    "joyroomcarchgr30w": {         // <--- Joyroom 30W Mini Maşın Adapteri BURADA
+        title: "Joyroom 30W İki Portlu Metal Mini Maşın Adapteri",
+        price: "29.99AZN",
+        warranty: "3 AY",
+        images: [
+            "Images_site/JoyroomCarChgr30W_1.png",
+            "Images_site/JoyroomCarChgr30W_2.png",
+            "Images_site/JoyroomCarChgr30W_3.png",
+            "Images_site/JoyroomCarChgr30W_4.webp",
+            "Images_site/JoyroomCarChgr30W_5.webp",
+            "Images_site/JoyroomCarChgr30W_6.webp"
+        ],
+        giftImage: null,
+        wpLink: "https://wa.me/994998058060?text=Salam%2C%20Joyroom%2030W%20mini%20ma%C5%9F%C4%B1n%20adapteri%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m.",
+        installmentLink: "https://birmarket.az/merchant/12157-charger-az?from_search=true&event=view_search_tips&query=charger%20az&choice=Charger.az&tips_type=items&position=1",
+        specs: [
+            { label: "Model:", value: "Joyroom CCN05" },
+            { label: "Maksimum Güc:", value: "30 Watt (Ultra sürətli şarj dəstəyi)" },
+            { label: "Port Sayı:", value: "2 Port (1 x Type-C PD, 1 x USB-A QC3.0)" },
+            { label: "Port Çıxışları:", value: "PD / QC3.0 tək istifadədə: Maks 30W | İki port eyni anda: 5V/4A" },
+            { label: "Sürətli Şarj:", value: "PD3.0, QC3.0, PPS (3.3-11V/3A)" },
+            { label: "Material:", value: "Premium Alüminium Ərintisi (Gözəl istilik paylanması)" },
+            { label: "Ölçü:", value: "Mini və gizli dizayn - 24 x 24 x 46 mm" },
+            { label: "Çəki:", value: "Ultra yüngül - cəmi 16 qram" }
+        ],
+        about: "Joyroom CCN05, tamamilə alüminium ərintisindən hazırlanmış, yüngüllüyü və möhkəmliyi ilə seçilən mini avtomobil şarj cihazıdır. Cəmi 16 qram çəkidə olan bu mikro adapter avtomobilin alışqan (çaxmaq) yuvasına tam oturur və kənara çıxıntı verməyərək minimalist görünüş təmin edir. Type-C (PD) və USB-A (QC3.0) portları vasitəsilə eyni anda 2 cihazı təhlükəsiz enerji ilə təmin edə bilir. Tək portdan 30W yüksək güc verməklə smartfonları maksimum sürətlə doldurur. Metal gövdəsi sayəsində şarj zamanı yaranan istiliyi dərhal uzaqlaşdırır və cihazlarınızın təhlükəsizliyini qoruyur."
+    },
+
+
+    "ancarchrg75w": {        // <--- Anker Nano 75W Maşın Adapteri BURADA
+        title: "Anker Nano 75W İki Portlu Sürətli Maşın Adapteri (Daxili Yığılan Kabelli)",
+        price: "74.99 AZN",
+        warranty: "1 İL",
+        images: [
+            "Images_site/AnCarChrg75W_1.png",
+            "Images_site/AnCarChrg75W_2.png",
+            "Images_site/AnCarChrg75W_3.png",
+            "Images_site/AnCarChrg75W_4.webp",
+            "Images_site/AnCarChrg75W_5.png",
+            "Images_site/AnCarChrg75W_6.webp",
+            "Images_site/AnCarChrg75W_7.webp"
+        ],
+        giftImage: null,
+        wpLink: "https://wa.me/994998058060?text=Salam%2C%20Anker%20Nano%2075W%20y%C4%B1%C4%9F%C4%B1lan%20kabelli%20ma%C5%9F%C4%B1n%20adapteri%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m.",
+        installmentLink: "https://birmarket.az/merchant/12157-charger-az?from_search=true&event=view_search_tips&query=charger%20az&choice=Charger.az&tips_type=items&position=1",
+        specs: [
+            { label: "Model:", value: "Anker Nano A2738" },
+            { label: "Maksimum Güc:", value: "75 Watt (Yüksək sürətli ümumi çıxış)" },
+            { label: "Port və Kabel:", value: "1 x Daxili Yığılan USB-C kabel, 1 x USB-C portu" },
+            { label: "Güclərin Paylanması:", value: "Daxili kabel Maks 45W + Əlavə USB-C portu Maks 30W" },
+            { label: "Daxili Kabel:", value: "75 sm uzana və qısa dartılma ilə avtomatik yığıla bilən USB-C kabel" },
+            { label: "Giriş Gərginliyi:", value: "DC 12V-24V (Həm minik, həm yük avtomobilləri üçün)" },
+            { label: "Çəki və Ölçü:", value: "Çox yüngül - cəmi 49.9 qram, Erqonomik dizayn" },
+            { label: "Uyğunluq:", value: "MacBook, iPad, iPhone, Samsung və digər Type-C dəstəkli cihazlar" }
+        ],
+        about: "Anker Nano 75W, avtomobilinizdə kabellərin yaratdığı nizamsızlığa son qoyan, yüksək güclü və premium dizaynlı avtomobil şarj cihazıdır. Üzərindəki daxili 75 sm-lik yığıla bilən xüsusi USB-C kabeli sayəsində kabeli dartaraq uzada, işiniz bitdikdə isə yüngülcə yenidən dartıb buraxaraq avtomatik daxilinə yığılmasını təmin edə bilərsiniz. Ümumi 75W gücü sayəsində daxili kabel tək rəngdə 45W, əlavə Type-C portu isə 30W güc verir. Bu da noutbuk, planşet və smartfonlarınızı eyni anda avtomobildə heç bir sürət itkisi olmadan maksimum sürətlə şarj etməyə imkan yaradır. Kompakt və şık quruluşu ilə avtomobilinizin interyerinə mükəmməl uyğunlaşır."
+    },
+
+
+
+
     "magtrio2": {      // <--- MagTrio 2 3-in-1 Simsiz Şarj Stansiyası BURADA
         title: "MagTrio 2 Qi2 25W Foldable 3-in-1 Simsiz Şarj stendi",
         price: "124.99 AZN",
         warranty: "1 İL",
         images: [
-            "Images_site/MagTrio2_1.png",
+
             "Images_site/MagTrio2_2.png",
+            "Images_site/MagTrio2_1.png",
             "Images_site/MagTrio2_3.png",
             "Images_site/MagTrio2_4.jpg",
             "Images_site/MagTrio2_5.jpg"
@@ -413,13 +506,10 @@ const products = {
     },
 
 
-
-
-
     "magduoarc": { // <--- MagDuo Arc 2-in-1 Simsiz Şarj Cihazı BURADA Mag Duo Arc
         title: "MagDuo Arc 2-in-1 Simsiz Maqnitli Şarj Cihazı",
-        price: "89.99 AZN", // Qiyməti bura daxil edin (məs: "79.99 AZN")
-        warranty: "1 İL",     // Zəmanət müddətini bura daxil edin
+        price: "89.99 AZN",
+        warranty: "1 İL",
         images: [
             "Images_site/MagDuoArc_1.png",
             "Images_site/MagDuoArc_2.png",
@@ -472,6 +562,61 @@ const products = {
             { label: "Mənşəyi:", value: "Orijinal Apple məhsulu" }
         ],
         about: "Dairəvi qulaqlıqlardan fərqli olaraq, EarPods-un dizaynı qulaq seyvanının həndəsəsinə uyğun yaradılmışdır. Bu xüsusiyyət onu uzunmüddətli istifadədə olduqca rahat edir. İçərisindəki dərəcəli dinamiklər səs çıxışını maksimum səviyyəyə qaldırır. Kabel üzərindəki daxili pult vasitəsilə telefonu cibinizdən çıxarmadan səsi tənzimləyə, videoları idarə edə və gələn zənglərə dərhal cavab verə bilərsiniz."
+    },
+
+
+    "ankercarchrg30w": {         // <--- Anker 30W 30vatt Maşın Adapteri BURADA
+        title: "Anker PowerDrive 30W İki Portlu Sürətli Maşın Adapteri",
+        price: "49.99 AZN",
+        warranty: "1 İL",
+        images: [
+            "Images_site/AnkerCarChrg30W_1.png",
+            "Images_site/AnkerCarChrg30W_2.png",
+            "Images_site/AnkerCarChrg30W_3.png",
+            "Images_site/AnkerCarChrg30W_4.png",
+            "Images_site/AnkerCarChrg30W_5.png"
+        ],
+        giftImage: null,
+        wpLink: "https://wa.me/994998058060?text=Salam%2C%20Anker%20PowerDrive%2030W%20ma%C5%9F%C4%B1n%20adapteri%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m.",
+        installmentLink: "https://birmarket.az/merchant/12157-charger-az?from_search=true&event=view_search_tips&query=charger%20az&choice=Charger.az&tips_type=items&position=1",
+        specs: [
+            { label: "Maksimum Güc:", value: "30 Watt (Tək portda USB-C ilə PPS dəstəkli)" },
+            { label: "Port Sayı:", value: "2 Port (1 x USB-C, 1 x USB-A)" },
+            { label: "Port Çıxışları:", value: "Tək USB-C: 30W / Tək USB-A: 22.5W / Hər iki port aktiv: 12W + 12W" },
+            { label: "Sürətli Şarj Dəstəyi:", value: "PPS, Samsung Super Fast Charging 1.0 (25W)" },
+            { label: "Təhlükəsizlik:", value: "MultiProtect (Yüksək gərginlik, qızma və qısa qapanmadan qorunma)" },
+            { label: "Ölçü:", value: "Ultra-kompakt, minimum yer tutan erqonomik dizayn" },
+            { label: "Uyğunluq:", value: "iPhone 15/16 seriyası daxil olmaqla bütün smartfonlar, planşetlər və aksesuarlar" }
+        ],
+        about: "Anker PowerDrive 30W maşın adapteri ultra-kompakt ölçüdə maksimum güc təklif edir. Yüksək güclü 30W USB-C portu sayəsində iPhone 15 və 16 seriyasını standart 5W adapterlərdən 3 dəfə daha sürətli şarj edir. İki portlu dizaynı (USB-C və USB-A) vasitəsilə eyni anda iki cihazı təhlükəsiz şəkildə enerji ilə təmin edir. Anker-in eksklüziv MultiProtect texnologiyası ağıllı enerji paylanması edərək cihazlarınızı həddindən artıq qızma, yüksək cərəyan və gərginlikdən tam qoruyur. Kiçik ölçüləri sayəsində avtomobilinizdə heç bir yer tutmur və tam oturur."
+    },
+
+
+    "joyroomcarchgr90w": {     // <--- Joyroom 90W Maşın Adapteri BURADA
+        title: "Joyroom JR-CL26 90W Üç Portlu Sürətli Maşın Adapteri",
+        price: "39.99 AZN",
+        warranty: "3 AY",
+        images: [
+            "Images_site/JoyroomCarChgr90W_1.webp",
+            "Images_site/JoyroomCarChgr90W_2.webp",
+            "Images_site/JoyroomCarChgr90W_3.webp",
+            "Images_site/JoyroomCarChgr90W_4.webp",
+            "Images_site/JoyroomCarChgr90W_5.webp"
+        ],
+        giftImage: null,
+        wpLink: "https://wa.me/994998058060?text=Salam%2C%20Joyroom%2090W%20ma%C5%9F%C4%B1n%20adapteri%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m.",
+        installmentLink: "https://birmarket.az/merchant/12157-charger-az?from_search=true&event=view_search_tips&query=charger%20az&choice=Charger.az&tips_type=items&position=1",
+        specs: [
+            { label: "Model:", value: "Joyroom JR-CL26" },
+            { label: "Maksimum Güc:", value: "90 Watt (Ümumi yüksək güc çıxışı)" },
+            { label: "Port Sayı:", value: "3 Port (2 x USB Type-C PD, 1 x USB-A QC3.0)" },
+            { label: "Port Gücləri:", value: "PD-1 (45W) + PD-2 (45W) eyni anda | Üç port aktiv olduqda: 45W + 24W" },
+            { label: "Sürətli Şarj Protokolları:", value: "PD3.0, QC3.0, PPS, Samsung AFC, Huawei FCP" },
+            { label: "İşıqlandırma:", value: "Gecə portları rahat tapmaq üçün rəngarəng LED işıq halqası" },
+            { label: "Material və Ölçü:", value: "Yanğına davamlı PC + ABS material, 71 x 36.5 x 36.5 mm" },
+            { label: "Çəki:", value: "Çox yüngül və yığcam - cəmi 34 qram" }
+        ],
+        about: "Joyroom JR-CL26, avtomobilinizdə eyni anda 3 cihazı super sürətli şarj etmək üçün layihələndirilmiş 90W gücündə qabaqcıl maşın adapteridir. İki ədəd Type-C (PD) və bir ədəd USB-A (QC3.0) portu ilə təchiz olunub. İki Type-C portu eyni anda istifadə edildikdə hər biri 45W güc verərək iki telefonu və ya planşeti eyni vaxtda tam sürətlə doldurur. Müasir PPS, Samsung AFC və Huawei FCP sürətli şarj protokollarını dəstəkləyir. Üst tərəfindəki gözoxşayan rəngarəng LED işıqlandırma sayəsində gecə vaxtı portları tapmaq olduqca rahatdır. Yanğına davamlı xüsusi materialı şarj zamanı qızmanın qarşısını alır və təhlükəsizliyi maksimuma çatdırır."
     },
 
 
