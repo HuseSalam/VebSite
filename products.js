@@ -2,6 +2,7 @@ const products = {
 
 
     "anker45w": {  // anker 45 vatt burada
+        
         title: "Anker 45W (Smart Display) Güc adapteri.",
         price: "89.99AZN",
         warranty: "1 İL",
@@ -136,7 +137,38 @@ const products = {
     },
 
 
-    "energea10k": { // <--- ENERGEA MAG PAC PRO PLUS 10K BURADA
+    "energea_ampcharge_45": {      // <--- ENERGEA ampcharge mini 45 vatt BURADA
+        title: "Energea AmpCharge Mini 45 EU GaN Şarj Cihazı",
+        price: "64.99 AZN",
+        warranty: "1 İL",
+        images: [
+            "Images_site/Eg_Ampcharge_Mini_45_1.png",
+            "Images_site/Eg_Ampcharge_Mini_45_4.png",
+            "Images_site/Eg_Ampcharge_Mini_45_2.png",
+            "Images_site/Eg_Ampcharge_Mini_45_3.png",
+            "Images_site/Eg_Ampcharge_Mini_45_5.webp",
+            "Images_site/Eg_Ampcharge_Mini_45_6.png",
+            "Images_site/Eg_Ampcharge_Mini_45_7.webp",],
+
+        giftImage: null,
+        wpLink: "https://wa.me/994998058060?text=Salam%2C%20Energea%20Ampcharge%20mini%2045%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m.",
+        installmentLink: "https://birmarket.az/merchant/12157-charger-az",
+        specs: [
+            { label: "Maksimum Güc:", value: "45W Max (PD3.0 PPS / QC 3.0)" },
+            { label: "Texnologiya:", value: "GaN (55% daha kiçik ölçü və daha az qızma)" },
+            { label: "Port Sayı:", value: "2 Port (1 x USB-C, 1 x USB-A)" },
+            { label: "USB-C Çıxış (Output):", value: "5V/3A, 9V/3A, 12V/3A, 15V/3A, 20V/2.25A (PD45W Max) | PPS: 45W Max" },
+            { label: "USB-A Çıxış (Output):", value: "5V/3A, 9V/3A, 12V/2.5A, 15V/2A, 20V/1.5A (QC3.0 30W Max)" },
+            { label: "Birgə İstifadə (C+A):", value: "15W Max" },
+            { label: "Ölçülər və Çəki:", value: "35 x 35 x 41mm | 61g" },
+            { label: "Uyğunluq:", value: "Bütün iPhone və iPad seriyaları, Android cihazları" }
+        ],
+        about: "Energea AmpCharge Mini 45, planşet və mobil cihazlarınız üçün 45W-a qədər sürətli şarj təmin edən ultra-kompakt GaN şarj cihazıdır. Qabaqcıl GaN texnologiyası sayəsində enerjini daha səmərəli ötürür, qızmanı minimuma endirir və standart adapterlərdən 55% daha az yer tutur. Həm USB-C, həm də USB-A portları ilə eyni anda iki cihazı şarj edə bilərsiniz. Ağıllı güc təyini texnologiyası qoşulan cihazın ehtiyacına uyğun çıxış gücünü avtomatik tənzimləyir. Qısa qapanma, həddindən artıq cərəyan, yüksək gərginlik və qızma əleyhinə tam qoruma sistemləri ilə təchiz olunmuşdur."
+    },
+
+
+
+    "energea10k": {       // <--- ENERGEA MAG PAC PRO PLUS 10K BURADA
         title: "ENERGEA Mag Pac Pro Plus 10K",
         price: "99.99 AZN",
         warranty: "1 İL",
@@ -224,6 +256,7 @@ const products = {
 
 
     "anker67wcar": { // <--- ANKER 67W CAR CHARGER BURADA
+        active: false, 
         title: "Anker 67W Car Charger",
         price: "69.99 AZN",
         warranty: "1 İL",
@@ -413,6 +446,38 @@ const products = {
         ],
         about: "Bu 20,000mAh gücündə premium powerbank, digər standart eyni tutumlu modellərlə müqayisədə 33% daha kiçik və ultra-portativ gövdəyə malikdir. Müasir smartfonları cəmi 30 dəqiqə ərzində 60%-ə qədər doldurmağı bacaran Universal Smart Charge texnologiyası ilə təchiz olunub. Yüksək PD67W gücü sayəsində MacBook və digər noutbukları avtonom şəkildə şarj edə bilir. Üzərindəki çıxarıla bilən daxili 100W gücündə USB-C kabeli həm telefonunuzu doldurmaq, həm də digər cihazlara qoşmaq üçün əlavə rahatlıq yaradır. Eyni anda 3 cihazı doldura bilən quruluşu, ağıllı saatlar və qulaqlıqlar üçün xüsusi 'Az Güclü Şarj Modu' (Low Power Charging) və real vaxt rejimli LED rəqəmsal ekranı ilə ideal bir səyahət yoldaşıdır."
     },
+
+
+    "magduo17.5w": {
+        title: "Qi2 Certified 17.5W 2-in-1 Wireless Charger",
+        price: "64.99 AZN",
+        warranty: "1 İL",
+        images: [
+            "Images_site/MagDuo_1.png",
+            "Images_site/MagDuo_3.png",
+            "Images_site/MagDuo_2.png",
+            "Images_site/MagDuo_4.png",
+            "Images_site/MagDuo_5.png",
+            "Images_site/MagDuo_6.png",
+            "Images_site/MagDuo_7.png"
+        ],
+        giftImage: null,
+        wpLink: "https://wa.me/994998058060?text=Salam%2C%20Qi2%20Certified%2017.5W%202-in-1%20Wireless%20Charger%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m.",
+        installmentLink: "https://birmarket.az/merchant/12157-charger-az?from_search=true&event=view_search_tips&query=charger%20az&choice=Charger.az&tips_type=items&position=1",
+        specs: [
+            { label: "Sertifikat:", value: "Qi2 Certified" },
+            { label: "Ümumi Güc:", value: "17.5W Max" },
+            { label: "Simsiz Şarj (Telefon):", value: "5W / 7.5W / 10W / 15W Sürətli Şarj" },
+            { label: "Simsiz Şarj (Saat):", value: "2.5W (Daxili Apple Watch Şarjı)" },
+            { label: "Giriş (Input):", value: "5V/2A; 9V/2.77A (Max)" },
+            { label: "Ölçülər və Çəki:", value: "65 x 73 x 16mm | 90g" },
+            { label: "Dizayn:", value: "16mm Ultra-slim, Metalik korpus" },
+            { label: "Uyğunluq:", value: "iPhone 12 seriyası və üzəri" }
+        ],
+        about: "Qi2 Certified 17.5W 2-in-1 Wireless Charger, quraşdırılmış Apple Watch şarj cihazı ilə təchiz olunmuş kompakt və səyahətə uyğun simsiz şarj cihazıdır. Aktiv və hərəkətli həyat tərzi üçün dizayn edilmiş bu model, iPhone və Apple Watch cihazlarınızı eyni anda doldurmağa imkan verir. iPhone 12 və daha yeni modellər üçün 15W sürətli simsiz şarj təklif edir. Daxili dayaq (kickstand) mexanizmi sayəsində telefonunuzu həm şaquli (portrait), həm də üfüqi (landscape) vəziyyətdə tənzimlənən baxış bucaqları ilə yerləşdirə bilərsiniz. 16 mm ultra-nazik profili və metalik xarici görünüşü ilə gündəlik həyatınızın mükəmməl tamamlayıcısıdır."
+    },
+
+
 
 
     "joyroomcarchgr30w": {         // <--- Joyroom 30W Mini Maşın Adapteri BURADA

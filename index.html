@@ -473,6 +473,16 @@
 
 
 
+
+        <a href="product.html?id=energea_ampcharge_45" class="product-item"
+            data-name="Energea ampcharge mini 45 EU GaN adapter, başlıq, зарядка, iki portlu, basliq">
+            <img src="Images_site/Eg_Ampcharge_Mini_45_1.png" alt="Energea Ampcharge Mini 45">
+            <p>Energea AmpCharge Mini 45W (2 portlu)</p>
+            <span>64.99 AZN</span>
+        </a>
+
+
+
         <a href="product.html?id=ankercarchrg30w" class="product-item"
             data-name="ankercarchrg30w anker powerdrive car charger 30w avto masin maşın adapteri ucluq basliq sarj aləti iki portlu sürətli зарядка в машину анкер">
             <img src="Images_site/AnkerCarChrg30W_1.png">
@@ -481,8 +491,16 @@
         </a>
 
 
+        <a href="product.html?id=magduo17.5w" class="product-item"
+            data-name="Qi2 Certified 17.5W 2-in-1 Wireless Charger with built-in Apple Watch Charger MagDuo">
+            <img src="Images_site/MagDuo_1.png" alt="Qi2 Certified 17.5W 2-in-1 Wireless Charger">
+            <p>Energea Simsiz Şarj Stendi (17.5W)</p>
+            <span>64.99 AZN</span>
+        </a>
+
+
         <a href="product.html?id=egcompacultra67" class="product-item"
-            data-name="egcompacultra67 universal smart charge powerbank taşınabilir batareya enerji toplayici 20000mah 20.000 67w pd67w noutbuk macbook kabelli rəqəmsal ekran led sürətli портативная зарядка повербанк">
+            data-name="egcompacultra67 universal smart charge powerbank poverbank taşınabilir batareya enerji toplayici 20000mah 20.000 67w pd67w noutbuk macbook kabelli rəqəmsal ekran led sürətli портативная зарядка повербанк">
             <img src="Images_site/EgCompacUltra67_1.png">
             <p>Energea Powerbank 20K</p>
             <span>139.99 AZN</span>
@@ -490,9 +508,9 @@
 
 
         <a href="product.html?id=magtrio2" class="product-item"
-            data-name="magtrio2 magtrio 2 qi2 25w foldable 3-in-1 wireless charging station simsiz şarj sarj cihazı stansiyası qatlanan ucluq başlıq apple watch iphone airpods">
+            data-name="magtrio2 magtrio 2 qi2 25w foldable 3-in-1 wireless charging station simsiz şarj sarj cihazı stansiyası qatlanan ucluq apple watch iphone airpods">
             <img src="Images_site/MagTrio2_2.png">
-            <p>Energea Stend (MAGTRIO 2)</p>
+            <p>Energea Simsiz Şarj Stendi (25W)</p>
             <span>124.99 AZN</span>
         </a>
 
@@ -600,7 +618,7 @@
         </a>
 
         <a href="product.html?id=applecablecl" class="product-item"
-            data-name="apple usb-c to lightning cable 1m 1 metr kabel şunur sunur şarj sarj lightning data kabeli original iphone ipad airpods qulaqlıq кабель эпл лайтнинг">
+            data-name="apple usb-c to lightning cable 1m 1 metr kabel şunur sunur şarj sarj lightning data kabeli original iphone ipad airpods кабель эпл лайтнинг">
             <img src="Images_site/Apple_C_to_Light_1m_1.png">
             <p>APPLE kabel USB-C TO LIGHTNING</p>
             <span>29.99 AZN</span>
@@ -685,6 +703,25 @@
     </div>
 
     <script>
+
+        // 🌟 YENİ: active: false olan məhsulları avtomatik gizlədən kod 🌟
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof products !== "undefined") {
+                for (const key in products) {
+                    if (products[key].active === false) {
+                        // products.js-də active: false olan məhsulun linkini (kartını) tapırıq
+                        const productLink = document.querySelector(`a[href="product.html?id=${key}"]`);
+                        if (productLink) {
+                            productLink.remove(); // Məhsulu ana səhifədən tamamilə silir
+                        }
+                    }
+                }
+            }
+        });
+
+
+
+
         function showGift(event, element) {
             event.stopPropagation();
             event.preventDefault();
@@ -788,6 +825,34 @@
             </div>
         </div>
     </footer>
+
+
+
+    </div>
+
+    <script src="products.js"></script>
+
+    <script>
+        // 🌟 YENİ: active: false olan məhsulları avtomatik gizlədən kod 🌟
+        document.addEventListener("DOMContentLoaded", function () {
+            // Artıq products faylı yuxarıda qoşulduğu üçün bu şərt doğru (true) olacaq
+            if (typeof products !== "undefined") {
+                for (const key in products) {
+                    if (products[key].active === false) {
+                        // products.js-də active: false olan məhsulun kartını tapırıq
+                        const productLink = document.querySelector(`a[href="product.html?id=${key}"]`);
+                        if (productLink) {
+                            productLink.remove(); // Məhsulu ana səhifədən tamamilə silir
+                        }
+                    }
+                }
+            }
+        });
+
+        // Digər funksiyalarınız (showGift, searchProduct və s.)...
+    </script>
+
+
 
 </body>
 
