@@ -2,7 +2,7 @@ const products = {
 
 
     "anker45w": {  // anker 45 vatt burada
-        
+
         title: "Anker 45W (Smart Display) Güc adapteri.",
         price: "89.99AZN",
         warranty: "1 İL",
@@ -227,6 +227,42 @@ const products = {
 
 
 
+
+
+
+    "energea_alupac_10k": { // <--- ENERGEA ALUPAC 10K BURADA
+        title: "Energea Alupac 10K Magsafe Powerbank",
+        price: "69.99 AZN",
+        warranty: "1 İL",
+        images: [
+            "Images_site/Eg-Alupac-10K-1.png",
+            "Images_site/Eg-Alupac-10K-2.png",
+            "Images_site/Eg-Alupac-10K-3.png",
+            "Images_site/Eg-Alupac-10K-4.png",
+            "Images_site/Eg-Alupac-10K-5.png",
+            "Images_site/Eg-Alupac-10K-6.png",
+
+        ],
+        giftImage: null,
+        wpLink: "https://wa.me/994998058060?text=Salam%2C%20Energea%20Alupac%2010K%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m.",
+        installmentLink: "https://birmarket.az/merchant/12157-charger-az?from_search=true&event=view_search_tips&query=charger%20az&choice=Charger.az&tips_type=items&position=1",
+        specs: [
+            { label: "Tutumu:", value: "10,000mAh, 3.85V 38.5Wh Li-Poly" },
+            { label: "Simsiz Çıxış Gücü:", value: "5W / 7.5W / 10W / 15W (iPhone üçün 7.5W, Android üçün 15W)" },
+            { label: "USB-C Çıxış Gücü:", value: "5V/3A, 9V/2.23A, 12V/1.67A (PD20W Maks)" },
+            { label: "USB-C Giriş Gücü:", value: "5V/3A, 9V/2.23A, 12V/1.67A (PD18W Maks)" },
+            { label: "Eyni Anda Şarj:", value: "2 cihazı eyni anda şarj etmə dəstəyi" },
+            { label: "Ölçülər və Çəki:", value: "102 x 66 x 16mm / 186q" },
+            { label: "İndikator:", value: "Batareya səviyyəsini göstərən LED işıqlar" }
+        ],
+        about: "Energea Alupac 10K, magnet (MagSafe) dəstəkli və yüksək keyfiyyətli alüminium gövdəyə malik ultra-kompakt xarici batareyadır. Yüngül və erqonomik dizaynı sayəsində cibinizə rahatlıqla yerləşir və çəkiliş zamanı kameranın qarşısını kəsmir. PD20W Type-C çıxışı vasitəsilə iPhone cihazınızı cəmi 30 dəqiqə ərzində 60%-dək sürətli şarj edə bilir. Eyni zamanda həm simli, həm də simsiz olaraq iki cihazı paralel doldurma imkanına malikdir."
+    },
+
+
+
+
+
+
     "airpodspro3anc": { // <--- AIRPODS PRO 3 ANC BURADA
         title: "AirPods Pro 3 ANC",
         price: "64.99 AZN",
@@ -256,7 +292,7 @@ const products = {
 
 
     "anker67wcar": { // <--- ANKER 67W CAR CHARGER BURADA
-        active: false, 
+        active: false,
         title: "Anker 67W Car Charger",
         price: "69.99 AZN",
         warranty: "1 İL",
@@ -279,6 +315,172 @@ const products = {
             { label: "Uyunluq:", value: "Telefon, Planşet və MacBook modelləri" }
         ],
         about: "Anker 67W avtomobil şarj cihazı, yolda olarkən noutbuk, planşet və telefonlarınızı eyni anda yüksək sürətlə doldurmaq üçün mükəmməl həlldir. ActiveShield təhlükəsizlik sistemi ilə həm yerə qənaət edir, həm də cihazlarınızı yüksək gərginlikdən qoruyur. Paketə 1 metrə yaxın sürətli şarj dəstəkləyən kabel daxildir."
+    },
+
+
+
+
+
+
+
+    "energea_travelworld_25": {        // <--- ENERGEA TRAVELWORLD 25 BURADA
+        title: "Energea TravelWorld 25W Səyahət Adapteri",
+        price: "59.99 AZN",
+        warranty: "1 İL",
+        images: [
+            "Images_site/Eg-Trave-25W-1.png",
+            "Images_site/Eg-Trave-25W-2.png",
+            "Images_site/Eg-Trave-25W-3.png",
+            "Images_site/Eg-Trave-25W-4.png",
+            "Images_site/Eg-Trave-25W-5.png",
+            "Images_site/Eg-Trave-25W-6.png",
+            "Images_site/Eg-Trave-25W-7.png"
+        ],
+        giftImage: null,
+        wpLink: "https://wa.me/994998058060?text=Salam%2C%20Energea%20TravelWorld%2025%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m.",
+        installmentLink: "https://birmarket.az/merchant/12157-charger-az?from_search=true&event=view_search_tips&query=charger%20az&choice=Charger.az&tips_type=items&position=1",
+        specs: [
+            { label: "Giriş Gərginliyi:", value: "100-240V ~ 50/60Hz 0.8A" },
+            { label: "USB-C Çıxış (PD/PPS):", value: "5V/3A; 9V/2.77A; 12V/2.08A (PD25W Maks) | 3.3V-11V/2.25A (PPS25W Maks)" },
+            { label: "USB-A Çıxış (QC3.0):", value: "5V/3A, 9V/2A, 12V/1.5A (QC3.0 18W Maks)" },
+            { label: "Kombinə Olunmuş Çıxış:", value: "USB-C + USB-A: 15W Maks" },
+            { label: "Port Sayı:", value: "2 Port (1 x USB-C, 1 x USB-A)" },
+            { label: "Xüsusi Texnologiyalar:", value: "Pin-lock mexanizmi (başlıqları sabitləyən sistem), Ağıllı Cihaz Tanıma (Power Identification)" },
+            { label: "Ölçülər və Çəki:", value: "70 x 42 x 25 mm / 65q" }
+        ],
+        about: "Energea TravelWorld 25, dünyanın fərqli ölkələrindəki rozetkalara tam uyğunlaşa bilən, dəyişdirilə bilən başlıqlara malik ultra-portativ 25W səyahət adapteridir. USB-C və USB-A portları vasitəsilə eyni anda iki cihazınızı rahatlıqla şarj edə bilərsiniz. PD25W və PPS25W dəstəyi sayəsində planşetləri, ağıllı telefonları və portativ oyun konsollarını (məsələn, Nintendo Switch) yüksək sürətlə doldurur. Xüsusi Pin-lock təhlükəsizlik sistemi istifadə zamanı daxili keçidlərin yerində möhkəm sabitlənməsini təmin edir. Həmçinin intellektual enerji müəyyən etmə texnologiyası sayəsində cihazınızın ehtiyacına uyğun ən optimal şarj cərəyanını avtomatik tənzimləyərək batareyanın ömrünü qoruyur."
+    },
+
+
+
+
+
+
+
+
+    "energea_travelworld_gan120": { // <--- ENERGEA TRAVELWORLD GAN120 BURADA
+        title: "Energea TravelWorld GaN 120W Səyahət Adapteri",
+        price: "149.99 AZN",
+        warranty: "1 İL",
+        images: [
+            "Images_site/Eg-Travel-120W-1.png",
+            "Images_site/Eg-Travel-120W-2.png",
+            "Images_site/Eg-Travel-120W-3.png",
+            "Images_site/Eg-Travel-120W-4.png"
+        ],
+        giftImage: null,
+        wpLink: "https://wa.me/994998058060?text=Salam%2C%20Energea%20TravelWorld%20GAN120%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m.",
+        installmentLink: "https://birmarket.az/merchant/12157-charger-az?from_search=true&event=view_search_tips&query=charger%20az&choice=Charger.az&tips_type=items&position=1",
+        specs: [
+            { label: "Maksimum Güc (AC):", value: "2500W / 100-250V (Məişət texnikaları üçün AC çıxışı)" },
+            { label: "Ümumi USB Çıxış Gücü:", value: "120W Maks (Yüksək effektivlikli GaN texnologiyası)" },
+            { label: "Tək Port Çıxışları:", value: "USB-C1/C2: Maks 100W (PD) / 55W (PPS) | USB-C3: Maks 20W | USB-A: Maks 18W" },
+            { label: "Çoxlu Port Paylanması:", value: "3 x USB-C və 1 x USB-A (Eyni anda noutbuk, planşet və telefonu sürətli şarj etmə dəstəyi)" },
+            { label: "Qorunma və Təhlükəsizlik:", value: "Təhlükəsizlik pərdəsi (Safety shutter), 10A daxili qoruyucu (və 1 ədəd ehtiyat sığorta/fuse)" },
+            { label: "Uyğunluq:", value: "ABŞ, Böyük Britaniya, Avstraliya, Avropa və Asiya (150-dən çox ölkə ilə tam uyğunluq)" },
+            { label: "Komplektasiya:", value: "Xüsusi daşıma çantası (Carry case) daxildir" },
+            { label: "Ölçülər və Çəki:", value: "50 x 54 x 94mm / 287q" }
+        ],
+        about: "Energea TravelWorld GAN120, səyahətləriniz zamanı bütün enerji ehtiyaclarınızı tək bir cihazla qarşılamaq üçün dizayn edilmiş unikal və güclü bir şarj mərkəzidir. Ən müasir GaN (Gallium Nitride) texnologiyası sayəsində kiçik ölçüdə qalaraq 120W ümumi USB enerjisi və 2500W-a qədər AC rozetka gücü təmin edir. Tək USB-C portundan 100W çıxış verməklə MacBook və digər noutbukları tam sürətlə doldurur. ABŞ, Böyük Britaniya, Avstraliya, Avropa və Asiya standartlarına uyğun daxili keçidləri ilə 150-dən çox ölkədə rahatlıqla istifadə olunur. GANSMART ağıllı güc paylama texnologiyası qoşulan cihazların tələbini avtomatik təyin edir, daxili təhlükəsizlik pərdələri və 10A sığorta sistemi isə yüksək gərginlikdən maksimum qorunma yaradır."
+    },
+
+
+
+
+
+    "joyroom_jr_w15": {          // <--- JOYROOM stendi JR-W15 BURADA
+        title: "Joyroom JR-W15 3-in-1 Magsafe Simsiz Şarj Stendi",
+        price: "64.99 AZN",
+        warranty: "3 AY",
+        images: [
+            "Images_site/JR-stend-15W-1.png",
+            "Images_site/JR-stend-15W-2.webp",
+            "Images_site/JR-stend-15W-3.png",
+            "Images_site/JR-stend-15W-4.webp",
+            "Images_site/JR-stend-15W-5.webp",
+            "Images_site/JR-stend-15W-6.png"
+        ],
+        giftImage: null,
+        wpLink: "https://wa.me/994998058060?text=Salam%2C%20Joyroom%20JR-W15%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m.",
+        installmentLink: "https://birmarket.az/merchant/12157-charger-az?from_search=true&event=view_search_tips&query=charger%20az&choice=Charger.az&tips_type=items&position=1",
+        specs: [
+            { label: "Brend / Model:", value: "Joyroom JR-W15" },
+            { label: "Çoxfunksiyalılıq:", value: "3-ü 1-də (Eyni anda Telefon, Apple Watch və Qulaqlıq şarjı)" },
+            { label: "Giriş Gücü (Input):", value: "5V=3A, 9V=2A" },
+            { label: "Telefon Çıxış Gücü:", value: "5W / 7.5W / 10W / 15W (MagSafe dəstəkli)" },
+            { label: "Qulaqlıq Çıxış Gücü:", value: "5W Maks" },
+            { label: "Ağıllı Saat Çıxış Gücü:", value: "2.5W (Apple Watch üçün)" },
+            { label: "Material:", value: "ABS + PC (Yüksək temperatura davamlı odadavamlı material)" },
+            { label: "Təhlükəsizlik Sistemləri:", value: "Temperatur nəzarəti, yüksək gərginlik, qısaqapanma və həddindən artıq cərəyan qorunması" },
+            { label: "Uyğunluq:", value: "iPhone 12/13/14/15/16 və daha yeni; Apple Watch S1-9, SE 1/2, Ultra 1/2; AirPods 2/3/Pro (simsiz versiyalar)" }
+        ],
+        about: "Joyroom JR-W15, masanızın üzərindəki kabel qarışıqlığına son qoyan və yerə qənaət edən ultra-stabil şaquli 3-ü 1-də simsiz şarj stansiyasıdır. MagSafe texnologiyası sayəsində iPhone-u maqnitlə möhkəm saxlayır və sürətli enerji bərpasını təmin edir. Şaquli dizaynı sayəsində telefonu həm şaquli, həm də üfüqi (Nightstand / Gecə masası rejimi) mövqedə yerləşdirərək video zənglər və ya videoları rahatlıqla izləyə bilərsiniz. Ağıllı enerji idarəetmə sistemi cihazlarınızı həddindən artıq qızmaqdan, gərginlik dəyişmələrindən və yüklənmələrdən maksimum dərəcədə qoruyur. Həm ev, həm də ofis istifadəsi üçün mükəmməl, minimalist dizaynlı müasir bir aksesuardır."
+    },
+
+
+
+
+    "bazic_trio_plus": { // <--- BAZIC TRIO PLUS BURADA
+        title: "Bazic Trio Plus 3-in-1 MagSafe Simsiz Şarj Paneli",
+        price: "89.99 AZN",
+        warranty: "6 AY",
+        images: [
+            "Images_site/Bazic-TrioPlus-1.png",
+            "Images_site/Bazic-TrioPlus-2.webp",
+            "Images_site/Bazic-TrioPlus-3.webp",
+            "Images_site/Bazic-TrioPlus-4.png",
+            "Images_site/Bazic-TrioPlus-5.webp",
+            "Images_site/Bazic-TrioPlus-6.png"
+        ],
+        giftImage: null,
+        wpLink: "https://wa.me/994998058060?text=Salam%2C%20Bazic%20Trio%20Plus%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m.",
+        installmentLink: "https://birmarket.az/merchant/12157-charger-az?from_search=true&event=view_search_tips&query=charger%20az&choice=Charger.az&tips_type=items&position=1",
+        specs: [
+            { label: "Brend / Model:", value: "Bazic Trio Plus" },
+            { label: "Çoxfunksiyalılıq:", value: "3-ü 1-də (Eyni anda iPhone, Apple Watch və AirPods şarjı)" },
+            { label: "Dizayn və Erqonomika:", value: "Unikal qatlanan mexanizm (1, 2 və ya 3 cihaz üçün tənzimlənə bilir)" },
+            { label: "USB-C Giriş (Input):", value: "DC 9V/3A, 12V/3A" },
+            { label: "Telefon Çıxış Gücü:", value: "5W / 7.5W / 10W / 15W (MagSafe sürətli şarj dəstəyi)" },
+            { label: "Qulaqlıq Çıxış Gücü:", value: "5W Maks (TWS / AirPods)" },
+            { label: "Apple Watch Çıxış Gücü:", value: "2.5W Maks (Daxili saat şarj yeri)" },
+            { label: "Xüsusi Funksiyalar:", value: "Kameranın qarşısını kəsməyən qabarıq maqnit halqası, şaquli/üfüqi şarj, Apple Watch üçün gecə masası (Night stand) rejimi, LED indikator" },
+            { label: "Ölçülər və Çəki:", value: "Açıq halda: 247 x 74.5 x 8.5mm | Qatlandıqda: 84 x 74.5 x 26.7mm | Çəki: 128q" },
+            { label: "Komplektasiya:", value: "Xüsusi qoruyucu daşıma çantası (Protective carrying pouch) daxildir" }
+        ],
+        about: "Bazic Trio Plus, üçlü simsiz şarjın gücünü maqnitli (MagSafe) bərkidilmənin rahatlığı ilə birləşdirən ultra-kompakt və qatlana bilən 3-ü 1-də şarj panelidir. iPhone 12 və daha yeni modellər, AirPods və Apple Watch üçün xüsusi olaraq hazırlanmışdır. İnnovativ qatlanan quruluşu sayəsində ehtiyacınıza uyğun olaraq onu tam aça, yaxud yalnız 1 və ya 2 cihazı dolduracaq şəkildə qatlayaraq masanızda yerə qənaət edə bilərsiniz. Qabarıq maqnit halqa dizaynı telefonun kamerasının maneə törətməsinin qarşısını alır və MagSafe keyslərlə tam uyğun işləyir. Yüngül çəkisi (128q) və komplektə daxil olan daşıma çantası ilə həm evdə, həm də səyahətlərdə imtina edilməz bir köməkçidir."
+    },
+
+
+
+
+
+    "alumag_gyro": { // <--- ALUMAG GYRO BURADA
+        title: "Alumag GYRO 3-in-1 Qi2 25W Fırlanan Simsiz Şarj Cihazı",
+        price: "149.99 AZN",
+        warranty: "1 İL",
+        images: [
+            "Images_site/Eg-Alumag-gyro-1.png",
+            "Images_site/Eg-Alumag-gyro-5.png",
+            "Images_site/Eg-Alumag-gyro-2.png",
+            "Images_site/Eg-Alumag-gyro-3.png",
+            "Images_site/Eg-Alumag-gyro-4.png",
+            "Images_site/Eg-Alumag-gyro-6.png",
+
+
+        ],
+        giftImage: null,
+        wpLink: "https://wa.me/994998058060?text=Salam%2C%20Alumag%20GYRO%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m.",
+        installmentLink: "https://birmarket.az/merchant/12157-charger-az?from_search=true&event=view_search_tips&query=charger%20az&choice=Charger.az&tips_type=items&position=1",
+        specs: [
+            { label: "Maksimum Güc:", value: "35W Ümumi (Telefon üçün maks 25W Qi2 sürətli şarj)" },
+            { label: "Çoxfunksiyalılıq:", value: "3-ü 1-də (Eyni anda Telefon, Apple Watch və Qulaqlıq şarjı)" },
+            { label: "Dizayn və Erqonomika:", value: "360° fırlanan baza, hündürlüyü tənzimlənən və qatlana bilən gövdə" },
+            { label: "Material:", value: "Premium və dayanıqlı ağırlaşdırılmış metal ərintisi (Alloy)" },
+            { label: "USB-C Giriş:", value: "5V/3A; 9V/3A; 12V/3A; 15V/3A" },
+            { label: "Simsiz Çıxışlar:", value: "Telefon: 5W-25W | Qulaqlıq (TWS): 5W Maks | Apple Watch: 5W Maks" },
+            { label: "Ölçülər və Çəki:", value: "83 x 83 x 29mm / 288q" }
+        ],
+        about: "ALUMAG GYRO, gündəlik istifadəni asanlaşdırmaq üçün hazırlanmış premium dizaynlı 3-ü 1-də Qi2 25W naqilsiz şarj stansiyasıdır. Ən son Qi2 texnologiyası sayəsində iPhone 16 və digər uyğun modelləri cəmi 30 dəqiqədən az müddətdə 0-dan 50%-ə qədər sürətlə şarj edir. 360° fırlanan bazası və hündürlüyü tənzimlənən strukturu iş masanızda və ya yataq otağınızda ən mükəmməl baxış bucağını tapmağa kömək edir. Ağırlaşdırılmış metal gövdəsi stendin yerində sabit qalmasını təmin edir, qatlanan dizaynı isə məkanınızı təmiz, minimalist və müasir saxlayır."
     },
 
 
@@ -373,7 +575,7 @@ const products = {
 
         ],
         giftImage: "Images_site/merkan_kecirici_1.png",
-        wpLink: "https://wa.me/994998058060?text=Salam%2C%20Apple%2040W%20%28UK%29%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m.",
+        wpLink: "https://wa.me/994998058060?text=Salam%2C%20Apple%2040W%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m.",
         installmentLink: "https://birmarket.az/merchant/12157-charger-az?from_search=true&event=view_search_tips&query=charger%20az&choice=Charger.az&tips_type=items&position=1",
         specs: [
             { label: "Maksimum Güc:", value: "40 Watt" },
@@ -541,6 +743,73 @@ const products = {
 
 
 
+
+    "choetech_qi2_car_charger": {           // <--- CHOETECH QI2 CAR CHARGER BURADA
+        title: "Choetech Qi2 15W RGB Maqnitli Sürətli Maşın Şarj Cihazı",
+        price: "94.99 AZN",
+        warranty: "6 AY",
+        images: [
+            "Images_site/CT-Holder-15W-Qi2-1.webp",
+            "Images_site/CT-Holder-15W-Qi2-2.webp",
+            "Images_site/CT-Holder-15W-Qi2-3.webp",
+            "Images_site/CT-Holder-15W-Qi2-4.webp",
+            "Images_site/CT-Holder-15W-Qi2-5.webp",
+            "Images_site/CT-Holder-15W-Qi2-6.webp",
+            "Images_site/CT-Holder-15W-Qi2-8.webp",
+            "Images_site/CT-Holder-15W-Qi2-7.webp",
+
+        ],
+        giftImage: null,
+        wpLink: "https://wa.me/994998058060?text=Salam%2C%20Choetech%20Qi2%20Ma%C5%9F%C4%B1n%20%C5%9Earj%20Cihaz%C4%B1%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m.",
+        installmentLink: "https://birmarket.az/merchant/12157-charger-az?from_search=true&event=view_search_tips&query=charger%20az&choice=Charger.az&tips_type=items&position=1",
+        specs: [
+            { label: "Brend / Model:", value: "Choetech Qi2 Magnetic Car Charger" },
+            { label: "Giriş Portu (Input):", value: "USB-C | 5V⎓2A / 9V⎓2.2A / 12V⎓2A" },
+            { label: "Naqilsiz Çıxış Gücü:", value: "Qi2 15W Maks (Standart şarj cihazlarından 20% daha sürətli)" },
+            { label: "Soyutma Sistemi:", value: "Aktiv siklon tipli turbor-soyutma (53 pərli fan, 3000 RPM) — temperaturu 8°C-dək azaldır" },
+            { label: "İşıqlandırma:", value: "Büllur (Crystal) RGB işıqlandırma — rejimlər arası keçid üçün üzərinə iki dəfə toxunmaq kifayətdir" },
+            { label: "Fiksasiya və Erqonomika:", value: "Güclü maqnit matrisi (Snap & Secure), tək əllə rahat istifadə, 360° fırlanan oynaq" },
+            { label: "Quraşdırılma Rejimi:", value: "İkili quraşdırılma — avtomobilin hava çıxışına (vent) və ya idarəetmə panelinə (dashboard) uyğundur" },
+            { label: "Material və Ölçülər:", value: "ABS + Yüksək şəffaflıqlı PC korpus | Ölçülər: Φ67mm × 41mm | Xalis Çəki: 69q" }
+        ],
+        about: "Choetech Qi2 Crystal-Air, yoldaykən yavaş şarj və telefonun qızması problemini tamamilə aradan qaldıran premium səviyyəli avtomobil şarj cihazı və tutacağıdır. Ən yeni Qi2 sertifikatlı maqnit texnologiyası vasitəsilə iPhone cihazlarını adi simsiz şarj cihazlarından 20% daha sürətli (15W) doldurur. Daxili 53 pərli (3000 dövr/dəq) daxili aktiv turbo pəri sayəsində şarj prosesində cihazın temperaturunu 8°C-yə qədər aşağı salır və telefonunuzun batareya ömrünü qoruyur. Şəffaf gövdəsi daxilində yerləşən Crystal RGB işıqlandırması avtomobilinizə xüsusi estetik gözəllik qatır və üzərinə iki dəfə toxunmaqla işıq effektləri (göyqşağı, nəfəs alma və s.) dəyişdirilə bilir. Güclü maqnit strukturu kələ-kötür yollarda belə telefonu tam sabit saxlayır, 360 dərəcəlik fırlanan oynağı isə mükəmməl görünüş bucağı təmin edir."
+    },
+
+
+
+
+
+    "pitaka_magez_pro2_qi2": { // <--- PITAKA MAGEZ PRO 2 QI2 BURADA
+        title: "Pitaka MagEZ Car Mount Pro 2 Qi2 15W Maqnitli Avtomobil Şarj Cihazı",
+        price: "139.99 AZN",
+        warranty: "6 AY",
+        images: [
+            "Images_site/Pitaka-Magez-Pro2-1.webp",
+            "Images_site/Pitaka-Magez-Pro2-2.webp",
+            "Images_site/Pitaka-Magez-Pro2-3.webp",
+            "Images_site/Pitaka-Magez-Pro2-4.webp",
+            "Images_site/Pitaka-Magez-Pro2-5.webp",
+            "Images_site/Pitaka-Magez-Pro2-6.png"
+        ],
+        giftImage: null,
+        wpLink: "https://wa.me/994998058060?text=Salam%2C%20Pitaka%20MagEZ%20Car%20Mount%20Pro%202%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m.",
+        installmentLink: "https://birmarket.az/merchant/12157-charger-az?from_search=true&event=view_search_tips&query=charger%20az&choice=Charger.az&tips_type=items&position=1",
+        specs: [
+            { label: "Brend / Model:", value: "Pitaka MagEZ Car Mount Pro 2 (Qi2 Certified)" },
+            { label: "Naqilsiz Çıxış Gücü:", value: "Qi2 15W Sürətli Simsiz Şarj" },
+            { label: "Maqnit Tutma Qüvvəsi:", value: "1.8 kq-a qədər güclü maqnit fiksasiyası" },
+            { label: "Xüsusi Texnologiya:", value: "Daxili NFC çipləri vasitəsilə qısayollar (Shortcuts) idarəetməsi" },
+            { label: "Ağıllı Funksiyalar:", value: "NFC toxunuşu ilə öncədən təyin edilmiş proqramları açma, ETA (çatma vaxtını) avtomatik mesajla ailəyə göndərmə" },
+            { label: "Premium Material:", value: "Vakuum örtüklü PC və orijinal Aramid Fiber (Kevlar) toxunuşu" },
+            { label: "Uyğunluq:", value: "MagSafe dəstəkli iPhone-lar və MagSafe keys istifadə edən Android cihazları" }
+        ],
+        about: "Pitaka MagEZ Car Mount Pro 2, unikal NFC funksionallığı və rəsmi Qi2 sertifikatına sahib ultra-premium avtomobil şarj cihazı və tutacağıdır. Qi2 texnologiyası sayəsində iPhone cihazınızı yolda 15W tam sürətlə naqilsiz şarj edir. 1.8 kq-a qədər ağırlıq qaldıra bilən möhkəm maqnit strukturu kəskin döngələrdə və kələ-kötür yollarda belə maksimum təhlükəsizlik təmin edir. Cihazın ən böyük üstünlüklərindən biri daxili PITAKA NFC çipləridir; telefonunuzu tutacağa yaxınlaşdırdıqda avtomatik olaraq naviqasiyanı işə sala, yaxud evinizə/işinizə çatma vaxtınızı (ETA) təyin etdiyiniz şəxsə avtomatik SMS olaraq göndərə bilər. Vakuum örtüklü polikarbonat və lüks aramid fiber (karbon görünüşlü) materialdan hazırlanmış minimalist dizaynı avtomobilinizin interyerinə mükəmməl vizual elitarlıq qatır."
+    },
+
+
+
+
+
     "magtrio2": {      // <--- MagTrio 2 3-in-1 Simsiz Şarj Stansiyası BURADA
         title: "MagTrio 2 Qi2 25W Foldable 3-in-1 Simsiz Şarj stendi",
         price: "124.99 AZN",
@@ -569,6 +838,42 @@ const products = {
         ],
         about: "MagTrio 2 ultra-portativ, Qi2 sertifikatlı və qatlana bilən 3-ü 1-də simsiz şarj stansiyasıdır. Üçlü simsiz şarj gücünü maqnitli yapışma rahatlığı ilə birləşdirir. Ən son Qi2 25W sürətli şarj texnologiyası sayəsində iPhone 16 modelini 30 dəqiqədən daha qısa müddətdə 0-dan 50%-ə qədər doldurur. Həmçinin Apple Watch üçün sürüşmə mexanizmli xüsusi şarj hissəsinə malikdir. Cəmi 18 mm qalınlığında olan erqonomik və qatlanan dizaynı sayəsində masanızda yerə qənaət edir və səyahətlər üçün mükəmməl portativlik təmin edir."
     },
+
+
+
+
+    "energea_magarctic_drive": {       // <--- ENERGEA MAGARCTIC DRIVE BURADA
+        title: "Energea MAGarctic Drive Qi2 25W Aktiv Soyutmalı Avtomobil Şarj Cihazı",
+        price: "149.99 AZN",
+        warranty: "1 İL",
+        images: [
+            "Images_site/EG-MagarcticDrive-1.png",
+            "Images_site/EG-MagarcticDrive-4.webp",
+            "Images_site/EG-MagarcticDrive-2.webp",
+            "Images_site/EG-MagarcticDrive-3.webp",
+            "Images_site/EG-MagarcticDrive-5.webp",
+            "Images_site/EG-MagarcticDrive-6.webp"
+        ],
+        giftImage: null,
+        wpLink: "https://wa.me/994998058060?text=Salam%2C%20Energea%20MAGarctic%20Drive%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m.",
+        installmentLink: "https://birmarket.az/merchant/12157-charger-az?from_search=true&event=view_search_tips&query=charger%20az&choice=Charger.az&tips_type=items&position=1",
+        specs: [
+            { label: "Brend / Model:", value: "Energea MAGarctic Drive (MagArctic Drive)" },
+            { label: "Naqilsiz Çıxış Gücü:", value: "Qi2 25W Ultra Sürətli Şarj (iPhone 17 və uyğun modelləri 30 dəqiqədə 0-50% doldurur)" },
+            { label: "Soyutma Texnologiyası:", value: "Qabaqcıl daxili fanlı Thermo soyutma sistemi (istiliyi effektiv idarə edir və səmərəliliyi qoruyur)" },
+            { label: "Maqnit Tutma Gücü:", value: "1.5 kq-a qədər güclü və tam təhlükəsiz maqnit fiksasiyası" },
+            { label: "Quraşdırılma Sistemi:", value: "Omni mount (Ön şüşə, idarəetmə paneli / dashboard və ya hava çıxışına / vent fiksasiya imkanı)" },
+            { label: "Əlavə Aksesuar:", value: "Teleskopik uzana bilən qol (bir əllə rahat idarəetmə üçün) və komplektə daxil olan ComDrive 45W sürətli avtomobil adapteri" },
+            { label: "Giriş Gücü (Wireless):", value: "DC 5V/2A; 9V/2A; 12V/3A; 15V/3A" },
+            { label: "Şarj Cihazı Çıxışı (ComDrive 45):", value: "Type-C: PD45W Maks (5V/3A, 9V/3A, 12V/3A, 15V/3A, 20V/2.25A) | PPS 55W Maks" },
+            { label: "Ölçülər və Çəki:", value: "Cihaz: 65 x 39mm | Çəki: 93q" }
+        ],
+        about: "Energea MAGarctic Drive, həm gündəlik hərəkətdə olanlar, həm də uzun səyahətlər üçün xüsusi olaraq dizayn edilmiş ən müasir texnologiyalı avtomobil şarj stansiyası və tutacağıdır. Ən son rəsmi Qi2 standartı sayəsində naqilsiz olaraq 25W ultra-sürətli enerji ötürülməsini dəstəkləyir. Cihazın daxilində yer alan qabaqcıl aktiv Thermo soyutma lövhəsi və inteqrasiya olunmuş ventilyator (fan) şarj əsnasında yaranan istiliyi dərhal kənarlaşdıraraq telefonun qızmasının qarşısını alır və şarj effektivliyini pik səviyyədə saxlayır. 1.5 kq-a qədər ağırlığa tab gətirən güclü maqnit matrisi telefonu sarsıntılardan qoruyur. Çoxfunksiyalı Omni mount quraşdırılma mexanizmi və teleskopik uzanan qolu sayəsində cihazı ön şüşəyə, torpedoya və ya hava ızgarasına istədiyiniz bucaqda yerləşdirə bilərsiniz. Paketə daxil olan ComDrive 45W (PPS55W dəstəkli) güclü maşın adapteri naqilsiz şarj stendinin tam güclə işləməsini təmin edir."
+    },
+
+
+
+
 
 
     "magduoarc": { // <--- MagDuo Arc 2-in-1 Simsiz Şarj Cihazı BURADA Mag Duo Arc
