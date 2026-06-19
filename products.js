@@ -228,9 +228,41 @@ const products = {
 
 
 
+    "anker_544_cable_240w": {         // <--- ANKER 544 CABLE 240W BURADA
+        title: "Anker 544 USB-C to USB-C 240W Bio-Əsaslı Şarj Kabeli",
+        price: "64.99 AZN",
+        warranty: "6 AY",
+        images: [
+            "Images_site/An-544-Cable-240W-1.png",
+            "Images_site/An-544-Cable-240W-2.webp",
+            "Images_site/An-544-Cable-240W-3.webp",
+            "Images_site/An-544-Cable-240W-4.webp",
+            "Images_site/An-544-Cable-240W-5.webp",
+            "Images_site/An-544-Cable-240W-6.png"
+        ],
+        giftImage: null,
+        wpLink: "https://wa.me/994998058060?text=Salam%2C%20Anker%20544%20C%20ti%C5%9Fi%20C%20kabel%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m.",
+        installmentLink: "https://birmarket.az/merchant/12157-charger-az?from_search=true&event=view_search_tips&query=charger%20az&choice=Charger.az&tips_type=items&position=1",
+        specs: [
+            { label: "Brend / Model:", value: "Anker 544 PowerLine USB-C to USB-C (Bio-Based)" },
+            { label: "Maksimum Güc:", value: "240W-a qədər ultra-sürətli şarj dəstəyi (240W və daha güclü adapterlərlə tam gücdə işləyir)" },
+            { label: "İnterfeys:", value: "USB-C-dən USB-C-yə (Type-C to Type-C)" },
+            { label: "Material:", value: "Ekoloji təmiz bio-əsaslı neylon material (xarici örtük bitki mənşəli materiallardan hazırlanmışdır)" },
+            { label: "Dözümlülük:", value: "10,000-dən çox bükülmə və qatlanma testindən uğurla keçmiş yüksək müqavimətli struktur" },
+            { label: "Uyğunluq:", value: "iPhone 15 və yuxarı seriyalar, iPad-lər, MacBook-lar, Android smartfonlar və Type-C dəstəkli digər bütün noutbuk/planşetlər" },
+            { label: "Qeyd:", value: "Bu kabel yalnız sürətli şarj və data ötürülməsi üçündür, monitora görüntü ötürməyi (media appearance) dəstəkləmir" }
+        ],
+        about: "Anker 544 PowerLine, həm yüksək texnoloji gücü, həm də təbiəti qorumağı hədəfləyən unikal bir şarj kabelidir. Kabelin xarici gövdəsi qarğıdalı və şəkər qamışı kimi bitkilərdən əldə edilən ekoloji təmiz bio-əsaslı materiallardan hazırlanmışdır. Bu yaşıl yanaşma keyfiyyətdən heç bir güzəştə getmir; kabel laboratoriya şəraitində 10,000-dən çox bükülmə testinə tab gətirərək uzun illər istifadə üçün xüsusi dözümlülüklə istehsal edilmişdir. Sürətli şarj standartlarında zirvə nöqtəsi olan 240W Power Delivery (PD) dəstəyi sayəsində, smartfonlardan əlavə yüksək enerji tələb edən MacBook və digər güclü noutbukları, planşetləri maksimum performansla doldurmağa imkan yaradır."
+    },
+
+
+
+
+
 
 
     "energea_alupac_10k": { // <--- ENERGEA ALUPAC 10K BURADA
+        active: false,
         title: "Energea Alupac 10K Magsafe Powerbank",
         price: "69.99 AZN",
         warranty: "1 İL",
@@ -428,7 +460,7 @@ const products = {
             "Images_site/Bazic-TrioPlus-1.png",
             "Images_site/Bazic-TrioPlus-2.webp",
             "Images_site/Bazic-TrioPlus-3.webp",
-            "Images_site/Bazic-TrioPlus-4.png",
+            "Images_site/Bazic-TrioPlus-4.jpg",
             "Images_site/Bazic-TrioPlus-5.webp",
             "Images_site/Bazic-TrioPlus-6.png"
         ],
