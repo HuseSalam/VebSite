@@ -323,6 +323,36 @@ const products = {
 
 
 
+    "energea_flow_duo_watch": {            // <--- ENERGEA FLOW DUO WATCH BURADA
+        title: "Energea Flow Duo Watch USB-C + Apple Watch Şarj Kabeli",
+        price: "64.99 AZN",
+        warranty: "1 İL",
+        images: [
+            "Images_site/Eg-DuoWatch-1.png",
+            "Images_site/Eg-DuoWatch-2.png",
+            "Images_site/Eg-DuoWatch-5.webp",
+            "Images_site/Eg-DuoWatch-6.webp",
+            "Images_site/Eg-DuoWatch-3.png",
+            "Images_site/Eg-DuoWatch-4.png",
+        ],
+        giftImage: null,
+        wpLink: "https://wa.me/994998058060?text=Salam%2C%20Energea%20Flow%20Duo%20Watch%20kabel%20sifari%C5%9F%20verm%C9%99k%20ist%C9%99yir%C9%99m.",
+        installmentLink: "https://birmarket.az/merchant/12157-charger-az?from_search=true&event=view_search_tips&query=charger%20az&choice=Charger.az&tips_type=items&position=1",
+        specs: [
+            { label: "Brend / Model:", value: "Energea Flow Duo Watch (USB-C + Watch)" },
+            { label: "İnnovativ Konstruksiya:", value: "2-si 1-də İkili Şarj (Eyni kabeldən həm Type-C cihazınızı, həm də Apple Watch-u doldurun)" },
+            { label: "USB-C Çıxış Gücü:", value: "60W-a qədər sürətli şarj (Planşetlər, smartfonlar və digər Type-C aksesuarları üçün)" },
+            { label: "Apple Watch Çıxış Gücü:", value: "2.5W xüsusi maqnit modulu" },
+            { label: "Data Ötürülməsi:", value: "480 Mbps-ə qədər sürətli sinxronizasiya (şəkil, musiqi və fayllar üçün)" },
+            { label: "Material və Uzunluq:", value: "1.5 metr, premium lüks NanoWeave® hörüklü dözümlü neylon kabel" },
+            { label: "Üstünlükləri:", value: "Kabel qarışıqlığının qarşısını alır, səyahət və iş masası üçün ideal minimalist həlldir" }
+        ],
+        about: "Energea Flow Duo Watch, cibinizdəki və ya çantanızdakı kabel qarışıqlığına birdəfəlik son qoyan unikal ikili şarj həllidir. Bu tək bir kabel vasitəsilə eyni anda həm USB-C portuna sahib cihazlarınızı (smartfon, planşet, qulaqlıq), həm də Apple Watch ağıllı saatınızı rahatlıqla şarj edə bilərsiniz. Type-C çıxışı 60W-a qədər yüksək sürətli enerji ötürülməsini dəstəkləyir, saat üçün ayrılmış modul isə 2.5W stabil güc verir. 1.5 metr uzunluğa malik kabelin xarici gövdəsi gündəlik bükülmələrə və sürtünmələrə qarşı maksimum davamlı olan premium NanoWeave® xüsusi hörük texnologiyası ilə gücləndirilmişdir. Həmçinin 480 Mbps data ötürmə sürəti ilə fayllarınızı və şəkillərinizi kompüterinizə sürətlə köçürməyə imkan yaradır."
+    },
+
+
+
+
     "anker67wcar": { // <--- ANKER 67W CAR CHARGER BURADA
         active: false,
         title: "Anker 67W Car Charger",

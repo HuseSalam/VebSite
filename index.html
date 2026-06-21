@@ -566,6 +566,16 @@
 
 
 
+        <a href="product.html?id=energea_flow_duo_watch" class="product-item"
+            data-name="Energea Flow Duo Watch USB-C + Watch Charging Cable, enercea, flow, duo, watch, cable, kabel, sim, sunur, şunur, usb-c, type-c, apple watch, saati, 60w, dual charging, nanoweave">
+            <img src="Images_site/Eg-DuoWatch-1.png" alt="Energea Flow Duo Watch Cable">
+            <p>Energea Flow Duo Watch (USB-C + Apple Watch 2-si 1-də Şarj Kabeli)</p>
+            <span>64.99 AZN</span>
+        </a>
+
+
+
+
         <a href="product.html?id=energea_travelworld_gan120" class="product-item"
             data-name="Energea, TravelWorld GAN120, GaN120, travel adapter, seyahet, basliq, adapter, başlıq, usb-c, type-c, usb-a, gan, 100w, 120w, enerca, multi plug">
             <img src="Images_site/Eg-Travel-120W-1.png" alt="Energea TravelWorld GAN120">
@@ -798,11 +808,17 @@
 
         // 🌟 YENİ: active: false olan məhsulları avtomatik gizlədən kod 🌟
         document.addEventListener("DOMContentLoaded", function () {
+            // products faylının uğurla qoşulduğundan əmin oluruq
             if (typeof products !== "undefined") {
                 for (const key in products) {
                     if (products[key].active === false) {
-                        // products.js-də active: false olan məhsulun linkini (kartını) tapırıq
-                        const productLink = document.querySelector(`a[href="product.html?id=${key}"]`);
+
+                        // *= işarəsi "içində id=anker67w keçən hər hansı bir linki tap" deməkdir.
+                        // Həm kiçik hərfli, həm də orijinal key versiyasını yoxlayırıq ki, heç bir fərqlilik qaçmasın.
+                        const lowerKey = key.toLowerCase();
+                        const productLink = document.querySelector(`a[href*="id=${key}"]`) ||
+                            document.querySelector(`a[href*="id=${lowerKey}"]`);
+
                         if (productLink) {
                             productLink.remove(); // Məhsulu ana səhifədən tamamilə silir
                         }
@@ -810,6 +826,7 @@
                 }
             }
         });
+
 
 
 
